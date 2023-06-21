@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Courgette&family=Marck+Script&family=Tiro+Devanagari+Marathi:ital@1&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* ----------------------BASE STYLES----------------------------- */
+
+body {
+    font-family: 'Tiro Devanagari Marathi', serif;
+    scroll-behavior: smooth;
+}
+
+/* ----------------------NAVBAR----------------------------- */
+
+.logo {
+    font-family: 'Cinzel',
+        serif;
+}
+
+.navigation {
+    padding-left: 20px;
+}
+
+.navigation i {
+    color: black;
+    margin-right: -2px;
+}
+
+.navbar {
+    background-color: rgba(179, 51, 51, 0.732);
+    font-family: 'Courgette', cursive;
+    box-shadow: rgb(0 0 0 / 9%) 0px 2px 1px,
+        rgb(0 0 0 / 9%) 0px 4px 2px,
+        rgb(0 0 0 / 9%) 0px 8px 4px,
+        rgb(0 0 0 / 9%) 0px 16px 8px,
+        rgb(0 0 0 / 9%) 0px 32px 16px;
+    z-index: 1;
+    color: black;
+}
+
+.navbar li {
+    margin-right: 15px;
+    transition: all 0.1s ease-out;
+}
+
+i {
+    color: #3a3a3a;
+}

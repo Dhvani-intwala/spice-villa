@@ -13,7 +13,7 @@
     <!-- Css link-->
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
     <title>Spice-vila</title>
-    <!--<link rel="icon" href=" " type="image/x-icon">-->
+    <link rel="icon" href="{% static 'media/images.jpg' %}" type="image/jpg">
 
     <!-- Fontawesome link -->
     <script src="https://kit.fontawesome.com/c8dffb0544.js" crossorigin="anonymous"></script>
@@ -22,30 +22,43 @@
 <body>
     <header>
         <!-- Navigatin links -->
-        <nav class="navbar navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand logo upper " href="">Splice Villa</a>
-
-                <ul class="nav justify-content-end">
-                    <li class=" nav-item flex a-center active" id="homeNav">
-                        <a class="nav-link link-dark" aria-current="page" href="">Home</a>
-                    </li>
-                    <li class="nav-item flex a-center active">
-                        <a class="nav-link link-dark " aria-current="page" href="">Menu</a>
-                    </li>
-                    <li class="nav-item flex a-center active">
-                        <a class="nav-link link-dark" aria-current="page" href="">Make a Booking</a>
-                    </li>
-                    <li class="nav-item flex a-center active">
-                        <a class="nav-link link-dark" aria-current="page" href="">Where to find us</a>
-                    </li>
-                    <li class="nav-item flex a-center active">
-                        <a class="nav-link link-dark" aria-current="page" href="">Reviews</a>
-                    </li>
-                </ul>
+                <a class="navbar-brand logo" href="">Spice Villa</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Gellary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Make a booking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Where to find us</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-but ">
+                            <a class="btn btn-outline-light" href="#">SignUp</a>
+                        </li>
+                        <li class="nav-but ">
+                            <a class="btn btn-outline-light" href="#">Login</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
-
     </header>
     <!-- Footer -->
     <footer class="footer mt-auto py-4 ">

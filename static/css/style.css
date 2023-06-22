@@ -18,17 +18,7 @@ body {
         serif;
 }
 
-.navigation {
-    padding-left: 20px;
-}
-
-i {
-    color: black;
-    margin-right: -2px;
-}
-
 .navbar {
-    background-color: rgba(179, 51, 51, 0.732);
     font-family: 'Courgette', cursive;
     box-shadow: rgb(0 0 0 / 9%) 0px 2px 1px,
         rgb(0 0 0 / 9%) 0px 4px 2px,
@@ -37,11 +27,6 @@ i {
         rgb(0 0 0 / 9%) 0px 32px 16px;
     z-index: 1;
     color: black;
-}
-
-.navbar li {
-    margin-right: 15px;
-    transition: all 0.1s ease-out;
 }
 
 /* ----------------------HOME PAGE COVER----------------------------- */

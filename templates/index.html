@@ -2,23 +2,44 @@
 {% load static %}
 {% block content %}
 
-<!-- Page Header -->
-<section class="masthead"
-    style="background-image: url('https://res.cloudinary.com/dj7pkwqu1/image/upload/v1686657154/cld-sample-4.jpg')">
-    <div class="overlay"></div>
-    <div class="container">
+<!-- main-image -->
+<section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
         <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-                <div class="site-heading">
-                    <h1 class="text-light">Spice Villa</h1>
-                    <div>
-                        <p class="decorated text-light"><span>Since 2010</span></p>
-                    </div>
-                    <span class="subheading text-light">A taste you will remember</span>
+            <div class="col-lg-8">
+                <h1>Welcome to <span>Spice Villa</span></h1>
+                <h2> A taste you will remember</h2>
+
+                <div class="btns">
+                    <a href="" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
+                    <a href="" class="btn-book animated fadeInUp scrollto">Book a Table</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- Menu page -->
+
+<section id="menu" class="menu section-bg">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Menu</h2>
+            <p>Check Our Tasty Menu</p>
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="menu-flters">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-starters">Starters</li>
+                    <li data-filter=".filter-salads">Salads</li>
+                    <li data-filter=".filter-salads">Dessert</li>
+                    <li data-filter=".filter-specialty"> Our Specialty</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
 {% endblock %}

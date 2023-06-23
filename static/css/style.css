@@ -9,6 +9,7 @@
 body {
     font-family: 'Tiro Devanagari Marathi', serif;
     scroll-behavior: smooth;
+    background-color: black;
 }
 
 /* ----------------------NAVBAR----------------------------- */
@@ -30,62 +31,82 @@ body {
 }
 
 /* ----------------------HOME PAGE COVER----------------------------- */
-
-.masthead {
-    margin-bottom: 50px;
-    background: no-repeat center center;
-    background-color: #868e96;
-    background-attachment: scroll;
-    position: relative;
+#hero {
+    width: 100%;
+    height: 90vh;
+    background: url("https://res.cloudinary.com/dj7pkwqu1/image/upload/v1686657154/cld-sample-4.jpg") top center;
     background-size: cover;
+    position: relative;
+    padding: 0;
 }
 
-.masthead .overlay {
+#hero:before {
+    content: "";
+    background: rgba(19, 19, 19, 0.626);
     position: absolute;
+    bottom: 0;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #212529;
-    opacity: 0.5;
-
+    right: 0;
 }
 
-.masthead .page-heading,
-.masthead .post-heading,
-.masthead .site-heading {
-    padding: 320px 0 150px;
-    color: black;
-    text-align: center;
-    background-color: #212529;
-    opacity: 0.5;
-
+#hero .container {
+    padding-top: 110px;
 }
 
-.decorated {
-    overflow: hidden;
-    text-align: center;
+#hero h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: rgb(19, 19, 19);
 }
 
-.decorated>span {
-    position: relative;
+#hero h1 span {
+    color: #dbd8d8;
+}
+
+#hero h2 {
+    color: rgb(19, 19, 19);
+    margin-bottom: 10px 0 0 0;
+    font-size: 22px;
+}
+
+#hero .btns {
+    margin-top: 30px;
+}
+
+#hero .btn-menu,
+#hero .btn-book {
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
     display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+    line-height: 1;
+    color: black;
+    border: 2px solid black;
+    text-decoration: none;
 }
 
-.decorated>span:before,
-.decorated>span:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    border-bottom: 2px solid;
-    width: 100px;
-    margin: 0 20px;
+#hero .btn-menu:hover,
+#hero .btn-book:hover {
+    background: white;
+    color: black;
 }
 
-.decorated>span:before {
-    right: 100%;
+#hero .btn-book {
+    margin-left: 15px;
 }
 
-.decorated>span:after {
-    left: 100%;
+
+
+
+/* ----------------------MENU PAGE----------------------------- */
+
+.section-bg {
+    background-color: #141311;
 }

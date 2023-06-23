@@ -48,6 +48,7 @@ body {
     width: 100%;
     background-color: #212529;
     opacity: 0.5;
+
 }
 
 .masthead .page-heading,
@@ -55,4 +56,36 @@ body {
 .masthead .site-heading {
     padding: 320px 0 150px;
     color: black;
+    text-align: center;
+    background-color: #212529;
+    opacity: 0.5;
+
+}
+
+.decorated {
+    overflow: hidden;
+    text-align: center;
+}
+
+.decorated>span {
+    position: relative;
+    display: inline-block;
+}
+
+.decorated>span:before,
+.decorated>span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px solid;
+    width: 100px;
+    margin: 0 20px;
+}
+
+.decorated>span:before {
+    right: 100%;
+}
+
+.decorated>span:after {
+    left: 100%;
 }

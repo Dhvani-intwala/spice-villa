@@ -31,16 +31,28 @@ body {
 
 /* ----------------------HOME PAGE COVER----------------------------- */
 
-#home-background-container {
-    height: 93vh;
-    background-image: url('https: //res.cloudinary.com/dj7pkwqu1/image/upload/v1686657154/cld-sample-4.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
-        rgba(0, 0, 0, 0.09) 0px 4px 2px,
-        rgba(0, 0, 0, 0.09) 0px 8px 4px,
-        rgba(0, 0, 0, 0.09) 0px 16px 8px,
-        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+.masthead {
+    margin-bottom: 50px;
+    background: no-repeat center center;
+    background-color: #868e96;
+    background-attachment: scroll;
     position: relative;
+    background-size: cover;
+}
+
+.masthead .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #212529;
+    opacity: 0.5;
+}
+
+.masthead .page-heading,
+.masthead .post-heading,
+.masthead .site-heading {
+    padding: 320px 0 150px;
+    color: black;
 }

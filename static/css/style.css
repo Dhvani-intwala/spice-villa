@@ -30,6 +30,11 @@ body {
     color: black;
 }
 
+.btn {
+    border-radius: 50px;
+}
+
+
 /* ----------------------HOME PAGE COVER----------------------------- */
 #hero {
     width: 100%;
@@ -83,7 +88,7 @@ body {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     display: inline-block;
-    padding: 12px 30px;
+    padding: 10px;
     border-radius: 50px;
     transition: 0.3s;
     line-height: 1;
@@ -109,4 +114,65 @@ body {
 
 .section-bg {
     background-color: #141311;
+}
+
+.menu #menu-flters {
+    padding: 0;
+    margin: 0 auto 0 auto;
+    list-style: none;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.menu #menu-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 12px 10px 12px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: all ease-in-out 0.3s;
+    border-radius: 50px;
+    font-family: "Playfair Display", serif;
+}
+
+.menu #menu-flters li:hover,
+.menu #menu-flters li.filter-active {
+    color: rgb(72, 72, 70);
+}
+
+.menu #menu-flters li:last-child {
+    margin-right: 0;
+}
+
+.menu .menu-item {
+    margin-top: 50px;
+}
+
+.section-title {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.section-title h2 {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+.section-title p {
+    margin: 0;
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    color: #fff;
 }

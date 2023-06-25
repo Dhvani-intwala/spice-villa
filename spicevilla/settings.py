@@ -31,8 +31,7 @@ SECRET_KEY = 'e$^r!fxokj2$hg21ou)=r3t)hu0qfzor12))99t7xv)0#1lc!6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['spice-villa.herokuapp.com', 'localhost',
-                 '8000-dhvani-intwala-spice-vil-6d7504h6ef.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['spice-villa-c8a666e63481.herokuapp.com', 'localhost']
 
 
 # Application definition

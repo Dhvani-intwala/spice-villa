@@ -24,6 +24,7 @@ body {
     font-size: 1.5rem;
 }
 
+
 .navbar {
     font-family: 'Courgette', cursive;
     box-shadow: rgb(0 0 0 / 9%) 0px 2px 1px,
@@ -258,7 +259,45 @@ body {
 
 /* ----------------------ABOUT SECTION----------------------------- */
 
-.section-title h4 {
+.section-title h5 {
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
+}
+
+/* ----------------------GALLERY SECTION----------------------------- */
+
+.gallery .gallery-item {
+    overflow: hidden;
+    border-right: 3px solid #454035;
+    border-bottom: 3px solid #454035;
+}
+
+.gallery .gallery-item img {
+    transition: all ease-in-out 0.4s;
+}
+
+.gallery .gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+element.style {}
+
+.gallery .gallery-item img {
+    transition: all ease-in-out 0.4s;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
 }

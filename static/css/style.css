@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Courgette&family=Marck+Script&family=Tiro+Devanagari+Marathi:ital@1&display=swap');
 
+:root {
+    --light: #fff;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -36,7 +40,7 @@ body {
 }
 
 
-/* ----------------------HOME PAGE COVER----------------------------- */
+/* ----------------------HOME SECTION----------------------------- */
 #hero {
     width: 100%;
     height: 90vh;
@@ -111,7 +115,7 @@ body {
 
 
 
-/* ----------------------MENU PAGE----------------------------- */
+/* ----------------------MENU SECTION----------------------------- */
 
 .section-bg {
     background-color: #141311;
@@ -119,7 +123,7 @@ body {
 
 .menu #menu-flters {
     padding: 0;
-    margin: 0 auto 0 auto;
+    margin: 50px 0 auto;
     list-style: none;
     text-align: center;
     border-radius: 50px;
@@ -152,10 +156,6 @@ body {
     margin-top: 50px;
 }
 
-.section-title {
-    padding-bottom: 50px;
-    padding-top: 50px;
-}
 
 .section-title h2 {
     font-size: 14px;
@@ -168,6 +168,27 @@ body {
     color: #fff;
     font-family: "Poppins", sans-serif;
 }
+
+
+.section-title h2::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 4px 10px;
+}
+
+.section-title h2::before {
+    content: "";
+    width: 100px;
+    height: 1px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 4px 10px;
+}
+
+
 
 .section-title p {
     margin: 0;
@@ -233,4 +254,11 @@ body {
     font-size: 14px;
     font-family: "Poppins", sans-serif;
     color: rgba(255, 255, 255, 0.5);
+}
+
+/* ----------------------ABOUT SECTION----------------------------- */
+
+.section-title h4 {
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
 }

@@ -4,25 +4,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap links-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <!-- Css link-->
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
     <title>Spice-vila</title>
-    <link rel="icon" href="{% static 'images/image.jpg' %}" type="image/jpg">
+    <link rel="icon" href="{% static 'images/image.jpg' %}" type="image/jpg" />
 
     <!-- Fontawesome link -->
     <script src="https://kit.fontawesome.com/c8dffb0544.js" crossorigin="anonymous"></script>
 
     <!-- animation-->
-    <link href="{% static 'animation/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'animation/animate.css' %}" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
-        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -54,10 +55,10 @@
                             <a class="nav-link" href="{% url 'home' %}#chefs">Chefs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Make a booking</a>
+                            <a class="nav-link" href="{% url 'home' %}#contact">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Where to find us</a>
+                            <a class="nav-link" href="#">Make a booking</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -72,15 +73,14 @@
             </div>
         </nav>
     </header>
-    {% block content %}
-    {% endblock %}
+    {% block content %} {% endblock %}
     <!-- Footer -->
     <footer class="footer mt-auto py-4 bg-dark text-light">
-        <p class="m-0 text-center ">Copyright &copy;Spice Villa 2022</p>
-        <p class="m-0 text-center ">Follow us: </p>
+        <p class="m-0 text-center">Copyright &copy;Spice Villa 2022</p>
+        <p class="m-0 text-center">Follow us:</p>
         <div class="text-center">
             <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Link to facebook page"><i
-                    class="fab fa-facebook-square fa-lg ms-3 text-light "></i></a>
+                    class="fab fa-facebook-square fa-lg ms-3 text-light"></i></a>
             <a href="https://www.twitter.com" target="_blank" rel="noopener" aria-label="Link to twitter page"><i
                     class="fab fa-twitter-square fa-lg ms-3 text-light"></i></a>
             <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Link to instagram page"><i
@@ -89,16 +89,14 @@
                     class="fab fa-youtube-square fa-lg ms-3 text-light"></i></a>
         </div>
     </footer>
-
-
 </body>
 <!-- jquery-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <!-- JavaScript Bundle for Bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-    </script>
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -109,17 +107,10 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
 <script src="{% static 'js/main.js' %}"></script>
-
-<!-- Alert messages disappear function. Credit: CI walkthrough -->
-<script>
-    setTimeout(function () {
-        let messages = document.getElementById('msg');
-        let alert = new bootstrap.Alert(messages);
-        alert.close();
-    }, 3000);
-</script>
-
-
 
 </html>

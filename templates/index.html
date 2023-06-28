@@ -6,7 +6,7 @@
 <section id="hero" class="d-flex align-items-center">
     <div class="container position-relative text-center text-lg-start animate__animated">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8 animate__animated animate__bounce">
                 <h1>Welcome to <span>Spice Villa</span></h1>
                 <h2> A taste you will remember</h2>
 
@@ -25,15 +25,15 @@
 <section id="menu" class="menu section-bg py-5">
     <div class="container">
 
-        <div class="section-title">
-            <h2 class="text-center fw-normal ff-secondary"> Food Menu</h2>
-            <p class="text-center">Check Our Tasty Menu</p>
+        <div class="section-title text-center">
+            <h2> Food Menu</h2>
+            <p>Check Our Tasty Menu</p>
         </div>
         <div class="row">
             <div class="col-lg-12 d-flex justify-content-center">
                 <ul id="menu-flters">
-                    <li data-filter="*" class="filter-active">All</li>
-                    <li data-filter=".filter-starters">Starters</li>
+                    <li data-filter="*" class="filter-active"><a onclick="allFood()">All</a></li>
+                    <li data-filter=".filter-starters"><a onclick="startersAll()" id="startersAll">Starters</a></li>
                     <li data-filter=".filter-salads">Salads</li>
                     <li data-filter=".filter-salads">Dessert</li>
                     <li data-filter=".filter-specialty"> Our Specialty</li>
@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <div class="row menu-container">
+        <div class="row menu-container" id="allfood">
 
             <div class="col-lg-6 menu-item filter-starters">
                 <img src="{% static 'images/menu/Hare-Bhara-kabab- Fried.jpg' %}" class="menu-img" alt="">
@@ -163,9 +163,50 @@
             </div>
 
         </div>
-    </div>
+        <div>
+            <div class="row menu-container d-none" id="starter">
+
+                <div class="col-lg-6 menu-item filter-starters">
+                    <img src="{% static 'images/menu/Hare-Bhara-kabab- Fried.jpg' %}" class="menu-img" alt="">
+                    <div class="menu-content">
+                        <a href="#" class="text-decoration-none">Hara bhara kabab</a><span>€5.99</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        Fried spinach balls with Potaoes
+                    </div>
+                </div>
+
+                <div class="col-lg-6 menu-item filter-starter">
+                    <img src="{% static 'images/menu/Starters.jpg' %}" class="menu-img" alt="">
+                    <div class="menu-content">
+                        <a href="#" class="text-decoration-none">Panner Tikka</a><span>€10.99</span>
+                    </div>
+                    <div class="menu-ingredients">
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 menu-item filter-starter">
+                    <img src="{% static 'images/menu/chili-cheese-nacho.jpg' %}" class="menu-img" alt="">
+                    <div class="menu-content">
+                        <a href="#" class="text-decoration-none">Chilli chesse nacho</a><span>€7.99</span>
+                    </div>
+                    <div class="menu-ingredients">
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
 </section>
+
+
+
+
+
 <!-- End Menu Section -->
+
 
 <!-- About page -->
 
@@ -205,7 +246,7 @@
                     <p class="mb-4 text-light text-center ">Welcome to <i class="fa fa-utensils me-2"></i>Splice Villa
                     </p>
                 </div>
-                >
+
                 <p> </p>
                 <p> </p>
 
@@ -213,7 +254,8 @@
 
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center border-start border-5 border-light px-3">
-                            <h1 class="flex-shrink-0 display-5 text-light mb-0" data-toggle="couter-up">15</h1>
+                            <h1 class="flex-shrink-0 display-5 text-light mb-0"> <span class="counter">25</span>
+                            </h1>
                             <div class="ps-4">
                                 <p class="mb-0 text-light">Yours of</p>
                                 <h6 class="text-uppercase mb-0 text-light"> Experiences</h6>
@@ -223,7 +265,8 @@
 
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center border-start border-5 border-light px-3">
-                            <h1 class="flex-shrink-0 display-5 text-light mb-0" data-toggle="couter-up">50</h1>
+                            <h1 class="flex-shrink-0 display-5 text-light mb-0"> <span class="counter">10</span>
+                            </h1>
                             <div class="ps-4">
                                 <p class="mb-0 text-light">Popular</p>
                                 <h6 class="text-uppercase mb-0 text-light">Marster chefs</h6>
@@ -240,12 +283,19 @@
 </div>
 <!-- End about Section -->
 
+
+<!-- Testimonial section -->
+
+
+
+
+
 <!-- gallery section -->
 
 <section id="gallery" class="gallery">
 
-    <div class="container" data-aos="fade-up">
-        <div class="section-title text-center fw-normal ff-secondary">
+    <div class="container">
+        <div class="section-title text-center">
             <h2>Gallery</h2>
             <p class="mb-5">Some photos from Our Restaurant</p>
         </div>
@@ -288,8 +338,8 @@
 
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <a href="{% static 'images/gallery/gallery16.jpeg' %}" class="gallery-lightbox">
-                        <img src="{% static 'images/gallery/gallery16.jpeg' %}" alt="" class="img-fluid">
+                    <a href="{% static 'images/gallery/gallery20.jpeg' %}" class="gallery-lightbox">
+                        <img src="{% static 'images/gallery/gallery20.jpeg' %}" alt="" class="img-fluid">
                     </a>
                 </div>
             </div>
@@ -326,109 +376,142 @@
 <!-- End gallery section -->
 
 <!-- chefs section -->
+<section id="chefs" class="chefs text-light m-5">
+    <div class="container" data-aos="fade-up">
 
-<section id="chefs" class="chefs">
-    <div class="container">
-
-        <div class="section-title text-center my-5">
+        <div class="section-title text-center mb-5">
             <h2>Chefs</h2>
             <p>Our Proffesional Chefs</p>
         </div>
 
-        <div class="col-lg-4 col-md-6">
-            <div class="member">
-                <img src="{% static 'images/chefs/chef1.jpg' %}" class="img-fluid" alt="">
-                <div class="member-info">
-                    <div class="member-info-content">
-                        <h4></h4>
-                        <span class="text-light">Master Chef</span>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <div class="member-img">
+
+                        <img src="{% static 'images/chefs/chef1.jpg' %}" class="img-fluid" alt="">
+
+                        <div class="social position-absolute text-center">
+                            <a href="http://www.twitter.com" target="_blank" rel="noopener"
+                                aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i
+                                    class="bi bi-twitter"></i></a>
+                            <a href="http://www.facebook.com" target="_blank" rel="noopener"
+                                aria-label="Join our Facebookpage (opens in a new tab)" class="facebook"><i
+                                    class="bi bi-facebook"></i></a>
+                            <a href="http://www.instagram.com" target="_blank" rel="noopener"
+                                aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="http://www.linkedin.com" target="_blank" rel="noopener"
+                                aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
+                                    class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="social">
-                        <a href="http://www.twitter.com" target="_blank" rel="noopener"
-                            aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i
-                                class="bi bi-twitter"></i></a>
-                        <a href="http://www.facebook.com" target="_blank" rel="noopener"
-                            aria-label="Join our Facebookpage (opens in a new tab)" class="facebook"><i
-                                class="bi bi-facebook"></i></a>
-                        <a href="http://www.instagram.com" target="_blank" rel="noopener"
-                            aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
-                                class="bi bi-instagram"></i></a>
+
+                    <div class="member-info text-center my-2">
+                        <h4>Joachim Wissler</h4>
+                        <p>Master Chef</p>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <div class="member-img ">
 
-        <div class="col-lg-4 col-md-6">
-            <div class="member">
-                <img src="{% static 'images/chefs/chef2.jpg' %}" class="img-fluid" alt="">
-                <div class="member-info">
-                    <div class="member-info-content">
-                        <h4></h4>
-                        <span class="text-light">Master Chef</span>
+                        <img src="{% static 'images/chefs/chef2.jpg' %}" class="img-fluid d-block" alt="">
+                        <div class="social position-absolute text-center">
+                            <a href="http://www.twitter.com" target="_blank" rel="noopener"
+                                aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i
+                                    class="bi bi-twitter"></i></a>
+                            <a href="http://www.facebook.com" target="_blank" rel="noopener"
+                                aria-label="Join our Facebookpage (opens in a new tab)" class="facebook"><i
+                                    class="bi bi-facebook"></i></a>
+                            <a href="http://www.instagram.com" target="_blank" rel="noopener"
+                                aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="http://www.linkedin.com" target="_blank" rel="noopener"
+                                aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
+                                    class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+
                     </div>
-                    <div class="social">
-                        <a href="http://www.twitter.com" target="_blank" rel="noopener"
-                            aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i
-                                class="bi bi-twitter"></i></a>
-                        <a href="http://www.facebook.com" target="_blank" rel="noopener"
-                            aria-label="Join our Facebookpage (opens in a new tab)" class="facebook"><i
-                                class="bi bi-facebook"></i></a>
-                        <a href="http://www.instagram.com" target="_blank" rel="noopener"
-                            aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
-                                class="bi bi-instagram"></i></a>
+
+
+                    <div class="member-info text-center my-2">
+                        <h4>stefanie martini</h4>
+                        <p>Master Chef</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <div class="member">
-                <img src="{% static 'images/chefs/chef3.jpg' %}" class="img-fluid" alt="">
-                <div class="member-info">
-                    <div class="member-info-content">
-                        <h4></h4>
-                        <span class="text-light">Master Chef</span>
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <div class="member-img ">
+
+                        <img src="{% static 'images/chefs/chef3.jpg' %}" class="img-fluid" alt="">
+
+                        <div class="social  position-absolute text-center">
+                            <a href="http://www.twitter.com" target="_blank" rel="noopener"
+                                aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i
+                                    class="bi bi-twitter"></i></a>
+                            <a href="http://www.facebook.com" target="_blank" rel="noopener"
+                                aria-label="Join our Facebookpage (opens in a new tab)" class="facebook"><i
+                                    class="bi bi-facebook"></i></a>
+                            <a href="http://www.instagram.com" target="_blank" rel="noopener"
+                                aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="http://www.linkedin.com" target="_blank" rel="noopener"
+                                aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
+                                    class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="social">
-                        <a href="http://www.twitter.com" target="_blank" rel="noopener"
-                            aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i
-                                class="bi bi-twitter"></i></a>
-                        <a href="http://www.facebook.com" target="_blank" rel="noopener"
-                            aria-label="Join our Facebookpage (opens in a new tab)" class="facebook"><i
-                                class="bi bi-facebook"></i></a>
-                        <a href="http://www.instagram.com" target="_blank" rel="noopener"
-                            aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
-                                class="bi bi-instagram"></i></a>
+
+                    <div class="member-info text-center my-2">
+                        <h4>stefanie hering</h4>
+                        <p>Patissier</p>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6">
-            <div class="member">
-                <img src="{% static 'images/chefs/chef4.jpg' %}" class="img-fluid" alt="">
-                <div class="member-info">
-                    <div class="member-info-content">
-                        <h4></h4>
-                        <span class="text-light">Master Chef</span>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                    <div class="member-img ">
+
+                        <img src="{% static 'images/chefs/chef1.jpg' %}" class="img-fluid" alt="">
+
+                        <div class="social position-absolute text-center">
+                            <a href="http://www.twitter.com" target="_blank" rel="noopener"
+                                aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i
+                                    class="bi bi-twitter"></i></a>
+                            <a href="http://www.facebook.com" target="_blank" rel="noopener"
+                                aria-label="Join our Facebookpage (opens in a new tab)" class="facebook"><i
+                                    class="bi bi-facebook"></i></a>
+                            <a href="http://www.instagram.com" target="_blank" rel="noopener"
+                                aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="http://www.linkedin.com" target="_blank" rel="noopener"
+                                aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
+                                    class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="social">
-                        <a href="http://www.twitter.com" target="_blank" rel="noopener"
-                            aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i
-                                class="bi bi-twitter"></i></a>
-                        <a href="http://www.facebook.com" target="_blank" rel="noopener"
-                            aria-label="Join our Facebookpage (opens in a new tab)" class="facebook"><i
-                                class="bi bi-facebook"></i></a>
-                        <a href="http://www.instagram.com" target="_blank" rel="noopener"
-                            aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
-                                class="bi bi-instagram"></i></a>
+
+                    <div class="member-info text-center my-2">
+                        <h4>Michael Kempf</h4>
+                        <p>Cook</p>
                     </div>
                 </div>
             </div>
+
+
+
         </div>
-
-
     </div>
 </section>
+
+
 <!-- End chefs Section -->
 
 <!-- Contact Section -->
@@ -493,9 +576,19 @@
 
 </section>
 <!-- End Contact Section -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 
+<script src="{% static 'js/main.js' %}"></script>
+<!-- <script>
 
-
+    document.getElementById('startersAll').addEventListener('click', () => {
+        document.getElementById('allfood').className = 'd-none';
+        document.getElementById('starter').classList.remove("d-none");
+        console.log('here');
+    });
+</script> -->
 
 
 

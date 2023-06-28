@@ -285,8 +285,6 @@ body {
     height: auto;
 }
 
-element.style {}
-
 .gallery .gallery-item img {
     transition: all ease-in-out 0.4s;
 }
@@ -344,4 +342,65 @@ element.style {}
 
 .contact .php-email-form {
     width: 100%;
+}
+
+/* ----------------------CHEFS SECTION----------------------------- */
+
+.social a {
+    color: #141311;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+.social a:hover {
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+
+.member {
+    margin-bottom: 20px;
+    overflow: 20px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.member-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.member:hover .social {
+    opacity: 1;
+}
+
+.member-img img {
+    display: block;
+    opacity: 0.5;
+}
+
+.social {
+    position: absolute;
+    left: 0;
+    bottom: 45px;
+    right: 0;
+    transition: ease-in-out 0.3s;
+    text-align: center;
+    opacity: 0;
+
+}
+
+
+.counter {
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+/* ----------------------TESTIMONIAL SECTION----------------------------- */
+
+
+.animate__animated.animate__bounce {
+    --animate-duration: 10s;
 }

@@ -40,6 +40,11 @@ body {
     border-radius: 50px;
 }
 
+/* ----------------------FOOTER SECTION----------------------------- */
+.footer-link:hover {
+    font-size: 1.2rem;
+}
+
 
 /* ----------------------HOME SECTION----------------------------- */
 #hero {
@@ -393,14 +398,14 @@ body {
 }
 
 
-.counter {
-    animation-duration: 10s;
-    animation-delay: 0s;
-}
-
-/* ----------------------TESTIMONIAL SECTION----------------------------- */
+/* -------------------- ANIMATIONS------------------------ */
 
 
 .animate__animated.animate__bounce {
     --animate-duration: 10s;
+}
+
+.counter {
+    animation-duration: 10s;
+    animation-delay: 0s;
 }

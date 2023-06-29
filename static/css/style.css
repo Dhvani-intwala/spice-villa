@@ -402,7 +402,7 @@ body {
 
 
 .animate__animated.animate__bounce {
-    --animate-duration: 10s;
+    --animate-duration: 5s;
 }
 
 .counter {

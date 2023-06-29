@@ -34,7 +34,7 @@
                 <ul id="menu-flters">
                     <li data-filter="*" class="filter-active"><a onclick="allFood()">All</a></li>
                     <li data-filter=".filter-starters"><a onclick="startersAll()" id="startersAll">Starters</a></li>
-                    <li data-filter=".filter-salads">Salads</li>
+                    <li data-filter=".filter-salads"><a onclick="saladsAll()" id="saladsAll">Salads</a></li>
                     <li data-filter=".filter-salads">Dessert</li>
                     <li data-filter=".filter-specialty"> Our Specialty</li>
                 </ul>
@@ -163,6 +163,8 @@
             </div>
 
         </div>
+
+
         <div>
             <div class="row menu-container d-none" id="starter">
 
@@ -198,15 +200,42 @@
             </div>
 
 
+            <div class="row menu-container d-none" id="salads">
+                <div class="col-lg-6 menu-item filter-salad">
+                    <img src="{% static 'images/menu/potato-salad.jpg' %}" class="menu-img" alt="">
+                    <div class="menu-content">
+                        <a href="#" class="text-decoration-none">Potato salad</a><span>€5.99</span>
+                    </div>
+                    <div class="menu-ingredients">
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 menu-item filter-salad">
+                    <img src="{% static 'images/menu/chicken-salad.webp' %}" class="menu-img" alt="">
+                    <div class="menu-content">
+                        <a href="#" class="text-decoration-none">Chicken salad</a><span>€6.99</span>
+                    </div>
+                    <div class="menu-ingredients">
+
+                    </div>
+                </div>
+                <div class="col-lg-6 menu-item filter-salad">
+                    <img src="{% static 'images/menu/0328-ceasar-salad-lede.webp' %}" class="menu-img" alt="">
+                    <div class="menu-content">
+                        <a href="#" class="text-decoration-none">Ceasar salad lede</a><span>€4.99</span>
+                    </div>
+                    <div class="menu-ingredients">
+
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
 </section>
-
-
-
-
-
 <!-- End Menu Section -->
-
 
 <!-- About page -->
 
@@ -285,7 +314,6 @@
 
 
 <!-- Testimonial section -->
-
 
 
 
@@ -369,12 +397,10 @@
 
         </div>
     </div>
-
-
 </section>
 
-<!-- End gallery section -->
 
+<!-- End gallery section -->
 <!-- chefs section -->
 <section id="chefs" class="chefs text-light m-5">
     <div class="container" data-aos="fade-up">
@@ -575,22 +601,12 @@
     </div>
 
 </section>
+
 <!-- End Contact Section -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 
 <script src="{% static 'js/main.js' %}"></script>
-<!-- <script>
-
-    document.getElementById('startersAll').addEventListener('click', () => {
-        document.getElementById('allfood').className = 'd-none';
-        document.getElementById('starter').classList.remove("d-none");
-        console.log('here');
-    });
-</script> -->
-
-
-
 
 {% endblock %}

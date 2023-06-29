@@ -36,15 +36,15 @@ jQuery(document).ready(function ($) {
         });
     }
 });
+
+
 function startersAll() {
     document.getElementById('allfood').className = 'd-none';
     document.getElementById('starter').classList.remove("d-none");
-
-    console.log('here');
 }
 
-// document.getElementById('startersAll').addEventListener('click', () => {
-//     document.getElementById('allfood').className = 'd-none';
-//     document.getElementById('starter').classList.remove("d-none");
-//     console.log('here');
-// });
+function saladsAll() {
+    document.getElementById('allfood').className = 'd-none';
+    document.getElementById('starter').className = 'd-none';
+    document.getElementById('salads').classList.remove("d-none");
+}

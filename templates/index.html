@@ -36,7 +36,8 @@
                     <li data-filter=".filter-starters"><a onclick="startersAll()" id="startersAll">Starters</a></li>
                     <li data-filter=".filter-salads"><a onclick="saladsAll()" id="saladsAll">Salads</a></li>
                     <li data-filter=".filter-salads"><a onclick="dessertAll()" id="dessertAll">Dessert</a></li>
-                    <li data-filter=".filter-specialty"> Our Specialty</li>
+                    <li data-filter=".filter-specialty"><a onclick="specialtyAll()" id="specialtyAll"> Our Specialty
+                    </li>
                 </ul>
             </div>
         </div>
@@ -264,6 +265,41 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Menu specialty -->
+            <div class="row menu-container d-none" id="specialty">
+                <div class="col-lg-6 menu-item filter-specialty">
+                    <img src="{% static 'images/menu/Paneer-&-Lentil Masala.jpg' %}" class="menu-img" alt="">
+                    <div class="menu-content">
+                        <a href="#" class="text-decoration-none">Paneer & Lentil Masala</a><span>€6.99</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        <p>Paneer & Lentil Masala with Spinach & Lime Rice</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 menu-item filter-specialty">
+                    <img src="{% static 'images/menu/currywurst-mit-pommes.jpg' %}" class="menu-img" alt="">
+                    <div class="menu-content">
+                        <a href="#" class="text-decoration-none">curry wurst</a><span>€6.99</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        <p>Hotdog with curry ketchup from scratch for an authentic German street food.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 menu-item filter-specialty">
+                    <img src="{% static 'images/menu/chicken-tikka-masala-.jpg' %}" class="menu-img" alt="">
+                    <div class="menu-content">
+                        <a href="#" class="text-decoration-none">Chicken tikka masala</a><span>€12.99</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        <p>A classic Indian dish with soft tender chunks of grilled chicken</p>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 </section>
 <!-- End Menu Section -->

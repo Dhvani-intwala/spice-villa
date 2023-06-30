@@ -35,7 +35,7 @@
                     <li data-filter="*" class="filter-active"><a onclick="allFood()">All</a></li>
                     <li data-filter=".filter-starters"><a onclick="startersAll()" id="startersAll">Starters</a></li>
                     <li data-filter=".filter-salads"><a onclick="saladsAll()" id="saladsAll">Salads</a></li>
-                    <li data-filter=".filter-salads">Dessert</li>
+                    <li data-filter=".filter-salads"><a onclick="dessertAll()" id="dessertAll">Dessert</a></li>
                     <li data-filter=".filter-specialty"> Our Specialty</li>
                 </ul>
             </div>
@@ -49,7 +49,7 @@
                     <a href="#" class="text-decoration-none">Hara bhara kabab</a><span>€5.99</span>
                 </div>
                 <div class="menu-ingredients">
-                    Fried spinach balls with Potaoes
+                    <p> Veg kabab made with potatoes, green peas, spinach</p>
                 </div>
             </div>
 
@@ -59,7 +59,7 @@
                     <a href="#" class="text-decoration-none">Panner Tikka</a><span>€10.99</span>
                 </div>
                 <div class="menu-ingredients">
-
+                    <p>Paneer cubes marinated in spicy yogurt mix, and grilled to perfection</p>
                 </div>
             </div>
 
@@ -69,17 +69,17 @@
                     <a href="#" class="text-decoration-none">Chilli chesse nacho</a><span>€7.99</span>
                 </div>
                 <div class="menu-ingredients">
-
+                    <p>cheese, ground meat, black beans, corn</p>
                 </div>
             </div>
 
             <div class="col-lg-6 menu-item filter-salad">
-                <img src="{% static 'images/menu/0328-ceasar-salad-lede.webp' %}" class="menu-img" alt="">
+                <img src="{% static 'images/menu/ceasar-salad.jpg' %}" class="menu-img" alt="">
                 <div class="menu-content">
-                    <a href="#" class="text-decoration-none">Ceasar salad lede</a><span>€4.99</span>
+                    <a href="#" class="text-decoration-none">Ceasar salad</a><span>€4.99</span>
                 </div>
                 <div class="menu-ingredients">
-
+                    <p>swagger from cold and crisp greens, a creamy</p>
                 </div>
             </div>
 
@@ -89,7 +89,7 @@
                     <a href="#" class="text-decoration-none">Buleberry cheese cake</a><span>€4.99</span>
                 </div>
                 <div class="menu-ingredients">
-
+                    <p></p>
                 </div>
             </div>
 
@@ -99,7 +99,7 @@
                     <a href="#" class="text-decoration-none">Mint chocolate ice-cream</a><span>€4.99</span>
                 </div>
                 <div class="menu-ingredients">
-
+                    <p></p>
                 </div>
             </div>
 
@@ -109,7 +109,7 @@
                     <a href="#" class="text-decoration-none">Piles of Pancake with honey </a><span>€4.99</span>
                 </div>
                 <div class="menu-ingredients">
-
+                    <p></p>
                 </div>
             </div>
 
@@ -119,7 +119,7 @@
                     <a href="#" class="text-decoration-none">Potato salad</a><span>€5.99</span>
                 </div>
                 <div class="menu-ingredients">
-
+                    <p>Salad with asparagus, soft boiled eggs and a creamy buttermilk dressing.</p>
                 </div>
             </div>
 
@@ -129,16 +129,16 @@
                     <a href="#" class="text-decoration-none">Chicken salad</a><span>€6.99</span>
                 </div>
                 <div class="menu-ingredients">
-
+                    <p>Delicious and easy paleo crispy chicken salad topped with flavorful and tangy honey mustard.</p>
                 </div>
             </div>
             <div class="col-lg-6 menu-item filter-specialty">
-                <!-- <img src="" class="menu-img" alt="">-->
+                <img src="{% static 'images/menu/Paneer-&-Lentil Masala.jpg' %}" class="menu-img" alt="">
                 <div class="menu-content">
-                    <a href="#" class="text-decoration-none">panner</a><span>€6.99</span>
+                    <a href="#" class="text-decoration-none">Paneer & Lentil Masala</a><span>€6.99</span>
                 </div>
                 <div class="menu-ingredients">
-
+                    <p>Paneer & Lentil Masala with Spinach & Lime Rice</p>
                 </div>
             </div>
 
@@ -148,24 +148,24 @@
                     <a href="#" class="text-decoration-none">curry wurst</a><span>€6.99</span>
                 </div>
                 <div class="menu-ingredients">
-
+                    <p>Hotdog with curry ketchup from scratch for an authentic German street food.</p>
                 </div>
             </div>
 
             <div class="col-lg-6 menu-item filter-specialty">
-                <img src="{% static 'images/menu/chicken-tikka-masala-.jfif' %}" class="menu-img" alt="">
+                <img src="{% static 'images/menu/chicken-tikka-masala-.jpg' %}" class="menu-img" alt="">
                 <div class="menu-content">
                     <a href="#" class="text-decoration-none">Chicken tikka masala</a><span>€12.99</span>
                 </div>
                 <div class="menu-ingredients">
-
+                    <p>A classic Indian dish with soft tender chunks of grilled chicken</p>
                 </div>
             </div>
 
         </div>
 
-
-        <div>
+        <!-- Menu Starters -->
+        <div class="row">
             <div class="row menu-container d-none" id="starter">
 
                 <div class="col-lg-6 menu-item filter-starters">
@@ -174,7 +174,7 @@
                         <a href="#" class="text-decoration-none">Hara bhara kabab</a><span>€5.99</span>
                     </div>
                     <div class="menu-ingredients">
-                        Fried spinach balls with Potaoes
+                        <p>Veg kabab made with potatoes, green peas, spinach</p>
                     </div>
                 </div>
 
@@ -184,7 +184,7 @@
                         <a href="#" class="text-decoration-none">Panner Tikka</a><span>€10.99</span>
                     </div>
                     <div class="menu-ingredients">
-
+                        <p>Paneer cubes marinated in spicy yogurt mix, and grilled to perfection</p>
                     </div>
                 </div>
 
@@ -194,12 +194,12 @@
                         <a href="#" class="text-decoration-none">Chilli chesse nacho</a><span>€7.99</span>
                     </div>
                     <div class="menu-ingredients">
-
+                        <p>cheese, ground meat, black beans, corn</p>
                     </div>
                 </div>
             </div>
 
-
+            <!-- Menu salads -->
             <div class="row menu-container d-none" id="salads">
                 <div class="col-lg-6 menu-item filter-salad">
                     <img src="{% static 'images/menu/potato-salad.jpg' %}" class="menu-img" alt="">
@@ -207,7 +207,7 @@
                         <a href="#" class="text-decoration-none">Potato salad</a><span>€5.99</span>
                     </div>
                     <div class="menu-ingredients">
-
+                        <p>Salad with asparagus, soft boiled eggs and a creamy buttermilk dressing.</p>
                     </div>
                 </div>
 
@@ -217,22 +217,53 @@
                         <a href="#" class="text-decoration-none">Chicken salad</a><span>€6.99</span>
                     </div>
                     <div class="menu-ingredients">
-
+                        <p>Delicious and easy paleo crispy chicken salad topped with flavorful and tangy honey mustard.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-6 menu-item filter-salad">
-                    <img src="{% static 'images/menu/0328-ceasar-salad-lede.webp' %}" class="menu-img" alt="">
+                    <img src="{% static 'images/menu/ceasar-salad.jpg' %}" class="menu-img" alt="">
                     <div class="menu-content">
-                        <a href="#" class="text-decoration-none">Ceasar salad lede</a><span>€4.99</span>
+                        <a href="#" class="text-decoration-none">Ceasar salad</a><span>€4.99</span>
                     </div>
                     <div class="menu-ingredients">
-
+                        <p>Salad with asparagus, soft boiled eggs and a creamy buttermilk dressing.</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Menu dessert -->
+            <div class="row menu-container d-none" id="desserts">
+                <div class="col-lg-6 menu-item filter-dessert">
+                    <img src="{% static 'images/menu/blueberry-cheesecake.jpg' %}" class="menu-img" alt="">
+                    <div class="menu-content">
+                        <a href="#" class="text-decoration-none">Buleberry cheese cake</a><span>€4.99</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        <p></p>
+                    </div>
+                </div>
 
+                <div class="col-lg-6 menu-item filter-dessert">
+                    <img src="{% static 'images/menu/mint-chocolate-ice-cream.jpg' %}" class="menu-img" alt="">
+                    <div class="menu-content">
+                        <a href="#" class="text-decoration-none">Mint chocolate ice-cream</a><span>€4.99</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        <p></p>
+                    </div>
+                </div>
 
+                <div class="col-lg-6 menu-item filter-dessert">
+                    <img src="{% static 'images/menu/piles-of-pancake-with-honey.jpg' %}" class="menu-img" alt="">
+                    <div class="menu-content">
+                        <a href="#" class="text-decoration-none">Piles of Pancake with honey </a><span>€4.99</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
         </div>
 </section>
 <!-- End Menu Section -->

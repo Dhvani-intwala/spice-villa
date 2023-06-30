@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <!-- main-image -->
 <section id="hero" class="d-flex align-items-center">
     <div class="container position-relative text-center text-lg-start animate__animated">
@@ -314,8 +314,119 @@
 
 
 <!-- Testimonial section -->
+<section class="testimonials text-light ">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Testimonials</h2>
+            <p class="mb-5">What they're saying about uspython</p>
+        </div>
+
+        <div class="row">
+
+            <div id="customers-testimonials" class="owl-carousel">
+                <!--TESTIMONIAL 1 -->
+                <div class="item animate__animated animate__slideOutLeft mt-5">
+                    <div class="shadow-effect position-relative">
+                        <img class="img-circle position-absolute top-0 start-50 translate-middle"
+                            src="{% static 'images/chefs/chef1.jpg' %}" alt="">
+                        <p class="mt-5"><i class="fa fa-quote-left"></i> Dramatically maintain clicks-and-mortar
+                            solutions without functional solutions. Completely synergize resource
+                            taxing relationships via premier niche markets. Professionally cultivate.
+                            <i class="fa fa-quote-right"></i>
+                        </p>
+                    </div>
+                    <div class="testimonial-name position-relative">Diane Kruger</div>
+                </div>
+                <!-- END TESTIMONIAL -->
+                <!--TESTIMONIAL 2 -->
+                <div class="item  animate__animated animate__slideInRight">
+                    <div class="shadow-effect position-relative">
+                        <img class="img-circle position-absolute top-0 start-50 translate-middle"
+                            src="{% static 'images/chefs/chef1.jpg' %}" alt="">
+                        <p class="mt-5"><i class="fa fa-quote-left"></i> Dramatically maintain clicks-and-mortar
+                            solutions without functional solutions. Completely synergize resource
+                            taxing relationships via premier niche markets. Professionally cultivate.
+                            <i class="fa fa-quote-right"></i>
+                        </p>
+                    </div>
+                    <div class="testimonial-name position-relative">Heike Makatsch</div>
+                </div>
+                <!-- END TESTIMONIAL -->
+                <!--TESTIMONIAL 3 -->
+                <div class="item animate__animated animate__slideInRight">
+                    <div class="shadow-effect position-relative">
+                        <img class="img-circle position-absolute top-0 start-50 translate-middle"
+                            src="{% static 'images/chefs/chef1.jpg' %}" alt="">
+                        <p class="mt-5"><i class="fa fa-quote-left"></i> Dramatically maintain clicks-and-mortar
+                            solutions without functional solutions. Completely synergize resource
+                            taxing relationships via premier niche markets. Professionally cultivate.
+                            <i class="fa fa-quote-right"></i>
+                        </p>
+                    </div>
+                    <div class="testimonial-name position-relative">Nina Hoss</div>
+                </div>
+                <!-- END TESTIMONIAL -->
+                <!--TESTIMONIAL 4 -->
+                <div class="item  animate__animated animate__slideInRight">
+                    <div class="shadow-effect position-relative">
+                        <img class="img-circle position-absolute top-0 start-50 translate-middle"
+                            src="{% static 'images/chefs/chef1.jpg' %}" alt="">
+                        <p class="mt-5"><i class="fa fa-quote-left"></i> Dramatically maintain clicks-and-mortar
+                            solutions without functional solutions. Completely synergize resource
+                            taxing relationships via premier niche markets. Professionally cultivate.
+                            <i class="fa fa-quote-right"></i>
+                        </p>
+                    </div>
+                    <div class="testimonial-name position-relative">Lotte Lenya</div>
+                </div>
+                <!-- END TESTIMONIAL -->
+                <!--TESTIMONIAL 5 -->
+                <div class="item  animate__animated animate__slideInRight">
+                    <div class="shadow-effect position-relative">
+                        <img class="img-circle position-absolute top-0 start-50 translate-middle"
+                            src="{% static 'images/chefs/chef1.jpg' %}" alt="">
+                        <p class="mt-5"><i class="fa fa-quote-left"></i> Dramatically maintain clicks-and-mortar
+                            solutions without functional solutions. Completely synergize resource
+                            taxing relationships via premier niche markets. Professionally cultivate.
+                            <i class="fa fa-quote-right"></i>
+                        </p>
+                    </div>
+                    <div class="testimonial-name position-relative">Nina Hoss</div>
+                </div>
+                <!-- END TESTIMONIAL -->
+                <!--TESTIMONIAL 6 -->
+                <div class="item  animate__animated animate__slideInRight">
+                    <div class="shadow-effect position-relative">
+                        <img class="img-circle position-absolute top-0 start-50 translate-middle"
+                            src="{% static 'images/chefs/chef1.jpg' %}" alt="">
+                        <p class="mt-5"><i class="fa fa-quote-left"></i> Dramatically maintain clicks-and-mortar
+                            solutions without functional solutions. Completely synergize resource
+                            taxing relationships via premier niche markets. Professionally cultivate.
+                            <i class="fa fa-quote-right"></i>
+                        </p>
+                    </div>
+                    <div class="testimonial-name position-relative">Hildegard Knef</div>
+                </div>
+                <!-- END TESTIMONIAL -->
 
 
+            </div>
+
+        </div>
+        <div style="text-align:center">
+
+            <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
+            <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
+            <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
+            <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
+            <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
+            <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
+
+        </div>
+    </div>
+</section>
+
+<!-- End Testimonial section -->
 
 
 <!-- gallery section -->
@@ -403,7 +514,7 @@
 <!-- End gallery section -->
 <!-- chefs section -->
 <section id="chefs" class="chefs text-light m-5">
-    <div class="container" data-aos="fade-up">
+    <div class="container">
 
         <div class="section-title text-center mb-5">
             <h2>Chefs</h2>

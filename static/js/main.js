@@ -36,6 +36,9 @@ jQuery(document).ready(function ($) {
         });
     }
 });
+function allFood() {
+
+}
 
 
 function startersAll() {
@@ -57,6 +60,7 @@ function saladsAll() {
 function dessertAll() {
     document.getElementById('allfood').className = 'd-none';
     document.getElementById('desserts').classList.remove("d-none");
+    document.getElementById('starter').className = 'd-none';
     document.getElementById('salads').className = 'd-none';
     document.getElementById('specialty').className = 'd-none';
 }

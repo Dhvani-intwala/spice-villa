@@ -45,6 +45,9 @@ body {
     font-size: 1.2rem;
 }
 
+.footer {
+    border-radius: 50%;
+}
 
 /* ----------------------HOME SECTION----------------------------- */
 #hero {
@@ -434,19 +437,19 @@ body {
 
 .testimonials {}
 
-.item{
-    display:none
+.item {
+    display: none
 }
 
 .dot {
     cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
 .img-circle {
@@ -467,4 +470,28 @@ body {
 .counter {
     animation-duration: 10s;
     animation-delay: 0s;
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 40px, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
 }

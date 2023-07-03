@@ -25,7 +25,13 @@
         integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
-
+{% block additional_styles %}
+<style>
+    body {
+        background-image: url(./static/images/golden_gate_bridge.jpg);
+    }
+</style>
+{% endblock %}
 <body>
     <header>
         <!-- Navigatin links -->
@@ -59,7 +65,7 @@
                         </li>
                         {% if user.is_authenticated %}
                         <li><a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
-                        <li><a class="nav-link" href="{% url 'mybookings_page' %}">My Bookings</a></li>
+                        <li><a class="nav-link" href="#">My Bookings</a></li>
                         {% else %}
                         <li><a class="nav-link" href="{% url 'account_signup' %}">SignUp</a></li>
                         <li><a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
@@ -81,7 +87,7 @@
         <p class="m-0 text-center">Follow us:</p>
         <div class="text-center ">
             <a class="footer-link" href="https://www.facebook.com" target="_blank" rel="noopener"
-                aria-label="Link to facebook page"><i class="fab fa-facebok- fa-lg ms-3 text-light"></i></a>
+                aria-label="Link to facebook page"><i class="fab fa-facebook fa-lg ms-3 text-light"></i></a>
             <a class="footer-link" href="https://www.twitter.com" target="_blank" rel="noopener"
                 aria-label="Link to twitter page"><i class="fab fa-twitter fa-lg ms-3 text-light"></i></a>
             <a class="footer-link" href="https://www.instagram.com" target="_blank" rel="noopener"

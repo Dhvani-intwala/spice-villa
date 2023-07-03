@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from booking import views
+from django.views.generic.base import TemplateView
 
 
 urlpatterns = [
@@ -23,4 +24,5 @@ urlpatterns = [
     path('', views.base_view, name='base'),
     path('', views.home, name='home'),
     path('accounts/', include('allauth.urls')),
+
 ]

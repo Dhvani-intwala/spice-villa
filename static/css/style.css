@@ -45,10 +45,6 @@ body {
     font-size: 1.2rem;
 }
 
-.footer {
-    border-radius: 50%;
-}
-
 /* ----------------------HOME SECTION----------------------------- */
 #hero {
     width: 100%;
@@ -106,9 +102,10 @@ body {
     border-radius: 50px;
     transition: 0.3s;
     line-height: 1;
-    color: black;
+    color: #fff;
     border: 2px solid black;
     text-decoration: none;
+    background-color: rgb(28, 27, 27);
 }
 
 #hero .btn-menu:hover,
@@ -460,6 +457,15 @@ body {
     border: 6px solid rgb(49, 48, 48);
 }
 
+/* -------------------- LOGIN PAGE ------------------------ */
+
+#login {
+    width: 70%;
+    display: block;
+    margin: auto;
+
+}
+
 /* -------------------- ANIMATIONS------------------------ */
 
 
@@ -470,28 +476,4 @@ body {
 .counter {
     animation-duration: 10s;
     animation-delay: 0s;
-}
-
-
-
-@keyframes fadeInUp {
-    from {
-        transform: translate3d(0, 40px, 0)
-    }
-
-    to {
-        transform: translate3d(0, 0, 0);
-        opacity: 1
-    }
-}
-
-.animated {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-fill-mode: both
-}
-
-.animatedFadeInUp {
-    opacity: 0
 }

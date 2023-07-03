@@ -37,7 +37,11 @@ jQuery(document).ready(function ($) {
     }
 });
 function allFood() {
-
+    document.getElementById('starter').className = 'd-none';
+    document.getElementById('allfood').classList.remove("d-none");
+    document.getElementById('salads').className = 'd-none';
+    document.getElementById('desserts').className = 'd-none';
+    document.getElementById('specialty').className = 'd-none';
 }
 
 

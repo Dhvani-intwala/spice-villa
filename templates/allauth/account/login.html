@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 {% block additional_styles %}
 <style>
-    body {}
+    body {
+        background-image: url("../../static/images/bg.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        object-fit: cover;
+    }
 </style>
 {% endblock %}
 
@@ -13,10 +18,10 @@
 {% block content %}
 
 <section class="text-light bg" id="login">
-    <div class="container height mt-5 pt-5">
-        <div class="row">
+    <div class="container height mt-5 p-3">
+        <div class="row login-bg">
             <h3 class="text-center">{% trans " Welcome to Login !!" %}</h3>
-            <div class="col-md-8 mt-3 offset-md-2 border rounded text-center p-5">
+            <div class="col-md-8 mt-3 offset-md-2 text-center">
 
                 <p>{% blocktrans %}Welcome back! Login to make your reservation and manage your bookings. If you
                     have
@@ -30,7 +35,7 @@
                     {% if redirect_field_value %}
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                     {% endif %}
-                    <button class="account-btn" type="submit">{% trans "Login" %}</button>
+                    <button class="account-btn rounded-pill" type=" submit">{% trans "Login" %}</button>
                 </form>
             </div>
         </div>

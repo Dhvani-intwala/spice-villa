@@ -30,51 +30,6 @@ jQuery(document).ready(function ($) {
     }
 });
 
-// menu filter
-
-// function allFood() {
-//     document.getElementById('starter').className = 'd-none';
-//     document.getElementById('allfood').classList.remove("d-none");
-//     document.getElementById('salads').className = 'd-none';
-//     document.getElementById('desserts').className = 'd-none';
-//     document.getElementById('specialty').className = 'd-none';
-// }
-
-
-// function startersAll() {
-//     document.getElementById('allfood').className = 'd-none';
-//     document.getElementById('starter').classList.remove("d-none");
-//     document.getElementById('salads').className = 'd-none';
-//     document.getElementById('desserts').className = 'd-none';
-//     document.getElementById('specialty').className = 'd-none';
-// }
-
-// function saladsAll() {
-//     document.getElementById('allfood').className = 'd-none';
-//     document.getElementById('starter').className = 'd-none';
-//     document.getElementById('salads').classList.remove("d-none");
-//     document.getElementById('desserts').className = 'd-none';
-//     document.getElementById('specialty').className = 'd-none';
-// }
-
-// function dessertAll() {
-//     document.getElementById('allfood').className = 'd-none';
-//     document.getElementById('desserts').classList.remove("d-none");
-//     document.getElementById('starter').className = 'd-none';
-//     document.getElementById('salads').className = 'd-none';
-//     document.getElementById('specialty').className = 'd-none';
-// }
-
-// function specialtyAll() {
-//     document.getElementById('allfood').className = 'd-none';
-//     document.getElementById('specialty').classList.remove("d-none");
-//     document.getElementById('salads').className = 'd-none';
-//     document.getElementById('desserts').className = 'd-none';
-//     document.getElementById('starter').className = 'd-none';
-// }
-
-// testimonial slider 
-
 let slideIndex = 0;
 showSlides();
 function showSlides() {

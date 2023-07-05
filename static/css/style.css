@@ -97,15 +97,9 @@ body {
     font-size: 48px;
     font-weight: 700;
     line-height: 56px;
-    color: rgb(19, 19, 19);
-}
-
-#hero h1 span {
-    color: #dbd8d8;
 }
 
 #hero h2 {
-    color: rgb(19, 19, 19);
     margin-bottom: 10px 0 0 0;
     font-size: 22px;
 }
@@ -125,10 +119,10 @@ body {
     border-radius: 50px;
     transition: 0.3s;
     line-height: 1;
-    color: #fff;
+    color: black;
     border: 2px solid black;
     text-decoration: none;
-    background-color: rgb(28, 27, 27);
+    background-color: white;
 }
 
 #hero .btn-menu:hover,
@@ -184,6 +178,8 @@ body {
 .menu .menu-item {
     margin-top: 50px;
 }
+
+
 
 
 .section-title h2 {

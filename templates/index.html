@@ -8,8 +8,8 @@
 <section id="hero" class="d-flex align-items-center">
     <div class="container position-relative text-center text-lg-start animate__animated">
         <div class="row">
-            <div class="col-lg-8 animate__animated animate__bounce">
-                <h1>Welcome to <span>Spice Villa</span></h1>
+            <div class="col-lg-8 animate__animated animate__bounce text-white">
+                <h1>Welcome to Spice Villa</h1>
                 <h2> A taste you will remember</h2>
 
                 <div class="btns">
@@ -34,12 +34,12 @@
         <div class="row">
             <div class="col-lg-12 d-flex justify-content-center">
                 <ul id="menu-flters">
-                    <li data-filter="*" class="filter-all"><a onclick="allFood()">All</a></li>
-                    <li data-filter=".filter-starters"><a onclick="startersAll()" id="startersAll">Starters</a>
+                    <li><a onclick="filterSelection('all')">All</a></li>
+                    <li><a onclick="filterSelection('starter')" id="startersAll">Starters</a>
                     </li>
-                    <li data-filter=".filter-salads"><a onclick="saladsAll()" id="saladsAll">Salads</a></li>
-                    <li data-filter=".filter-salads"><a onclick="dessertAll()" id="dessertAll">Dessert</a></li>
-                    <li data-filter=".filter-specialty"><a onclick="specialtyAll()" id="specialtyAll"> Our Specialty</a>
+                    <li><a onclick="filterSelection('Salads')" id="saladsAll">Salads</a></li>
+                    <li><a onclick="filterSelection('Desserts')" id="dessertAll">Dessert</a></li>
+                    <li><a onclick="filterSelection('specialty')" id="specialtyAll"> Our Specialty</a>
                     </li>
                 </ul>
             </div>
@@ -167,145 +167,10 @@
 
         </div>
 
-        <!-- Menu Starters -->
-        <div class="row menu-container d-none" id="starter">
-
-            <div class="col-lg-6 menu-item filter-starters">
-                <img src="{% static 'images/menu/Hare-Bhara-kabab- Fried.jpg' %}" class="menu-img" alt="">
-                <div class="menu-content">
-                    <a href="#" class="text-decoration-none">Hara bhara kabab</a><span>€5.99</span>
-                </div>
-                <div class="menu-ingredients">
-                    <p>Veg kabab made with potatoes, green peas, spinach</p>
-                </div>
-            </div>
-
-            <div class="col-lg-6 menu-item filter-starter">
-                <img src="{% static 'images/menu/Starters.jpg' %}" class="menu-img" alt="">
-                <div class="menu-content">
-                    <a href="#" class="text-decoration-none">Panner Tikka</a><span>€10.99</span>
-                </div>
-                <div class="menu-ingredients">
-                    <p>Paneer cubes marinated in spicy yogurt mix, and grilled to perfection</p>
-                </div>
-            </div>
-            <div class="w-100"></div>
-            <div class="col-lg-6 menu-item filter-starter">
-                <img src="{% static 'images/menu/chili-cheese-nacho.jpg' %}" class="menu-img" alt="">
-                <div class="menu-content">
-                    <a href="#" class="text-decoration-none">Chilli chesse nacho</a><span>€7.99</span>
-                </div>
-                <div class="menu-ingredients">
-                    <p>cheese, ground meat, black beans, corn</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Menu salads -->
-        <div class="row menu-container d-none" id="salads">
-            <div class="col-lg-6 menu-item filter-salad">
-                <img src="{% static 'images/menu/potato-salad.jpg' %}" class="menu-img" alt="">
-                <div class="menu-content">
-                    <a href="#" class="text-decoration-none">Potato salad</a><span>€5.99</span>
-                </div>
-                <div class="menu-ingredients">
-                    <p>Salad with asparagus, soft boiled eggs and a creamy buttermilk dressing.</p>
-                </div>
-            </div>
-
-            <div class="col-lg-6 menu-item filter-salad">
-                <img src="{% static 'images/menu/chicken-salad.webp' %}" class="menu-img" alt="">
-                <div class="menu-content">
-                    <a href="#" class="text-decoration-none">Chicken salad</a><span>€6.99</span>
-                </div>
-                <div class="menu-ingredients">
-                    <p>Delicious and easy paleo crispy chicken salad topped with flavorful and tangy honey mustard.
-                    </p>
-                </div>
-            </div>
-            <div class="w-100"></div>
-            <div class="col-lg-6 menu-item filter-salad">
-                <img src="{% static 'images/menu/ceasar-salad.jpg' %}" class="menu-img" alt="">
-                <div class="menu-content">
-                    <a href="#" class="text-decoration-none">Ceasar salad</a><span>€4.99</span>
-                </div>
-                <div class="menu-ingredients">
-                    <p>Salad with asparagus, soft boiled eggs and a creamy buttermilk dressing.</p>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Menu dessert -->
-        <div class="row menu-container d-none" id="desserts">
-            <div class="col-lg-6 menu-item filter-dessert">
-                <img src="{% static 'images/menu/blueberry-cheesecake.jpg' %}" class="menu-img" alt="">
-                <div class="menu-content">
-                    <a href="#" class="text-decoration-none">Buleberry cheese cake</a><span>€4.99</span>
-                </div>
-                <div class="menu-ingredients">
-                    <p></p>
-                </div>
-            </div>
-
-            <div class="col-lg-6 menu-item filter-dessert">
-                <img src="{% static 'images/menu/mint-chocolate-ice-cream.jpg' %}" class="menu-img" alt="">
-                <div class="menu-content">
-                    <a href="#" class="text-decoration-none">Mint chocolate ice-cream</a><span>€4.99</span>
-                </div>
-                <div class="menu-ingredients">
-                    <p></p>
-                </div>
-            </div>
-
-            <div class="w-100"></div>
-            <div class="col-lg-6 menu-item filter-dessert">
-                <img src="{% static 'images/menu/piles-of-pancake-with-honey.jpg' %}" class="menu-img" alt="">
-                <div class="menu-content">
-                    <a href="#" class="text-decoration-none">Piles of Pancake with honey </a><span>€4.99</span>
-                </div>
-                <div class="menu-ingredients">
-                    <p></p>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Menu specialty -->
-        <div class="row menu-container d-none" id="specialty">
-            <div class="col-lg-6 menu-item filter-specialty">
-                <img src="{% static 'images/menu/Paneer-&-Lentil Masala.jpg' %}" class="menu-img" alt="">
-                <div class="menu-content">
-                    <a href="#" class="text-decoration-none">Paneer & Lentil Masala</a><span>€6.99</span>
-                </div>
-                <div class="menu-ingredients">
-                    <p>Paneer & Lentil Masala with Spinach & Lime Rice</p>
-                </div>
-            </div>
-
-            <div class="col-lg-6 menu-item filter-specialty">
-                <img src="{% static 'images/menu/currywurst-mit-pommes.jpg' %}" class="menu-img" alt="">
-                <div class="menu-content">
-                    <a href="#" class="text-decoration-none">curry wurst</a><span>€6.99</span>
-                </div>
-                <div class="menu-ingredients">
-                    <p>Hotdog with curry ketchup from scratch for an authentic German street food.</p>
-                </div>
-            </div>
-            <div class="w-100"></div>
-            <div class="col-lg-6 menu-item filter-specialty">
-                <img src="{% static 'images/menu/chicken-tikka-masala-.jpg' %}" class="menu-img" alt="">
-                <div class="menu-content">
-                    <a href="#" class="text-decoration-none">Chicken tikka masala</a><span>€12.99</span>
-                </div>
-                <div class="menu-ingredients">
-                    <p>A classic Indian dish with soft tender chunks of grilled chicken</p>
-                </div>
-            </div>
 
 
 
-        </div>
+
     </div>
 </section>
 <!-- End Menu Section -->
@@ -345,13 +210,33 @@
             <div class="col-lg-6 text-light">
                 <div class=" section-title ">
                     <h2 class=" ff-secondary text-start fw-normal text-light text-center"> About Us</h2>
-                    <p class="mb-4 text-light text-center ">Welcome to <i class="fa fa-utensils me-2"></i>Splice Villa
+                    <p class="mb-4 text-light text-center ">Welcome to <i class="fa fa-utensils me-2"></i>Spice Villa
                     </p>
                 </div>
 
                 <p> Welcome to SPICE VILLA, where culinary excellence meets warm hospitality. our
-                    restaurant is a haven for food lovers seeking unforgettable dining experiences.</p>
-                <p> </p>
+                    restaurant is a haven for food lovers seeking unforgettable dining experiences.
+                </p>
+
+                <p>In addition to our exquisite food and outstanding service, our restaurant boasts a thoughtfully
+                    designed
+                    ambiance. Our interior decor combines elements of modern elegance with touches of rustic charm,
+                    creating
+                    a welcoming space that is perfect for intimate dinners, family gatherings, or celebrations with
+                    friends.
+                    We also offer outdoor seating for those who wish to savor their meals in the fresh air.
+                </p>
+                <p>
+                    Whether you're seeking a romantic dinner for two, a memorable meal with loved ones, or a place to
+                    celebrate
+                    a special occasion, [Restaurant Name] is here to exceed your expectations. Join us and let us take
+                    you on a
+                    culinary journey that will awaken your senses and create lasting memories.
+
+                </p>
+                <p>We look forward to welcoming you to Splice Villa and sharing our passion for exceptional food,
+                    impeccable service,
+                    and unforgettable moments. </p>
 
                 <div class="row g-4 mb-4">
 
@@ -397,9 +282,9 @@
 
         <div class="row">
 
-            <div id="customers-testimonials" class="owl-carousel testimonial-slider">
+            <div id="customers-testimonials" class="owl-carousel testimonial-slider mt-5">
                 <!--TESTIMONIAL 1 -->
-                <div class="item animate__animated animate__slideOutLeft mt-5">
+                <div class="item animate__animated animate__slideOutLeft">
                     <div class="shadow-effect position-relative">
                         <img class="img-circle position-absolute top-0 start-50 translate-middle"
                             src="{% static 'images/chefs/chef1.jpg' %}" alt="">

@@ -11,7 +11,7 @@ from django.conf import settings
 
 class Table(models.Model):
     """
-    Model for table object
+    Model for teble object
     """
     code = models.CharField(max_length=10, unique=True)
     table_free_img = CloudinaryField('free_image')

@@ -46,3 +46,5 @@ function showSlides() {
     slides[slideIndex].classList.add('animate_slideOutLeft');
     setTimeout(showSlides, 5000);
 }
+
+

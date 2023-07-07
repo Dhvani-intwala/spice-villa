@@ -27,49 +27,37 @@
 <section id="menu" class="menu section-bg py-5">
     <div class="container">
 
-        <div class="section-title text-center">
+        <div class=" section-title text-center">
             <h2> Food Menu</h2>
             <p>Check Our Tasty Menu</p>
         </div>
-        <div class="row">
-            {% for item in menu_data %}
-            <p class="text-light">{{ item.name }}</p>
-            <p class="text-light">{{ item.description }}</p>
-            <p class="text-light">{{ item.price }}</p>
-            {% endfor %}
-            <!-- <div class="col-lg-12 d-flex justify-content-center">
-                <ul id="menu-flters">
-                    <li><a onclick="filterSelection('all')">All</a></li>
-                    <li><a onclick="filterSelection('starter')" id="startersAll">Starters</a>
-                    </li>
-                    <li><a onclick="filterSelection('Salads')" id="saladsAll">Salads</a></li>
-                    <li><a onclick="filterSelection('Desserts')" id="dessertAll">Dessert</a></li>
-                    <li><a onclick="filterSelection('specialty')" id="specialtyAll"> Our Specialty</a>
-                    </li>
-                </ul>
+        {% for item in menu_data %}
+        <div class=" row cols-3 flex meal  mt-5">
+            <div class=" text-light">
+                <img src="{{ item.menu_img_path }}" alt="" class="img-fluid">
             </div>
-        </div> -->
+            <div class=" text-light">
+                <div class="flex sp-between ">
+                    <div class="flex meal-header text-light">
 
-            <div class="row menu-container" id="allfood">
-
-                <div class="col-lg-6 menu-item filter-specialty">
-                    <img src="{% static 'images/menu/chicken-tikka-masala-.jpg' %}" class="menu-img" alt="">
-                    <div class="menu-content">
-                        <a href="#" class="text-decoration-none">Chicken tikka masala</a><span>€12.99</span>
-                    </div>
-                    <div class="menu-ingredients">
-                        <p>A classic Indian dish with soft tender chunks of grilled chicken</p>
+                        <h5 class="text-light">{{ item.name }} <b class="ms-3">€{{ item.price }}</b> </h5>
                     </div>
                 </div>
+                <div class="text-light">
+                    <p><b>Ingredients:</b> {{ item.description }}</p>
 
+                </div>
+                <div class="text-light">
+                    <p>............................................................................................................................................................................
+                    </p>
+                </div>
+                {% endfor %}
             </div>
-
-
-
-
-
         </div>
+
+    </div>
 </section>
+
 <!-- End Menu Section -->
 
 <!-- About page -->

@@ -46,3 +46,18 @@ function showSlides() {
     slides[slideIndex].classList.add('animate_slideOutLeft');
     setTimeout(showSlides, 5000);
 }
+
+// sticky  bar
+
+window.addEventListener('scroll',
+    function () {
+        let navbar = document.getElementById('navbar');
+
+        if (window.pageYOffset >= 530) {
+            navbar.classList.add('sticky');
+        } else {
+            navbar.classList.remove('sticky');
+        }
+
+    });
+

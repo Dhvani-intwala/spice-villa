@@ -189,9 +189,10 @@ body {
     color: #fff;
 }
 
-.img-fluid {
-    width: 15%;
-    height: 15%;
+.img-fluids {
+    width: 10vw;
+    height: 20vh;
+    border-radius: 50%;
 }
 
 /* ----------------------ABOUT SECTION----------------------------- */

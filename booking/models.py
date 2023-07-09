@@ -29,7 +29,7 @@ class Menu(models.Model):
 
 class Table(models.Model):
     """
-    Model for teble object
+    Model for table object
     """
     code = models.CharField(max_length=10, unique=True)
     table_free_img = CloudinaryField('free_image')

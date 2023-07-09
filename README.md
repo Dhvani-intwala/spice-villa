@@ -77,3 +77,23 @@ For creating a clone of the repository on your local machine, use<b>Clone</b>:
 - Enter the command <code>git clone</code> followed by the copied URL
 - Your clone was created
 <hr>
+
+## Credits
+
+### Code
+
+- [Django Documenation](https://www.djangoproject.com/) was used to provide examples of code solutions and Django functionality.
+- [Bootstrap Documenation](https://getbootstrap.com/) was used to provide examples of Bootstrap functionality and building blocks.
+- [Code Institute walkthrough](https://codeinstitute.net/) as inspiration and code examples, the code institute walkthroughs "Hello Django" and "I Think Therefore I Blog" was used.
+
+### Content
+
+### Media
+
+### Acknowledgements
+
+- The tutor support team at Code Institute for their support.
+- My Code Institute Mentor for feedback and suggestions.
+- The Code Institute Slack community.
+
+[Back to top](#toc)

@@ -12,7 +12,7 @@
 
                 <div class="btns">
                     <a href="{% url 'home' %}#menu" class="btn-menu">Our Menu</a>
-                    <a href="" class="btn-book">Book a Table</a>
+                    <a href="{% url 'booking' %}" class="btn-book">Book a Table</a>
                 </div>
             </div>
         </div>
@@ -85,29 +85,29 @@
 
 
                     <div class="col-6 text-start">
-                        <img src="{% static 'images/about/about-img1.jfif'%}" alt="" data-wow-delay="0.1s"
-                            class="img-fluid rounded w-100 wow zoomIn">
+                        <img src="{% static 'images/about/about-img1.jfif'%}" alt=""
+                            class="img-fluid rounded w-100 animate__zoomIn  animate__animated">
                     </div>
 
                     <div class="col-6 text-start">
-                        <img src="{% static 'images/about/about-img2.jfif'%}" alt="" data-wow-delay="0.3s"
-                            class="img-fluid rounded w-75 wow zoomIn" style="margin-top:25%">
+                        <img src="{% static 'images/about/about-img2.jfif'%}" alt=""
+                            class="img-fluid rounded w-75 animate__zoomIn animate__animated" style="margin-top:25%">
                     </div>
 
                     <div class="col-6 text-end">
-                        <img src="{% static 'images/about/about-img3.jfif'%}" alt="" data-wow-delay="0.5s"
-                            class="img-fluid rounded w-75 wow zoomIn">
+                        <img src="{% static 'images/about/about-img3.jfif'%}" alt=""
+                            class="img-fluid rounded w-75 animate__zoomIn animate__animated">
                     </div>
 
                     <div class="col-6 text-end">
-                        <img src="{% static 'images/about/about-img4.jfif'%}" alt="" data-wow-delay="0.7s"
-                            class="img-fluid rounded w-100 wow zoomIn">
+                        <img src="{% static 'images/about/about-img4.jfif'%}" alt=""
+                            class="img-fluid rounded w-100 animate__zoomIn animate__animated">
                     </div>
 
                 </div>
             </div>
 
-            <div class="col-lg-6 text-light">
+            <div class="col-lg-6 text-light animate__animated animate__backInRight">
                 <div class=" section-title ">
                     <h2 class=" ff-secondary text-start fw-normal text-light text-center"> About Us</h2>
                     <p class="mb-4 text-light text-center ">Welcome to <i class="fa fa-utensils me-2"></i>Spice Villa
@@ -138,13 +138,13 @@
                     impeccable service,
                     and unforgettable moments. </p>
 
-                <div class="row g-4 mb-4">
+                <div class="row g-4 mb-4 ">
 
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 ">
                         <div class="d-flex align-items-center border-start border-5 border-light px-3">
                             <h1 class="flex-shrink-0 display-5 text-light mb-0"> <span class="counter">25</span>
                             </h1>
-                            <div class="ps-4">
+                            <div class="ps-4 ">
                                 <p class="mb-0 text-light">Yours of</p>
                                 <h6 class="text-uppercase mb-0 text-light"> Experiences</h6>
                             </div>
@@ -369,12 +369,13 @@
             <p>Our Proffesional Chefs</p>
         </div>
 
-        <div class="row">
+        <div class="row ">
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
                     <div class="member-img">
 
-                        <img src="{% static 'images/chefs/chef1.jpg' %}" class="img-fluid" alt="">
+                        <img src="{% static 'images/chefs/chef1.jpg' %}"
+                            class="img-fluid animate__pulse animate__animated" alt="">
 
                         <div class="social position-absolute text-center">
                             <a href="http://www.twitter.com" target="_blank" rel="noopener"
@@ -393,7 +394,7 @@
                         </div>
                     </div>
 
-                    <div class="member-info text-center my-2">
+                    <div class="member-info text-center my-3">
                         <h4>Joachim Wissler</h4>
                         <p>Master Chef</p>
                     </div>
@@ -403,7 +404,7 @@
                 <div class="member">
                     <div class="member-img ">
 
-                        <img src="{% static 'images/chefs/chef2.jpg' %}" class="img-fluid d-block" alt="">
+                        <img src="{% static 'images/chefs/chef2.jpg' %}" class="img-fluid" alt="">
                         <div class="social position-absolute text-center">
                             <a href="http://www.twitter.com" target="_blank" rel="noopener"
                                 aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i
@@ -423,7 +424,7 @@
                     </div>
 
 
-                    <div class="member-info text-center my-2">
+                    <div class="member-info text-center my-3">
                         <h4>stefanie martini</h4>
                         <p>Master Chef</p>
                     </div>
@@ -453,7 +454,7 @@
                         </div>
                     </div>
 
-                    <div class="member-info text-center my-2">
+                    <div class="member-info text-center my-3">
                         <h4>stefanie hering</h4>
                         <p>Patissier</p>
                     </div>
@@ -483,7 +484,7 @@
                         </div>
                     </div>
 
-                    <div class="member-info text-center my-2">
+                    <div class="member-info text-center my-3">
                         <h4>Michael Kempf</h4>
                         <p>Cook</p>
                     </div>

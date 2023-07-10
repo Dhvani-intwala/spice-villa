@@ -53,17 +53,15 @@ body {
     z-index: 1;
     color: black;
     width: 100%;
-    margin-top: 35px;
+    /* margin-top: 35px; */
 }
 
-.sticky {
+/* .sticky {
     position: fixed;
-    width: 100%;
-    left: 0;
     top: 0;
-    z-index: 100;
-    border-top: 0;
-}
+    left: 0;
+    width: 100%
+} */
 
 .btn {
     border-radius: 50px;
@@ -334,6 +332,11 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 50px;
+    height: 50vh;
+}
+
+.member-img:hover {
+    transform: scale(1.05);
 }
 
 .member:hover .social {
@@ -450,7 +453,7 @@ body {
 #logout {
     width: 40%;
     display: block;
-    margin: 10% auto;
+    margin: 5% auto;
     padding-top: 50px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
@@ -468,6 +471,24 @@ body {
     text-align: center;
     opacity: 0.9;
     z-index: 999;
+}
+
+/* -------------------- BOOKING PAGE  ------------------------ */
+
+.center-container {
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+.center-container h1 {
+    margin-top: 20vh;
+
+}
+
+.booking {
+    margin: auto;
+    display: block;
 }
 
 /* -------------------- ANIMATIONS------------------------ */

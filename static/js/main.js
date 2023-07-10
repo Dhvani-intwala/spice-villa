@@ -49,15 +49,11 @@ function showSlides() {
 
 // sticky  bar
 
-window.addEventListener('scroll',
-    function () {
-        let navbar = document.getElementById('navbar');
-
-        if (window.pageYOffset >= 530) {
-            navbar.classList.add('sticky');
-        } else {
-            navbar.classList.remove('sticky');
-        }
-
-    });
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+        $('.nav').addClass('sticky');
+    } else {
+        $('.nav').removeClass('sticky');
+    }
+});
 

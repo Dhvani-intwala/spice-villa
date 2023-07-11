@@ -101,6 +101,8 @@ For creating a clone of the repository on your local machine, use<b>Clone</b>:
 
 ### Media
 
+- Most of the pictures for the project was taken from [Google](https://www.google.de)
+
 ### Acknowledgements
 
 - The tutor support team at Code Institute for their support.

@@ -52,7 +52,6 @@ body {
         rgb(0 0 0 / 9%) 0px 32px 16px;
     z-index: 1;
     color: black;
-    width: 100%;
     /* margin-top: 35px; */
 }
 
@@ -99,7 +98,7 @@ body {
 
 /* ----------------------HOME SECTION----------------------------- */
 #hero {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: url("https://res.cloudinary.com/dj7pkwqu1/image/upload/v1686657154/cld-sample-4.jpg") top center;
     background-size: cover;

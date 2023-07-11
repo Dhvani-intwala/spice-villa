@@ -8,6 +8,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Menu
 from .models import Category
+from datetime import date
+import os
+import datetime
 
 
 def home(request):

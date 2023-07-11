@@ -6,6 +6,7 @@ You can view the live site here:-
 
 ## [Content](#content)
 
+- [Overview](#over-view)
 - [User Experience (UX)](#user-experience-ux)
   - [Project goals](#project-goals)
   - [User Stories](#user-stories)
@@ -30,6 +31,12 @@ You can view the live site here:-
   - [Code](#code)
   - [Media](#media)
   - [Acknowledgements](#acknowledgements)
+
+## Overview
+
+This is a project designed and developed to create a complete experience for the clients of Spice Villa Restaurant. The users are given the possibility to create a booking, see the restaurant menu. All these functionalities can be accessed by any user with an account, considering that the staff members have special permissions for controlling the data.
+The website was created for real-life situations, but the restaurant's name is fictive.
+Spice Villa - booking website was developed using Python (Django), HTML, CSS and JavaScript by storing the data in a PostgreSQL database.
 
 ## Deployment
 

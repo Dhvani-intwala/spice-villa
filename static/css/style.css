@@ -75,7 +75,7 @@ body {
 
 
 /* ----------------------FOOTER SECTION----------------------------- */
-.footer-link:hover {
+a i:hover {
     font-size: 1.2rem;
 }
 
@@ -493,6 +493,7 @@ body {
     margin: auto;
     display: block;
 }
+
 
 /* -------------------- ANIMATIONS------------------------ */
 

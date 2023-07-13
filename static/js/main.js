@@ -28,6 +28,8 @@ jQuery(document).ready(function ($) {
             time: 1000,
         });
     }
+
+
 });
 
 let slideIndex = 0;
@@ -57,3 +59,27 @@ $(window).scroll(function () {
     }
 });
 
+function setPerson() {
+    var tableCode = document.getElementById('tableCode').value;
+    console.log('here' + tableCode);
+    var temp = 0;
+    if (tableCode === 'A1') {
+        temp = '2';
+    }
+    else if (tableCode === 'A2') {
+        temp = '3';
+    }
+    else if (tableCode === 'A3') {
+        temp = '4';
+    }
+    else if (tableCode === 'B1') {
+        temp = '5';
+    }
+    else if (tableCode === 'B2') {
+        temp = '6';
+    }
+    else if (tableCode === 'B3') {
+        temp = '7';
+    }
+    document.getElementById('tablePersons').value = temp;
+}

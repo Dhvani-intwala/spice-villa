@@ -10,7 +10,7 @@
             {% csrf_token %}
             {{ form.non_field_errors }}
             <div class="row justify-content-center mt-3" id="bookingDetails">
-                <p class="h4">Choose the date and time for your booking and we will show you the available places</p>
+                <p class="h5">Choose the date and time for your booking and we will show you the available places</p>
                 <!-- Date input -->
                 <div class="col form-field col-12 col-md-4 col-lg-3 mt-2">
                     <label for="datePicker"><i class="far fa-calendar-alt"></i> Choose Date:</label><br>
@@ -36,9 +36,32 @@
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn btn-simple continue text-light mt-5 border border-light">Find a
-                table</button>
-    </div>
 
+            <button type="button" class="btn btn-simple continue text-light mt-5 border border-light"
+                data-toggle="collapse" data-target="#selectTable">Find a
+                table</button>
+            <div class="collapse p-center" id="selectTable">
+                <div class="row justify-content-center col-lg-6 booking d-flex mt-3">
+                    <div class="form-field col-12 col-md-5">
+                        <!-- Table select -->
+                        <label for="tableCode"><i class="fas fa-check"></i>Select a table</label><br>
+                        {{ form.table_code }}
+                        <br>
+                    </div>
+                    <div class="form-field col-12 col-md-5">
+                        <!-- Number of persons read-only input -->
+                        <label for="tablePersons"><i class="fas fa-users"></i>Number of persons</label>
+                        <input id="tablePersons" class="form-control" type="text" disabled>
+                    </div>
+                </div><br>
+                <div class="flex p-center" id="flexButtons">
+                    <button type="button"
+                        class="btn btn-simple continue text-light border border-light">Continue</button>
+                    <button type="button" class="btn btn-simple restart text-light border border-light">Restart</button>
+                </div><br>
+            </div>
+        </form>
+
+    </div>
 </div>
 {%endblock%}

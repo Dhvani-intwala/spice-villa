@@ -52,23 +52,27 @@ body {
         rgb(0 0 0 / 9%) 0px 32px 16px;
     z-index: 1;
     color: black;
-    /* margin-top: 35px; */
+    margin-top: 35px;
+    width: 100vw;
 }
 
-/* .sticky {
+.sticky {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%
-} */
+}
 
 .btn {
     border-radius: 50px;
 }
 
-#header {
+/* #header {
     z-index: 997;
-}
+} */
+
+
+
 
 /* ----------------------FOOTER SECTION----------------------------- */
 .footer-link:hover {
@@ -100,7 +104,7 @@ body {
 #hero {
     width: 100vw;
     height: 100vh;
-    background: url("https://res.cloudinary.com/dj7pkwqu1/image/upload/v1686657154/cld-sample-4.jpg") top center;
+    background: url("https://res.cloudinary.com/dj7pkwqu1/image/upload/v1686657154/cld-sample-4.jpg");
     background-size: cover;
     position: relative;
     padding: 0;

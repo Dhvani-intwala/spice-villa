@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'bootstrap_datepicker_plus',
     'django.contrib.messages',
     'django.contrib.sites',
     'allauth',

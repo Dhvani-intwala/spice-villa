@@ -9,6 +9,7 @@ from django.http import HttpResponse
 from .models import Menu
 from .models import Category
 from datetime import date
+from .forms import BookingForm
 import os
 import datetime
 
@@ -26,5 +27,10 @@ def booking(request):
     """
     A view that provides a form to the user that creates a Booking entry
     """
+    form = BookingForm()
+    return render(request, 'mybookings.html', {'form': form})
 
-    return render(request, 'mybookings.html')
+
+def date_picker_view(request):
+    form = BookingForm()
+    return render(request, 'mybookings.html', {'form': form})

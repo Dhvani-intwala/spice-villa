@@ -9,28 +9,28 @@
         <form id="bookingForm" method="post">
             {% csrf_token %}
             {{ form.non_field_errors }}
-            <div class="row justify-content-center" id="bookingDetails">
+            <div class="row justify-content-center mt-3" id="bookingDetails">
                 <p class="h4">Choose the date and time for your booking and we will show you the available places</p>
                 <!-- Date input -->
-                <div class="col form-field col-12 col-md-4 col-lg-3">
+                <div class="col form-field col-12 col-md-4 col-lg-3 mt-2">
                     <label for="datePicker"><i class="far fa-calendar-alt"></i> Choose Date:</label><br>
-
+                    {{form.date}}
                     <div class="error-container">
                         <small class="errorlist booking-error"></small>
                     </div>
                 </div>
                 <!-- Start time input -->
-                <div class="col form-field col-lg-3">
+                <div class="col form-field col-lg-3 mt-2">
                     <label for="startTime"><i class="fas fa-clock"></i> Starting At:</label><br>
-
+                    {{form.start_time}}
                     <div class="error-container">
                         <small class="errorlist booking-error"></small>
                     </div>
                 </div>
                 <!-- End time input -->
-                <div class="col form-field col-lg-3">
+                <div class="col form-field col-lg-3 mt-2">
                     <label for="endTime"><i class="fas fa-clock"></i> Until:</label><br>
-
+                    {{form.end_time}}
                     <div class="error-container">
                         <small class="errorlist booking-error"></small>
                     </div>

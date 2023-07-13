@@ -60,6 +60,25 @@
                     <button type="button" class="btn btn-simple restart text-light border border-light">Restart</button>
                 </div><br>
             </div>
+            <div class="flex f-column a-center p-center col-12 col-md-6 col-lg-3 booking" id="bookingContactCollapse">
+                <h5>CONTACT DETAILS</h5>
+                <div class="form-field">
+                    <!-- Name input -->
+                    <label for="fullName"><i class="fas fa-user"></i> Customer Full Name:</label>
+                    {{ form.customer_full_name }}
+
+                </div>
+                <div class="form-field">
+                    <!-- Email input -->
+                    <label for="email"><i class="fas fa-envelope"></i> Customer Email:</label>
+                    {{form.customer_email }}
+
+                    <!-- <p><b><strong>OR</strong></b></p> -->
+                </div>
+
+            </div>
+
+
         </form>
 
     </div>

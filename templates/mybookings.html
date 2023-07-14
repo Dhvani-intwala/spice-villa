@@ -37,8 +37,8 @@
                 </div>
             </div>
 
-            <button type="button" class="btn btn-simple continue text-light mt-5 border border-light"
-                data-toggle="collapse" data-target="#selectTable">Find a
+            <button type="button" class="btn btn-simple text-light mt-5 border border-light" data-toggle="collapse"
+                data-target="#selectTable">Find a
                 table</button>
             <div class="collapse p-center" id="selectTable">
                 <div class="row justify-content-center col-lg-6 booking d-flex mt-3">
@@ -51,12 +51,12 @@
                     <div class="form-field col-12 col-md-5">
                         <!-- Number of persons read-only input -->
                         <label for="tablePersons"><i class="fas fa-users"></i>Number of persons</label>
-                        <input id="tablePersons" class="form-control" type="text" disabled>
+                        <input id="tablePersons" class="form-control" type="text" disabled value="2">
                     </div>
                 </div><br>
                 <div class="flex p-center" id="flexButtons">
-                    <button type="button"
-                        class="btn btn-simple continue text-light border border-light">Continue</button>
+                    <button type="button" class="btn btn-simple  text-light border border-light" data-toggle="collapse"
+                        data-target="#bookingContactCollapse">Continue</button>
                     <button type="button" class="btn btn-simple restart text-light border border-light">Restart</button>
                 </div><br>
             </div>
@@ -72,9 +72,14 @@
                     <!-- Email input -->
                     <label for="email"><i class="fas fa-envelope"></i> Customer Email:</label>
                     {{form.customer_email }}
-
                     <!-- <p><b><strong>OR</strong></b></p> -->
                 </div>
+                <!-- Date inputCheckbox -->
+                {{ form.book_on_user }}
+                <label for="bookAuthenticate">Book It On My Name</label><br>
+
+                <button type="button" class="btn btn-simple text-light border border-light" data-toggle="collapse"
+                    data-target="#finishContactCollapse">Finish</button><br>
 
             </div>
 

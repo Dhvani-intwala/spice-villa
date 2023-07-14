@@ -56,23 +56,19 @@ body {
     width: 100vw;
 }
 
-.sticky {
-    position: fixed;
+.sticky-nav {
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%
+    z-index: 100;
+}
+
+.sticky-nav.hidden {
+    transform: translateY(-100%);
 }
 
 .btn {
     border-radius: 50px;
 }
-
-/* #header {
-    z-index: 997;
-} */
-
-
-
 
 /* ----------------------FOOTER SECTION----------------------------- */
 a i:hover {
@@ -492,6 +488,13 @@ a i:hover {
 .booking {
     margin: auto;
     display: block;
+}
+
+/* ---------------------- MANAGEBOOKING PAGE ----------------------------- */
+
+.content {
+    display: block;
+    margin: 10% auto;
 }
 
 

@@ -6,7 +6,7 @@
     <div class="center-container">
         <h1>Book your table now <i class="fas fa-pencil-alt"></i></h1>
         <!-- Booking form -->
-        <form id="bookingForm" method="post">
+        <form id="bookingForm" method="post" action="{% url 'submit_booking' %}">
             {% csrf_token %}
             {{ form.non_field_errors }}
             <div class="row justify-content-center mt-3" id="bookingDetails">
@@ -78,7 +78,7 @@
                 {{ form.book_on_user }}
                 <label for="bookAuthenticate">Book It On My Name</label><br>
 
-                <button type="button" class="btn btn-simple text-light border border-light" data-toggle="collapse"
+                <button type="submit" class="btn btn-simple text-light border border-light" data-toggle="collapse"
                     data-target="#finishContactCollapse">Finish</button><br>
 
             </div>

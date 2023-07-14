@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from booking import views
 from django.views.generic.base import TemplateView
+from booking.views import booking
 
 
 urlpatterns = [
@@ -24,5 +25,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('accounts/', include('allauth.urls')),
     path('mybooking/', views.booking, name='booking'),
+    path('submit/', booking, name='submit_booking'),
+    path('managebooking/', views.booking_list_admin, name='booking_list_admin')
 
 ]

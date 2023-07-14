@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="row content text-light col-10 col-lg-9">
+    <div class="center-container">
+        <h2>Welcome back , {{ user.username }}</h2>
+        <small>{{ user.email }}</small><br><br>
+    </div>
+
+    <div>
+        <ul>
+            {% for data in data %}
+            <li>{{data.table}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

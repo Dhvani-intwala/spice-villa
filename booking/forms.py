@@ -45,4 +45,4 @@ class BookingForm(forms.Form):
         attrs={'id': 'email', 'class': 'form-control',
                'type': 'email'}))
     book_on_user = forms.BooleanField(widget=forms.CheckboxInput(
-        attrs={'id': 'bookAuthenticate', 'type': 'checkbox'}))
+        attrs={'id': 'bookAuthenticate', 'type': 'checkbox'}), required=False)

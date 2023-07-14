@@ -51,13 +51,17 @@ function showSlides() {
 
 // sticky  bar
 
-$(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-        $('.nav').addClass('sticky');
+window.addEventListener('scroll', function () {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var stickyNav = document.querySelector('.sticky-nav');
+
+    if (scrollTop > 100) {
+        stickyNav.classList.add('hidden');
     } else {
-        $('.nav').removeClass('sticky');
+        stickyNav.classList.remove('hidden');
     }
 });
+
 
 function setPerson() {
     var tableCode = document.getElementById('tableCode').value;

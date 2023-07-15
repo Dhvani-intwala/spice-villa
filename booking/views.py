@@ -59,9 +59,9 @@ def booking(request):
     else:
         form = BookingForm()
 
-    return render(request, 'mybookings.html', {'form': form})
+    return render(request, 'booking.html', {'form': form})
 
 
 def booking_list_admin(request):
     data = Booking.objects.filter(created_by=request.user)
-    return render(request, 'managebookings.html', {'data': data})
+    return render(request, 'mybookings.html', {'data': data})

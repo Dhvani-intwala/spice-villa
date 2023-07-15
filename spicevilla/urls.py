@@ -24,8 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('accounts/', include('allauth.urls')),
-    path('mybooking/', views.booking, name='booking'),
+    path('booking/', views.booking, name='booking'),
     path('submit/', booking, name='submit_booking'),
-    path('managebooking/', views.booking_list_admin, name='booking_list_admin')
+    path('mybooking/', views.booking_list_admin, name='booking_list_admin')
 
 ]

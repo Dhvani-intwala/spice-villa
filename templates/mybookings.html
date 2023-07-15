@@ -2,90 +2,25 @@
 {% load static %}
 {% block content %}
 
-<div class="row col-10 col-lg-9 text-light booking">
+<div class="row content text-light col-10 col-lg-9">
     <div class="center-container">
-        <h1>Book your table now <i class="fas fa-pencil-alt"></i></h1>
-        <!-- Booking form -->
-        <form id="bookingForm" method="post" action="{% url 'submit_booking' %}">
-            {% csrf_token %}
-            {{ form.non_field_errors }}
-            <div class="row justify-content-center mt-3" id="bookingDetails">
-                <p class="h5">Choose the date and time for your booking and we will show you the available places</p>
-                <!-- Date input -->
-                <div class="col form-field col-12 col-md-4 col-lg-3 mt-2">
-                    <label for="datePicker"><i class="far fa-calendar-alt"></i> Choose Date:</label><br>
-                    {{form.date}}
-                    <div class="error-container">
-                        <small class="errorlist booking-error"></small>
-                    </div>
-                </div>
-                <!-- Start time input -->
-                <div class="col form-field col-lg-3 mt-2">
-                    <label for="startTime"><i class="fas fa-clock"></i> Starting At:</label><br>
-                    {{form.start_time}}
-                    <div class="error-container">
-                        <small class="errorlist booking-error"></small>
-                    </div>
-                </div>
-                <!-- End time input -->
-                <div class="col form-field col-lg-3 mt-2">
-                    <label for="endTime"><i class="fas fa-clock"></i> Until:</label><br>
-                    {{form.end_time}}
-                    <div class="error-container">
-                        <small class="errorlist booking-error"></small>
-                    </div>
-                </div>
-            </div>
+        <h2>Welcome back , {{ user.username }}</h2>
+        <small>{{ user.email }}</small><br><br>
+    </div>
+    <div class="flex sp-between">
+        <!-- Bookings Container -->
+        <div class="col-12 col-lg-6 booking-table">
+            <h4 class="decorated"><span>Your upcoming bookings <i class="far fa-calendar-alt"></i></span></h4>
+        </div>
+    </div>
 
-            <button type="button" class="btn btn-simple text-light mt-5 border border-light" data-toggle="collapse"
-                data-target="#selectTable">Find a
-                table</button>
-            <div class="collapse p-center" id="selectTable">
-                <div class="row justify-content-center col-lg-6 booking d-flex mt-3">
-                    <div class="form-field col-12 col-md-5">
-                        <!-- Table select -->
-                        <label for="tableCode"><i class="fas fa-check"></i>Select a table</label><br>
-                        {{ form.table_code }}
-                        <br>
-                    </div>
-                    <div class="form-field col-12 col-md-5">
-                        <!-- Number of persons read-only input -->
-                        <label for="tablePersons"><i class="fas fa-users"></i>Number of persons</label>
-                        <input id="tablePersons" class="form-control" type="text" disabled value="2">
-                    </div>
-                </div><br>
-                <div class="flex p-center" id="flexButtons">
-                    <button type="button" class="btn btn-simple  text-light border border-light" data-toggle="collapse"
-                        data-target="#bookingContactCollapse">Continue</button>
-                    <button type="button" class="btn btn-simple restart text-light border border-light">Restart</button>
-                </div><br>
-            </div>
-            <div class="flex f-column a-center p-center col-12 col-md-6 col-lg-3 booking" id="bookingContactCollapse">
-                <h5>CONTACT DETAILS</h5>
-                <div class="form-field">
-                    <!-- Name input -->
-                    <label for="fullName"><i class="fas fa-user"></i> Customer Full Name:</label>
-                    {{ form.customer_full_name }}
-
-                </div>
-                <div class="form-field">
-                    <!-- Email input -->
-                    <label for="email"><i class="fas fa-envelope"></i> Customer Email:</label>
-                    {{form.customer_email }}
-                    <!-- <p><b><strong>OR</strong></b></p> -->
-                </div>
-                <!-- Date inputCheckbox -->
-                {{ form.book_on_user }}
-                <label for="bookAuthenticate">Book It On My Name</label><br>
-
-                <button type="submit" class="btn btn-simple text-light border border-light" data-toggle="collapse"
-                    data-target="#finishContactCollapse">Finish</button><br>
-
-            </div>
-
-
-        </form>
-
+    <div>
+        <ul>
+            {% for data in data %}
+            <li>{{data.table}}</li>
+            {% endfor %}
+        </ul>
     </div>
 </div>
-{%endblock%}
+
+{% endblock %}

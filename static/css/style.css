@@ -16,6 +16,7 @@ body {
     scroll-behavior: smooth;
     background-color: black;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* ----------------------TOP BAR ----------------------------- */
@@ -449,9 +450,7 @@ a i:hover {
 #login {
     width: 40%;
     display: block;
-    margin: 15% auto;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
+    margin: 10% auto;
 }
 
 .pluse-effect {
@@ -509,7 +508,10 @@ a i:hover {
 }
 
 .logout-bg {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(167, 165, 165, 0.267);
+    border: #fff solid 2px;
+    outline: 2px solid #fff;
+    outline-offset: 5px;
     padding: 15px;
 }
 

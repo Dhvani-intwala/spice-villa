@@ -6,15 +6,15 @@
 {% block content %}
 
 <section class="text-light bg " id="login">
-    <div class="container height mt-5 p-3">
+    <div class="container height mt-5 p-5">
         <div class="row login-bg">
-            <h3 class="text-center">{% trans " Welcome to Login !!" %}</h3>
+            <h1 class="text-center">{% trans " Sign In" %}</h1>
             <div class="col-md-8 mt-3 offset-md-2 text-center ">
 
-                <p>{% blocktrans %}Welcome back! Login to make your reservation and manage your bookings. If you
+                <p>{% blocktrans %}Please login to make your reservation and manage your bookings. If you
                     have
                     not created an account yet, then please
-                    <a href="{{ signup_url }} " class="pluse-effect">sign up</a> first.{% endblocktrans %}
+                    <a href="{{ signup_url }} " class="pluse-effect">Sign Up</a> first.{% endblocktrans %}
                 </p>
 
                 <form class="login" method="POST" action="{% url 'account_login' %}">

@@ -460,26 +460,73 @@ a i:hover {
     transition: all 0.3s ease 0s;
 }
 
-.login-effect {
+.pluse-effect {
     color: #fff;
+    text-decoration: none;
+    background: #c3ad60;
+    width: 40px;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+    animation: pluse-effect 2s infinite;
 }
 
-.login-effect:hover {
-    color: black;
+.pluse-effect:hover {
+    animation: none;
+    color: #141311;
+}
+
+@-webkit-keyframes pluse-effect {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    }
+
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
+}
+
+@keyframes pluse-effect {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    }
+
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    }
+
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
 }
 
 .login-bg {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(167, 165, 165, 0.267);
+    border: #fff solid 2px;
+    outline: 2px solid #fff;
+    outline-offset: 5px;
     padding: 15px;
 }
 
 .logout-bg {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(167, 165, 165, 0.267);
+    border: #fff solid 2px;
+    outline: 2px solid #fff;
+    outline-offset: 5px;
     padding: 15px;
 }
 
 .signup-bg {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(167, 165, 165, 0.267);
+    border: #fff solid 2px;
+    outline: 2px solid #fff;
+    outline-offset: 5px;
     padding: 15px;
 }
 

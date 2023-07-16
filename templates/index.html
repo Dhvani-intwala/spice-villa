@@ -79,10 +79,14 @@
 
 <div class="container-xxl py-5" id="about">
     <div class="container">
+        <div class=" section-title">
+            <h2 class=" ff-secondary text-start fw-normal text-light text-center"> About Us</h2>
+            <p class="mb-4 text-light text-center ">Welcome to <i class="fa fa-utensils me-2"></i>Spice Villa
+            </p>
+        </div>
         <div class="row g-5 align-items-center">
             <div class="col-lg-6">
                 <div class="row g-3">
-
 
                     <div class="col-6 text-start">
                         <img src="{% static 'images/about/about-img1.jfif'%}" alt=""
@@ -108,11 +112,7 @@
             </div>
 
             <div class="col-lg-6 text-light animate__animated animate__backInRight">
-                <div class=" section-title ">
-                    <h2 class=" ff-secondary text-start fw-normal text-light text-center"> About Us</h2>
-                    <p class="mb-4 text-light text-center ">Welcome to <i class="fa fa-utensils me-2"></i>Spice Villa
-                    </p>
-                </div>
+
 
                 <p> Welcome to SPICE VILLA, where culinary excellence meets warm hospitality. our
                     restaurant is a haven for food lovers seeking unforgettable dining experiences.
@@ -183,6 +183,7 @@
         <div class="row">
 
             <div id="customers-testimonials" class="owl-carousel testimonial-slider mt-5">
+
                 <!--TESTIMONIAL 1 -->
                 <div class="item animate__animated animate__slideOutLeft">
                     <div class="shadow-effect position-relative">
@@ -268,15 +269,22 @@
                 </div>
                 <!-- END TESTIMONIAL -->
             </div>
+            <div style="text-align:center">
+
+                <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
+                <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
+                <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
+                <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
+                <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
+                <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
+
+            </div>
 
         </div>
-
     </div>
 </section>
 
 <!-- End Testimonial section -->
-
-
 <!-- gallery section -->
 
 <section id="gallery" class="gallery py-5">

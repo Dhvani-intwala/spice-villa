@@ -3,6 +3,7 @@
 {% block content %}
 
 <div class="row col-10 col-lg-9 text-light booking">
+    {% if user.is_authenticated %}
     <div class="center-container">
         <h1>Book your table now <i class="fas fa-pencil-alt"></i></h1>
         <!-- Booking form -->
@@ -84,6 +85,13 @@
 
 
         </form>
+        {% else %}
+        <p class="booking-text">To make a reservation, please <a href="{% url 'account_login' %}"
+                class="booking-signin-up">login</a>. If you have
+            not
+            created an account yet, then please <a href="{% url 'account_signup' %}" class="booking-signin-up">sign
+                up.</a></p>
+        {% endif %}
 
     </div>
 </div>

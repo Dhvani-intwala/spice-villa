@@ -571,6 +571,21 @@ a i:hover {
     display: block;
 }
 
+.booking-text {
+    margin: 20% auto;
+    display: block;
+    text-align: center;
+}
+
+.booking-signin-up {
+    color: #67675b;
+    text-decoration: none;
+}
+
+.booking-signin-up:hover {
+    color: #81807e;
+}
+
 /* ---------------------- MANAGEBOOKING PAGE ----------------------------- */
 
 .content {

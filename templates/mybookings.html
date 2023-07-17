@@ -11,15 +11,20 @@
         <!-- Bookings Container -->
         <div class="col-12 col-lg-6 booking-table">
             <h4 class="decorated"><span>Your upcoming bookings <i class="far fa-calendar-alt"></i></span></h4>
-        </div>
-    </div>
+            <div class="flex j-center f-wrap">
+                <!-- Booking container -->
+                <div class="col-12 col-md-5 booking-container">
+                    <!-- Default note image -->
+                    <img src="{% static 'images/sticky-img.png' %}" alt="note image">
+                </div>
+            </div>
 
-    <div>
-        <ul>
-            {% for data in data %}
-            <li>{{data.table}}</li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
-{%endblock%}
+            <div>
+                <ul>
+                    {% for data in data %}
+                    <li>{{data.table}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {%endblock%}

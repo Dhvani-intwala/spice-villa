@@ -57,10 +57,6 @@ class Booking(models.Model):
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
     class Meta:
-        constraints = [
-            models.UniqueConstraint(
-                fields=['created_by'], name='unique_booking_created_by')
-        ]
         ordering = ['date', 'start_time']
 
 

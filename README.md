@@ -44,6 +44,29 @@ Spice Villa - booking website was developed using Python (Django), HTML, CSS and
 
 The overall goal of the website is to create a restaurant webpage that is enticing for the visitors that generates an interest and curiosity to visit the restaurant. Visitors should be able to find general information about the restaurant as well as finding the menu offerings. In addition, visitors should be able to make a reservation for a table directly on the webpage. It will also provide a booking management admin panel for the staff members.
 
+## Features
+
+### Navbar
+
+- The navbar shows all the sections that the user can enter and provides a quick and easy means of
+  navigating the site. The link to make a booking is enlarged to make it extra easy to find and use.
+
+  ![Navbar]()
+
+### Hero
+
+The hero section makes for a great first impression of the site and thus the restaurant for the visitor.
+It also encompasses the links that the user most likely needs the most often which is the menu link
+and a link to Book a Table.
+![Hero]()
+
+### Menu
+
+On the Menu page there is a list with all the menu elements. Every item represents a meal with
+details such as Name, Image, Price, and Ingredients. The list design is simple and attractive.
+
+![Menu]()
+
 ## Deployment
 
 ### Deploy on Heroku

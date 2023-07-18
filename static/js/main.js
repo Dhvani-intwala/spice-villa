@@ -71,19 +71,19 @@ function setPerson() {
         temp = '2';
     }
     else if (tableCode === 'A2') {
-        temp = '3';
-    }
-    else if (tableCode === 'A3') {
-        temp = '4';
+        temp = '2';
     }
     else if (tableCode === 'B1') {
-        temp = '5';
+        temp = '4';
     }
     else if (tableCode === 'B2') {
+        temp = '4';
+    }
+    else if (tableCode === 'C1') {
         temp = '6';
     }
-    else if (tableCode === 'B3') {
-        temp = '7';
+    else if (tableCode === 'C2') {
+        temp = '6';
     }
     document.getElementById('tablePersons').value = temp;
 }
@@ -99,3 +99,12 @@ for (var i = 0; i < btns.length; i++) {
         this.className += " active";
     });
 }
+
+//preloader
+
+// let preloader = select('#preloader');
+// if (preloader) {
+//     window.addEventListener('load', () => {
+//         preloader.remove();
+//     });
+// }

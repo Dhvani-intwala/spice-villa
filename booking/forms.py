@@ -7,7 +7,7 @@ Forms for Booking App
 
 from django import forms
 from datetime import date
-from .models import Booking
+from .models import Booking, Table
 
 
 class BookingForm(forms.Form):
@@ -40,9 +40,27 @@ class BookingForm(forms.Form):
         ("C3", "C3")))
     customer_full_name = forms.CharField(widget=forms.TextInput(
         attrs={'id': 'fullName', 'class': 'form-control',
-               'type': 'text', }))
+               'type': 'text', }), required=False)
     customer_email = forms.EmailField(widget=forms.EmailInput(
         attrs={'id': 'email', 'class': 'form-control',
-               'type': 'email'}))
+               'type': 'email'}), required=False)
     book_on_user = forms.BooleanField(widget=forms.CheckboxInput(
         attrs={'id': 'bookAuthenticate', 'type': 'checkbox'}), required=False)
+
+    def clean(self):
+        cleaned_data = super().clean()
+        customer_full_name = cleaned_data['customer_full_name']
+        customer_email = cleaned_data['customer_email']
+        book_on_user = cleaned_data['book_on_user']
+        table_obj = Table.objects.get(code=cleaned_data['table_code'])
+
+        if (not (customer_email and customer_full_name) and not book_on_user):
+            raise forms.ValidationError("Either write name and email or book on"
+                                         +"your name by selecting checkbox")
+
+        if Booking.objects.filter(table=table_obj).exists():
+            raise form.ValidationError(
+                "Table is occupied try selecting different table"
+            )
+
+        return cleaned_data

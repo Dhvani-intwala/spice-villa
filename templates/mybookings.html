@@ -15,16 +15,22 @@
                 <!-- Booking container -->
                 <div class="col-12 col-md-5 booking-container">
                     <!-- Default note image -->
-                    <img src="{% static 'images/sticky-img.png' %}" alt="note image">
+                    <img src="{% static 'images/sticky-img.png' %}" class="sticky-img" alt="note image">
                 </div>
             </div>
-
             <div>
-                <ul>
-                    {% for data in data %}
-                    <li>{{data.table}}</li>
-                    {% endfor %}
-                </ul>
+                {% for data in data %}
+                <div class="booking-details">
+                    <p><b>Date: </b>{{ data.date }}</p>
+                    <p><b>From: </b>{{ data.start_time }} <b>To: </b>{{ data.end_time }}</p>
+                    <p><b>Table: </b>{{ data.table }}</p>
+                    <p><small><b>Customer: </b>{{ data.customer_full_name }}</small></p>
+                </div>
+                <a class="btn btn-primary" href="{% url 'delete_booking' pk=data.pk %}">Delete</a>
+                {% endfor %}
             </div>
         </div>
-        {%endblock%}
+    </div>
+</div>
+<script src="{% static 'js/main.js' %}"></script>
+{%endblock%}

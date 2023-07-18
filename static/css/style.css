@@ -28,6 +28,7 @@ body {
     transition: all 0.5s;
     z-index: 996;
     margin-bottom: 5px;
+    margin-top: 2px;
 }
 
 .contact-info i span {
@@ -43,6 +44,53 @@ body {
     transform: translateY(-100%);
 }
 
+/* ----------------------PRELOADER----------------------------- */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #030303;
+}
+
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #1a1814;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 /* ----------------------NAVBAR----------------------------- */
 
@@ -62,7 +110,7 @@ body {
         rgb(0 0 0 / 9%) 0px 32px 16px;
     z-index: 1;
     color: black;
-    margin-top: 35px;
+    margin-top: 52px;
     width: 100vw;
 }
 
@@ -456,10 +504,10 @@ a i:hover {
 .pluse-effect {
     color: #fff;
     text-decoration: none;
-    background: #c3ad60;
+    background: #616160;
     width: 40px;
     cursor: pointer;
-    box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+    box-shadow: 0 0 0 rgba(132, 131, 128, 0.4);
     animation: pluse-effect 2s infinite;
 }
 
@@ -470,7 +518,7 @@ a i:hover {
 
 @-webkit-keyframes pluse-effect {
     0% {
-        -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+        -webkit-box-shadow: 0 0 0 0 rgba(127, 126, 122, 0.4);
     }
 
     70% {
@@ -484,8 +532,8 @@ a i:hover {
 
 @keyframes pluse-effect {
     0% {
-        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
-        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+        -moz-box-shadow: 0 0 0 0 rgba(127, 126, 122, 0.4);
+        box-shadow: 0 0 0 0 rgba(127, 126, 122, 0.4);
     }
 
     70% {
@@ -578,15 +626,15 @@ a i:hover {
 }
 
 .booking-signin-up {
-    color: #67675b;
+    color: #696966;
     text-decoration: none;
 }
 
 .booking-signin-up:hover {
-    color: #81807e;
+    color: #a2a09e;
 }
 
-/* ---------------------- MANAGEBOOKING PAGE ----------------------------- */
+/* ---------------------- MyBOOKING PAGE ----------------------------- */
 
 .content {
     display: block;
@@ -624,6 +672,35 @@ a i:hover {
 
 .decorated>span:after {
     left: 100%;
+}
+
+.sticky-img {
+    width: 20vw;
+    height: 30vh;
+}
+
+.booking-container {
+    position: relative;
+}
+
+.booking-details {
+    position: absolute;
+    top: 45%;
+    left: 42%;
+    transform: translateX(-50%);
+    color: #3a3a3a;
+    font-weight: bold;
+    font-size: 15px;
+    width: fit-content;
+}
+
+.booking-details p {
+    margin-bottom: 10px;
+}
+
+.booking-details p small {
+    display: flex;
+    flex-direction: column;
 }
 
 

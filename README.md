@@ -44,6 +44,14 @@ Spice Villa - booking website was developed using Python (Django), HTML, CSS and
 
 The overall goal of the website is to create a restaurant webpage that is enticing for the visitors that generates an interest and curiosity to visit the restaurant. Visitors should be able to find general information about the restaurant as well as finding the menu offerings. In addition, visitors should be able to make a reservation for a table directly on the webpage. It will also provide a booking management admin panel for the staff members.
 
+### Agile Methodology
+
+This project was developed using the Agile methodology.
+All epics and user stories implementation progress were registered using Trello. Necessary goals and
+priorities throughout the project were well defined. In addition, labels were used to further define
+the priority of each user story in the Kanban board. As the user stories were accomplished, they
+were moved in the Trello board from To Do, Progress and Done lists.
+
 ## Features
 
 ### Navbar

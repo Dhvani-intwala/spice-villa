@@ -687,7 +687,7 @@ a i:hover {
     text-decoration: none;
     border: 1px solid #0c0c0c;
     padding: 2px;
-    margin: 5px auto;
+    margin: auto;
     display: block;
     text-align: center
 }
@@ -699,6 +699,22 @@ a i:hover {
 
 .btn-light:hover {
     background-color: #bab3a6;
+}
+
+.No-booking {
+    display: block;
+    margin: 100px auto;
+    font-size: large;
+    width: 50vw;
+}
+
+.No-booking a {
+    color: #696966;
+    text-decoration: none;
+}
+
+.No-booking a:hover {
+    color: #a2a09e;
 }
 
 

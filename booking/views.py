@@ -33,18 +33,12 @@ def booking(request):
     tables = Table.objects.all()
     bookings = Booking.objects.all()
     occupied_table = [booking.table.code for booking in bookings]
-    # for table in tables:
-    #     print(table.code in occupied_table, table.code)
-    # print("here", occupied_table)
-    # print("table", tables)
+
     if (request.method == 'POST'):
-        print('here')
         form = BookingForm(request.POST)
         if (form.is_valid()):
             print(request.POST)
             print(form.cleaned_data['date'])
-            # table_obj = Table(code=form.cleaned_data['table_code'])
-            # table_obj.save()
             table_obj = Table.objects.get(code=form.cleaned_data['table_code'])
             name = form.cleaned_data['customer_full_name']
             email = form.cleaned_data['customer_email']

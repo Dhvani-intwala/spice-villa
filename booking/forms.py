@@ -14,11 +14,6 @@ class BookingForm(forms.Form):
     """
     Form for the Booking Model
     """
-    # class Meta:
-    #     model = Booking()
-    #     fields = ['date', 'start_time', 'end_time', 'table',
-    #               'customer_full_name', 'customer_email',
-    #               'created_on', 'created_by']
 
     date = forms.DateField(widget=forms.DateInput(attrs={
         'id': 'datePicker', 'class': 'form-control', 'type': 'date'}),

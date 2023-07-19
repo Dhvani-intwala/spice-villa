@@ -203,8 +203,15 @@ relevant contact information and social media links on all pages throughout the 
 
 ![Footer]()
 
+## Technologies Used
+Languages
+- Python
+- JavaScript
+- HTML5
+- CSS3
 
 ## Deployment
+
 
 ### Deploy on Heroku
 

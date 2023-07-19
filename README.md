@@ -71,6 +71,13 @@ priorities throughout the project were well defined. In addition, labels were us
 the priority of each user story in the Kanban board. As the user stories were accomplished, they
 were moved in the Trello board from To Do, Progress and Done lists.
 
+### Design
+
+The theme for the project were chosen in accordance with the intended target market in mind for
+the restaurant. With its fancy looks and feel, dark colours and luxurious details and effects, the
+theme fits perfect for the goal of giving the visitor the impression that this is a very high quality
+restaurant.
+
 ## Features
 
 ### Navbar

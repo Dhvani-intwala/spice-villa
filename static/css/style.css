@@ -675,39 +675,30 @@ a i:hover {
 }
 
 .bg-card {
-    background-image: url("/static/images/sticky-img.png");
+    background-image: url('/static/images/sticky-img.png');
     background-repeat: no-repeat;
-    background-size: contain;
-    padding: 20px;
-    color: #ffffff;
-    text-align: center;
-    width: 20vw;
-    height: 30vh;
-    margin: 10px;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    padding: 10px;
+    color: #0c0c0c;
 }
 
-.booking-container {
-    position: relative;
+.button-link {
+    text-decoration: none;
+    border: 1px solid #0c0c0c;
+    padding: 2px;
+    margin: 5px auto;
+    display: block;
+    text-align: center
 }
 
-.booking-details {
-    position: absolute;
-    top: 45%;
-    left: 42%;
-    transform: translateX(-50%);
-    color: #3a3a3a;
-    font-weight: bold;
-    font-size: 15px;
-    width: fit-content;
+.btn-light {
+    background-color: #bab3a6;
+
 }
 
-.booking-details p {
-    margin-bottom: 10px;
-}
-
-.booking-details p small {
-    display: flex;
-    flex-direction: column;
+.btn-light:hover {
+    background-color: #bab3a6;
 }
 
 

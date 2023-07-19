@@ -82,7 +82,7 @@ def booking(request):
 def deleteBooking(request, pk):
     booking = get_object_or_404(Booking, pk=pk)
     booking.delete()
-    redirect('mybooking/')
+    return redirect('/mybooking/')
 
 
 def booking_list_admin(request):

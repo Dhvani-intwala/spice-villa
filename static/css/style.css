@@ -674,9 +674,16 @@ a i:hover {
     left: 100%;
 }
 
-.sticky-img {
+.bg-card {
+    background-image: url("/static/images/sticky-img.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
     width: 20vw;
     height: 30vh;
+    margin: 10px;
 }
 
 .booking-container {

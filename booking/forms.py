@@ -56,10 +56,10 @@ class BookingForm(forms.Form):
 
         if (not (customer_email and customer_full_name) and not book_on_user):
             raise forms.ValidationError("Either write name and email or book on"
-                                         +"your name by selecting checkbox")
+                                        + "your name by selecting checkbox")
 
         if Booking.objects.filter(table=table_obj).exists():
-            raise form.ValidationError(
+            raise forms.ValidationError(
                 "Table is occupied try selecting different table"
             )
 

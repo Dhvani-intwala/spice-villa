@@ -67,6 +67,107 @@ details such as Name, Image, Price, and Ingredients. The list design is simple a
 
 ![Menu]()
 
+### About
+
+The about section tells more about the restaurant and incorporates some of the design to further
+enhance its unique selling points.
+
+![About]()
+
+### Testimonials
+
+The testimonials show what some of the previous customers says of the restaurant and is a method
+of providing social proof to increase customer conversion of the webpage.
+
+![Testimonials]()
+
+### Gallery
+
+In the gallery visitors can see examples of its interior and what the restaurant looks like.
+
+![Gallery]()
+
+### Contact
+
+The contact section includes all the necessary information about the restaurant that the visitor may
+need to know about.
+
+![Contact]()
+
+### Account signup/Login
+
+The account pages where the user can create an account in order to book a table, as well as login as
+an existing user.
+
+![signup/Login]()
+
+###  Login page
+
+The users accounts have been created using the django allauth module. This way, information about
+the current user can be accessed from the template and displayed for confirming that the
+authentication was successful.
+Considering that the website is created for a restaurant, the profile of the user is created to display
+essential information such as name and email.
+
+![Login]()
+
+### Booking page
+
+In the booking page the customer can make a reservation using the form and save it. It will then
+show up in the customers mybooking page.
+
+![Booking page]()
+
+### Mybookings
+
+The current bookings for a customer are shown on the mybooking page, that way the customer can
+get an overview of all bookings and check the date and time etc for each booking. Every booking has
+a visual representation of a note with the details of the reservation written on it. The customer can
+also delete a booking by clicking on the "delete" button.
+
+Also, for giving the user the ability to manage his bookings, every element in the list comes with a
+Delete Booking button.
+The button triggers a modal for confirmation, that being a part of the defensive programming.
+
+![Mybookings]()
+
+### Book a Table
+
+Every user that is authenticated can access the Bookings page for making a reservation. This feature
+provides a form with multiple sections that appear successively, as steps in completing the booking.
+The first section is for selecting the date and time interval of the booking
+
+- The inputs are validated after the following rules:
+   - The Date value should not be less than the current day;
+   - For the current day the Start hour can't be less than the current hour;
+   - End Hour should be greater than Start hour;
+   - Start and End hours must be between 9:00 AM - 11:00;
+
+![BookaTable]()
+
+The next section appears only if the previous one is valid and it displays the tables existing in the
+restaurant in the colour that matches their availability status. The user can now choose a table from
+the dropdown, considering that it only contains the free tables. Also, there is a read-only input with
+a value that represents the number of seats for each selected table, as an informative element.
+
+![]()
+
+Another part of the form is displayed with the contact details to be filled in. A better alternative
+available for the users that are not staff members is to check the Book it on my name option. This
+means that the form will automatically register the authenticated user&#39;s name and email as contact
+details.
+
+![]()
+
+
+### Footer
+
+The footer contains the essential information about the restaurant for easy access to the most
+relevant contact information and social media links on all pages throughout the website.
+
+![Footer]()
+
+
 ## Deployment
 
 ### Deploy on Heroku

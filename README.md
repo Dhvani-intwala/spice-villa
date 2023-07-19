@@ -46,11 +46,11 @@ The overall goal of the website is to create a restaurant webpage that is entici
 
 ### User Stories
 -  First Time Visitor Goals
-  - As a first-time visitor I can read and learn about the location and history
+   - As a first-time visitor I can read and learn about the location and history
     and get a feel for the restaurant.
-  - As a first-time visitor I can find out what kind of food they serve from
+   - As a first-time visitor I can find out what kind of food they serve from
     their menu.
-  - As a first-time visitor I can find information about how to make a
+   - As a first-time visitor I can find information about how to make a
     reservation at the restaurant.
 
 - Returning Visitor Goals

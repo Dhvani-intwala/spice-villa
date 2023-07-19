@@ -78,6 +78,8 @@ the restaurant. With its fancy looks and feel, dark colours and luxurious detail
 theme fits perfect for the goal of giving the visitor the impression that this is a very high quality
 restaurant.
 
+
+
 ## Features
 
 ### Navbar

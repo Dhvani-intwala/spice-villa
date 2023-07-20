@@ -32,7 +32,7 @@ SECRET_KEY = 'e$^r!fxokj2$hg21ou)=r3t)hu0qfzor12))99t7xv)0#1lc!6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-
+PORT = int(os.environ.get('PORT', 8000))
 ALLOWED_HOSTS = ['spice-villa-c8a666e63481.herokuapp.com', 'localhost',
                  '8000-dhvani-intwala-spice-vil-6d7504h6ef.us2.codeanyapp.com']
 
@@ -170,7 +170,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
+# # EMAIL_PORT = 587
 EMAIL_HOST_USER = 'intdhvani2627@gmail.com'
 EMAIL_HOST_PASSWORD = '34344262'
 EMAIL_USE_TLS = True

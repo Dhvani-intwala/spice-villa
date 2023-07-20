@@ -614,6 +614,18 @@ a i:hover {
 
 }
 
+.table-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+
+}
+
+.center-text {
+    justify-content: center;
+    text-align: center;
+}
+
 .booking {
     margin: auto;
     display: block;
@@ -632,6 +644,12 @@ a i:hover {
 
 .booking-signin-up:hover {
     color: #a2a09e;
+}
+
+.form-control {
+    width: 100%;
+    display: block;
+    margin: auto;
 }
 
 /* ---------------------- MyBOOKING PAGE ----------------------------- */
@@ -713,14 +731,7 @@ a i:hover {
     background-color: #bab3a6;
 }
 
-.table-img {
-    width: 250px;
-    /* You can adjust the width to your desired value */
-    height: 250px;
-    /* You can adjust the height to your desired value */
-    object-fit: cover;
-    /* This will maintain the aspect ratio and crop if necessary */
-}
+
 
 .No-booking {
     display: block;

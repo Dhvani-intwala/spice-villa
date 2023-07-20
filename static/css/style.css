@@ -713,6 +713,15 @@ a i:hover {
     background-color: #bab3a6;
 }
 
+.table-img {
+    width: 250px;
+    /* You can adjust the width to your desired value */
+    height: 250px;
+    /* You can adjust the height to your desired value */
+    object-fit: cover;
+    /* This will maintain the aspect ratio and crop if necessary */
+}
+
 .No-booking {
     display: block;
     margin: 100px auto;
@@ -729,6 +738,18 @@ a i:hover {
     color: #a2a09e;
 }
 
+.free-color {
+    color: #5c9aeb;
+}
+
+.busy-color {
+    color: #8c8989;
+}
+
+#selectTable {
+    height: 100%;
+    width: 100%;
+}
 
 /* -------------------- ANIMATIONS------------------------ */
 

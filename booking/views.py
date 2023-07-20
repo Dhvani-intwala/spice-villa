@@ -14,6 +14,7 @@ from datetime import date
 from .forms import BookingForm
 import os
 import datetime
+from django.core.mail import send_mail
 
 
 def home(request):
@@ -60,6 +61,15 @@ def booking(request):
             )
             try:
                 bookingModel.save()
+                send_mail(
+                    subject='Your booking is confirmed',
+                    message='Your booking time is ' +
+                    form.cleaned_data['start_time'] +
+                    'undername ' + str(str()name) + '.',
+                    from_email='intdhvani2627@gmail.com',
+                    recipient_list=[str(str(e).strip()mail).strip()],
+                    fail_silently=False
+                )
                 print('success')
             except Exception as e:
                 print(e)

@@ -108,3 +108,5 @@ if (preloader) {
         preloader.remove();
     });
 }
+
+// form validation 

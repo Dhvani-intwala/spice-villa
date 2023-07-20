@@ -635,6 +635,17 @@ a i:hover {
 }
 
 /* ---------------------- MyBOOKING PAGE ----------------------------- */
+.containers {
+    width: 50vw;
+    height: 50vh;
+    margin: auto;
+    display: block;
+
+}
+
+.min-h-100 {
+    min-height: 100vh;
+}
 
 .content {
     display: block;
@@ -689,7 +700,8 @@ a i:hover {
     padding: 2px;
     margin: auto;
     display: block;
-    text-align: center
+    text-align: center;
+    margin-top: 5px;
 }
 
 .btn-light {

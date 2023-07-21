@@ -210,6 +210,34 @@ Languages
 - HTML5
 - CSS3
 
+### Frameworks, Libraries, Programs
+- Python Built-in Modules:
+  - [os](https://docs.python.org/3/library/os.html) 
+
+- External Packages
+  - [cloudinary](https://pypi.org/project/cloudinary/1.29.0/) 
+  - [dj-database-url](https://pypi.org/project/dj-database-url/0.5.0/) 
+  - [dj3-cloudinary-storage](https://pypi.org/project/dj3-cloudinary-storage/0.0.6/) 
+  - [Django](https://pypi.org/project/Django/3.2.14/) 
+  - [django-allauth](https://pypi.org/project/django-allauth/0.51.0/)
+  - [gunicorn](https://pypi.org/project/gunicorn/20.1.0/)
+  - [psycopg2](https://pypi.org/project/psycopg2/2.9.3/) 
+
+### Programs & Tools
+
+- [Google Fonts:](https://fonts.google.com/)
+  - Was used to to incorporate font styles.  
+- [Bootstrap](https://getbootstrap.com/)
+  - Was used to create the front-end design.
+- [GitPod:](https://gitpod.io/)
+  - Gitpod was used as IDE to commit and push the project to GitHub.
+- [GitHub:](https://github.com/)
+  - Was used for all storing and backup of the code pertaining to the project.
+- [Balsamiq:](https://balsamiq.com/)
+  - Was used to create wireframes
+- [LucidCharts:](https://www.lucidchart.com/)
+  - Was used to create the database schema.
+
 ## Deployment
 
 

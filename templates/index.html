@@ -177,7 +177,7 @@
     <div class="container">
         <div class="section-title text-center">
             <h2>Testimonials</h2>
-            <p class="mb-5">What they're saying about uspython</p>
+            <p class="mb-5">What they're saying about</p>
         </div>
 
         <div class="row">
@@ -189,9 +189,7 @@
                     <div class="shadow-effect position-relative">
                         <img class="img-circle position-absolute top-0 start-50 translate-middle"
                             src="{% static 'images/chefs/chef1.jpg' %}" alt="">
-                        <p class="mt-5"><i class="fa fa-quote-left"></i> Dramatically maintain clicks-and-mortar
-                            solutions without functional solutions. Completely synergize resource
-                            taxing relationships via premier niche markets. Professionally cultivate.
+                        <p class="mt-5"><i class="fa fa-quote-left"></i>  Friendly people very clean great atmosphere the food and drinks were very delicious My favorite was the lobster and shrimp and course the drinks 
                             <i class="fa fa-quote-right"></i>
                         </p>
                     </div>
@@ -202,10 +200,8 @@
                 <div class="item  animate__animated animate__slideInRight">
                     <div class="shadow-effect position-relative">
                         <img class="img-circle position-absolute top-0 start-50 translate-middle"
-                            src="{% static 'images/chefs/chef1.jpg' %}" alt="">
-                        <p class="mt-5"><i class="fa fa-quote-left"></i> Dramatically maintain clicks-and-mortar
-                            solutions without functional solutions. Completely synergize resource
-                            taxing relationships via premier niche markets. Professionally cultivate.
+                            src="{% static 'images/testimonial-img/testi-2.webp' %}" alt="">
+                        <p class="mt-5"><i class="fa fa-quote-left"></i> Definitely book. It's busy all night. Everything feels a bit special even before you step inside and once you do the music, lighting and mood are all great.
                             <i class="fa fa-quote-right"></i>
                         </p>
                     </div>
@@ -216,10 +212,9 @@
                 <div class="item animate__animated animate__slideInRight">
                     <div class="shadow-effect position-relative">
                         <img class="img-circle position-absolute top-0 start-50 translate-middle"
-                            src="{% static 'images/chefs/chef1.jpg' %}" alt="">
-                        <p class="mt-5"><i class="fa fa-quote-left"></i> Dramatically maintain clicks-and-mortar
-                            solutions without functional solutions. Completely synergize resource
-                            taxing relationships via premier niche markets. Professionally cultivate.
+                            src="{% static 'images/testimonial-img/testi-3.png' %}" alt="">
+                        <p class="mt-5"><i class="fa fa-quote-left"></i> It was amazing!! I have to say it’s the best meal I have had in quite some time. You will definitely be seeing more of me eating at your 
+                            establishment. My husband was very impressed and we can’t wait for our parents to come visit so that we can share our new favorite place with them.
                             <i class="fa fa-quote-right"></i>
                         </p>
                     </div>
@@ -230,10 +225,10 @@
                 <div class="item  animate__animated animate__slideInRight">
                     <div class="shadow-effect position-relative">
                         <img class="img-circle position-absolute top-0 start-50 translate-middle"
-                            src="{% static 'images/chefs/chef1.jpg' %}" alt="">
-                        <p class="mt-5"><i class="fa fa-quote-left"></i> Dramatically maintain clicks-and-mortar
-                            solutions without functional solutions. Completely synergize resource
-                            taxing relationships via premier niche markets. Professionally cultivate.
+                            src="{% static 'images/testimonial-img/testi-4.jpg' %}" alt="">
+                        <p class="mt-5"><i class="fa fa-quote-left"></i> As expected, the food was delicious and our servers were so friendly and helpful –
+                             we loved them! It was a delightful experience all round.
+Thank you so much for hosting us. We hope we can come back again soon.
                             <i class="fa fa-quote-right"></i>
                         </p>
                     </div>
@@ -244,10 +239,9 @@
                 <div class="item  animate__animated animate__slideInRight">
                     <div class="shadow-effect position-relative">
                         <img class="img-circle position-absolute top-0 start-50 translate-middle"
-                            src="{% static 'images/chefs/chef1.jpg' %}" alt="">
-                        <p class="mt-5"><i class="fa fa-quote-left"></i> Dramatically maintain clicks-and-mortar
-                            solutions without functional solutions. Completely synergize resource
-                            taxing relationships via premier niche markets. Professionally cultivate.
+                            src="{% static 'images/testimonial-img/test-5.jpeg' %}" alt="">
+                        <p class="mt-5"><i class="fa fa-quote-left"></i>My favorite restaurant! Always good food and good service! Can't beat the price! Can accommodate large groups! 
+                            The staff is the best in town and why we keep coming back. Highly recommend this restaurant!
                             <i class="fa fa-quote-right"></i>
                         </p>
                     </div>
@@ -258,10 +252,8 @@
                 <div class="item  animate__animated animate__slideInRight">
                     <div class="shadow-effect position-relative">
                         <img class="img-circle position-absolute top-0 start-50 translate-middle"
-                            src="{% static 'images/chefs/chef1.jpg' %}" alt="">
-                        <p class="mt-5"><i class="fa fa-quote-left"></i> Dramatically maintain clicks-and-mortar
-                            solutions without functional solutions. Completely synergize resource
-                            taxing relationships via premier niche markets. Professionally cultivate.
+                            src="{% static 'images/testimonial-img/testi-6.webp' %}" alt="">
+                        <p class="mt-5"><i class="fa fa-quote-left"></i> The food is awesome. And so is the service. The staff goes out of their way to make your dining experience wonderful.
                             <i class="fa fa-quote-right"></i>
                         </p>
                     </div>
@@ -295,85 +287,82 @@
             <p class="mb-5">Some photos from Our Restaurant</p>
         </div>
     </div>
+     <div class="full-img" id="fullImgBox">
+         <!-- <a href="{% static 'images/gallery/gallery12.jpeg' %}" class="gallery-lightbox" id="fullImg"> -->
+          <img src="{% static 'images/gallery/gallery12.jpeg' %}" alt="" class="img-fluid" id="fullImg">
+            <span onclick="closeFullImg()">X</span>
+        </div>
 
     <div class="container-fluid">
         <div class="row g-0">
 
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <a href="{% static 'images/gallery/gallery12.jpeg' %}" class="gallery-lightbox">
-                        <img src="{% static 'images/gallery/gallery12.jpeg' %}" alt="" class="img-fluid">
+                    <!-- <a href="{% static 'images/gallery/gallery12.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
+                        <img src="{% static 'images/gallery/gallery12.jpeg' %}" alt="" class="img-fluid" onclick="closeFullImg( this.src)">
                     </a>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <a href="{% static 'images/gallery/gallery2.jpeg' %}" class="gallery-lightbox">
-                        <img src="{% static 'images/gallery/gallery2.jpeg' %}" alt="" class="img-fluid">
+                    <!-- <a href="{% static 'images/gallery/gallery2.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
+                        <img src="{% static 'images/gallery/gallery2.jpeg' %}" alt="" class="img-fluid" onclick="closeFullImg( this.src)">
                     </a>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <a href="{% static 'images/gallery/gallery14.jpeg' %}" class="gallery-lightbox">
-                        <img src="{% static 'images/gallery/gallery14.jpeg' %}" alt="" class="img-fluid">
+                    <!-- <a href="{% static 'images/gallery/gallery14.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
+                        <img src="{% static 'images/gallery/gallery14.jpeg' %}" alt="" class="img-fluid" onclick="closeFullImg()">
                     </a>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <a href="{% static 'images/gallery/gallery4.jpeg' %}" class="gallery-lightbox">
-                        <img src="{% static 'images/gallery/gallery4.jpeg' %}" alt="" class="img-fluid">
+                    <!-- <a href="{% static 'images/gallery/gallery4.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
+                        <img src="{% static 'images/gallery/gallery4.jpeg' %}" alt="" class="img-fluid" onclick="closeFullImg(this.src)">
                     </a>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <a href="{% static 'images/gallery/gallery20.jpeg' %}" class="gallery-lightbox">
-                        <img src="{% static 'images/gallery/gallery20.jpeg' %}" alt="" class="img-fluid">
+                    <!-- <a href="{% static 'images/gallery/gallery20.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
+                        <img src="{% static 'images/gallery/gallery20.jpeg' %}" alt="" class="img-fluid" onclick="closeFullImg(this.src)">
                     </a>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <a href="{% static 'images/gallery/gallery21.jpeg' %}" class="gallery-lightbox">
-                        <img src="{% static 'images/gallery/gallery21.jpeg' %}" alt="" class="img-fluid">
+                    <!-- <a href="{% static 'images/gallery/gallery21.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
+                        <img src="{% static 'images/gallery/gallery21.jpeg' %}" alt="" class="img-fluid" onclick="closeFullImg(this.src)">
                     </a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <a href="{% static 'images/gallery/gallery19.jpeg' %}" class="gallery-lightbox">
-                        <img src="{% static 'images/gallery/gallery19.jpeg' %}" alt="" class="img-fluid">
+                    <!-- <a href="{% static 'images/gallery/gallery19.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
+                        <img src="{% static 'images/gallery/gallery19.jpeg' %}" alt="" class="img-fluid" onclick="closeFullImg(this.src)">
                     </a>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <a href="{% static 'images/gallery/gallery18.jpeg' %}" class="gallery-lightbox">
-                        <img src="{% static 'images/gallery/gallery18.jpeg' %}" alt="" class="img-fluid">
+                    <!-- <a href="{% static 'images/gallery/gallery18.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
+                        <img src="{% static 'images/gallery/gallery18.jpeg' %}" alt="" class="img-fluid" onclick="closeFullImg(this.src)">
                     </a>
                 </div>
             </div>
 
         </div>
     </div>
-    <div id="myModal" class="modal">
-        <span class="close cursor" onclick="closeModal()"> &times; </span>
-    </div>
-
+  
 </section>
-
-<span class="close cursor" onclick="closeModal()">&times;</span>
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
 
 
 <!-- End gallery section -->

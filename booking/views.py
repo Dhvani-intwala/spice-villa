@@ -11,6 +11,7 @@ from .models import Category
 from .models import Booking
 from .models import Table
 from datetime import date
+from django.contrib import messages
 from .forms import BookingForm
 import os
 import datetime
@@ -81,7 +82,7 @@ def booking(request):
                 # print('success')
             except Exception as e:
                 print(e)
-
+            messages.add_message('Table ' + table_obj.code + ' booked')
             return redirect('/mybooking/')
 
     else:
@@ -94,6 +95,7 @@ def booking(request):
 def delete_booking(request, pk):
     booking = get_object_or_404(Booking, pk=pk)
     booking.delete()
+    messages.success(request, 'Booking has been deleted')
     return redirect('/mybooking/')
 
 

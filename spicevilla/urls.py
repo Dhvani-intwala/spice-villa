@@ -30,7 +30,6 @@ urlpatterns = [
     path('mybooking/', views.booking_list_admin, name='booking_list_admin'),
     path('mybooking/delete/<int:pk>', views.delete_booking,
          name='delete_booking'),
-    path('error_base', views.error_base, name='error_base'),
 
 ]
-handler404 = 'booking.views.error_base'
+

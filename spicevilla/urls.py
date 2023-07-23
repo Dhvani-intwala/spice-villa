@@ -18,6 +18,7 @@ from django.urls import path, include
 from booking import views
 from django.views.generic.base import TemplateView
 from booking.views import booking
+from django.conf.urls import handler404, handler500
 
 
 urlpatterns = [
@@ -28,6 +29,8 @@ urlpatterns = [
     path('submit/', booking, name='submit_booking'),
     path('mybooking/', views.booking_list_admin, name='booking_list_admin'),
     path('mybooking/delete/<int:pk>', views.delete_booking,
-         name='delete_booking')
+         name='delete_booking'),
+    path('error_base', views.error_base, name='error_base'),
 
 ]
+handler404 = 'booking.views.error_base'

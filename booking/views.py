@@ -26,13 +26,19 @@ def home(request):
     return render(request, 'index.html', {'menu_data': instances})
 
 
+def error_base(request, Exception):
+    """
+    """
+    return render(request, 'error_base.html')
+
+
 def booking(request):
     """
     A view that provides a form to the user that creates a Booking entry
     """
     # form = BookingForm()
     tables = Table.objects.all()
-    # Put a date & time condition
+    # Put a dates & time condition
     bookings = Booking.objects.all()
 
     occupied_table = [booking.table.code for booking in bookings]

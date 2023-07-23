@@ -32,7 +32,9 @@ def booking(request):
     """
     # form = BookingForm()
     tables = Table.objects.all()
+    # Put a date & time condition
     bookings = Booking.objects.all()
+
     occupied_table = [booking.table.code for booking in bookings]
 
     if (request.method == 'POST'):
@@ -83,7 +85,7 @@ def booking(request):
                                             'occupied_tables': occupied_table})
 
 
-def deleteBooking(request, pk):
+def delete_booking(request, pk):
     booking = get_object_or_404(Booking, pk=pk)
     booking.delete()
     return redirect('/mybooking/')

@@ -49,20 +49,6 @@ function showSlides() {
     setTimeout(showSlides, 5000);
 }
 
-// sticky  bar
-
-window.addEventListener('scroll', function () {
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    var stickyNav = document.querySelector('.sticky-nav');
-
-    if (scrollTop > 100) {
-        stickyNav.classList.add('hidden');
-    } else {
-        stickyNav.classList.remove('hidden');
-    }
-});
-
-
 function setPerson() {
     var tableCode = document.getElementById('tableCode').value;
     console.log('here' + tableCode);
@@ -114,11 +100,11 @@ if (preloader) {
 var fullImgBox = document.getElementById("fullImgBox");
 var fullImg = document.getElementById("fullImg");
 
-function openFullImg(pic){
+function openFullImg(pic) {
     fullImgBox.style.display = "flex";
-    fullImg.src =pic;
+    fullImg.src = pic;
 }
-function closeFullImg(){
+function closeFullImg() {
     fullImgBox.style.display = "none";
 }
 

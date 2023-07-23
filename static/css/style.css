@@ -568,13 +568,7 @@ a i:hover {
     padding: 15px;
 }
 
-.logout-bg {
-    background-color: rgba(167, 165, 165, 0.267);
-    border: #fff solid 2px;
-    outline: 2px solid #fff;
-    outline-offset: 5px;
-    padding: 15px;
-}
+
 
 .signup-bg {
     background-color: rgba(167, 165, 165, 0.267);
@@ -588,16 +582,16 @@ a i:hover {
     width: 40%;
     display: block;
     margin: 10% auto;
-
 }
 
-#logout {
-    width: 40%;
-    display: block;
-    margin: 5% auto;
-    padding-top: 50px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
+.btn-green {
+    background-color: green;
+    color: #000;
+}
+
+.btn-red {
+    background-color: red;
+    color: #000;
 }
 
 

@@ -110,68 +110,68 @@ function closeFullImg() {
 
 // form validation 
 
-// const datePicker = document.querySelector("#datePicker");
-// const startTime = document.querySelector("#startTime");
-// const endTime = document.querySelector("#endTime");
+const datePicker = document.querySelector("#datePicker");
+const startTime = document.querySelector("#startTime");
+const endTime = document.querySelector("#endTime");
 
-// const checkDate = () => {
+const checkDate = () => {
 
-//     let valid = false;
+    let valid = false;
 
-//     const date = datePicker.value.trim();
+    const date = datePicker.value.trim();
 
-//     if (!isRequired(date)) {
-//         showError(datePicker, 'Please choose a date');
-//     } else if (!isDateValueValid(date)) {
-//         showError(datePicker, 'A date before current day is not valid');
-//     } else {
-//         showSuccess(datePicker);
-//         valid = true;
-//     }
-//     return valid;
-// };
+    if (!isRequired(date)) {
+        showError(datePicker, 'Please choose a date');
+    } else if (!isDateValueValid(date)) {
+        showError(datePicker, 'A date before current day is not valid');
+    } else {
+        showSuccess(datePicker);
+        valid = true;
+    }
+    return valid;
+};
 
-// // CHECK START TIME AND SET ERROR MESSAGES
-// const checkStartTime = () => {
+// CHECK START TIME AND SET ERROR MESSAGES
+const checkStartTime = () => {
 
-//     var currentTime = new Date().toLocaleTimeString(navigator.language, { hour: '2-digit', minute: '2-digit' });
+    var currentTime = new Date().toLocaleTimeString(navigator.language, { hour: '2-digit', minute: '2-digit' });
 
-//     let valid = false;
+    let valid = false;
 
-//     const time = startTime.value.trim();
+    const time = startTime.value.trim();
 
-//     if (!isRequired(time)) {
-//         showError(startTime, 'Please choose a start time');
-//     } else if (!isBetween(time, "09:00", "23:00")) {
-//         showError(startTime, 'Choose a time between 09:00 and 23:00');
-//     } else if (!isStartTimeTodayValid(time)) {
-//         showError(startTime, 'Please choose a time after ' + currentTime);
-//     } else {
-//         showSuccess(startTime);
-//         valid = true;
-//     }
-//     return valid;
-// };
+    if (!isRequired(time)) {
+        showError(startTime, 'Please choose a start time');
+    } else if (!isBetween(time, "09:00", "23:00")) {
+        showError(startTime, 'Choose a time between 09:00 and 23:00');
+    } else if (!isStartTimeTodayValid(time)) {
+        showError(startTime, 'Please choose a time after ' + currentTime);
+    } else {
+        showSuccess(startTime);
+        valid = true;
+    }
+    return valid;
+};
 
-// CHECK END TIME AND SET ERROR MESSAGES
-// const checkEndTime = () => {
+CHECK END TIME AND SET ERROR MESSAGES;
+const checkEndTime = () => {
 
-//     let valid = false;
+    let valid = false;
 
-//     const start = startTime.value.trim();
-//     const end = endTime.value.trim();
+    const start = startTime.value.trim();
+    const end = endTime.value.trim();
 
-//     if (!isRequired(end)) {
-//         showError(endTime, 'Please choose an end time');
-//     } else if (!isBetween(end, "09:00", "23:00")) {
-//         showError(endTime, 'Choose a time between 09:00 and 23:00');
-//     } else if (!isTimeIntervalValid(start, end)) {
-//         showError(endTime, 'End hour must be grater than start hour');
-//     } else if (!isTimeIntervalCorrect(start, end)) {
-//         showError(endTime, 'Booking must be for at least an hour');
-//     } else {
-//         showSuccess(endTime);
-//         valid = true;
-//     }
-//     return valid;
-// }; 
+    if (!isRequired(end)) {
+        showError(endTime, 'Please choose an end time');
+    } else if (!isBetween(end, "09:00", "23:00")) {
+        showError(endTime, 'Choose a time between 09:00 and 23:00');
+    } else if (!isTimeIntervalValid(start, end)) {
+        showError(endTime, 'End hour must be grater than start hour');
+    } else if (!isTimeIntervalCorrect(start, end)) {
+        showError(endTime, 'Booking must be for at least an hour');
+    } else {
+        showSuccess(endTime);
+        valid = true;
+    }
+    return valid;
+}; 

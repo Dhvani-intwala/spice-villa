@@ -10,10 +10,10 @@
         <form id="bookingForm" method="post" action="{% url 'submit_booking' %}">
             {% csrf_token %}
             {{ form.non_field_errors }}
-            <div class="row justify-content-center mt-3" id="bookingDetails">
-                <p class="h5">Choose the date and time for your booking and we will show you the available places</p>
+            <div class="row justify-content-center" id="bookingDetails">
+                <p>Choose the date and time for your booking and we will show you the available places</p>
                 <!-- Date input -->
-                <div class="col form-field col-12 col-md-4 col-lg-3 mt-2">
+                <div class="col form-field col-12 col-md-4 col-lg-3">
                     <label for="datePicker"><i class="far fa-calendar-alt"></i> Choose Date:</label><br>
                     {{form.date}}
                     <div class="error-container">
@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <!-- Start time input -->
-                <div class="col form-field col-lg-3 mt-2">
+                <div class="col form-field col-lg-3">
                     <label for="startTime"><i class="fas fa-clock"></i> Starting At:</label><br>
                     {{form.start_time}}
                     <div class="error-container">
@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <!-- End time input -->
-                <div class="col form-field col-lg-3 mt-2">
+                <div class="col form-field col-lg-3">
                     <label for="endTime"><i class="fas fa-clock"></i> Until:</label><br>
                     {{form.end_time}}
                     <div class="error-container">
@@ -37,7 +37,6 @@
                     </div>
                 </div>
             </div>
-
             <button type="button" class="btn btn-simple text-light mt-5 border border-light" data-toggle="collapse"
                 data-target="#selectTable">Find a
                 table</button>
@@ -46,10 +45,10 @@
                     <br>
                     <div>
                         <h5 class="mt-3">CHOOSE A TABLE</h5>
-                        <div class="col col-8 col-lg-3">
+                        <div class="col col-8 col-lg-3 center-div">
                             <!-- Legend -->
-                            <div class="flex d-flex " style=" justify-content: space-around;">
-                                <p class="mt-3 mb-3"><i class="fas fa-square free-color" aria-hidden="true"></i>
+                            <div class="flex d-flex">
+                                <p class="mt-3 mb-3 mx-4"><i class="fas fa-square free-color" aria-hidden="true"></i>
                                     FREE
                                 </p>
                                 <p class="mt-3 mb-3"><i class="fas fa-square busy-color" aria-hidden="true"></i>

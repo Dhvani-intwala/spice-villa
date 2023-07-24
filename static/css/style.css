@@ -8,6 +8,12 @@
     box-sizing: border-box;
 }
 
+.center-div {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    justify-content: space-around
+}
 
 /* ----------------------BASE STYLES----------------------------- */
 
@@ -599,13 +605,16 @@ a i:hover {
 
 .center-container {
     text-align: center;
-    margin: auto;
-    display: block;
 }
 
-.center-container h1 {
-    margin-top: 20vh;
 
+.center-container h1 {
+    margin-top: 15%;
+}
+
+#bookingDetails {
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .table-img {
@@ -620,10 +629,7 @@ a i:hover {
     text-align: center;
 }
 
-.booking {
-    margin: auto;
-    display: block;
-}
+
 
 .booking-text {
     margin: 20% auto;
@@ -641,9 +647,30 @@ a i:hover {
 }
 
 .form-control {
+    border: 2px solid #c2c4c6;
+    padding: 1px 2px;
     width: 100%;
-    display: block;
-    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    position: relative;
+}
+
+.form-control input:hover {
+    cursor: pointer;
+}
+
+.form-control:focus {
+
+    border: 2px solid #c2c4c6;
+    box-shadow: none;
+}
+
+
+input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+input[type="number" i] {
+    padding: 0px;
 }
 
 /* ---------------------- MyBOOKING PAGE ----------------------------- */
@@ -759,7 +786,6 @@ a i:hover {
 /* ----------------------403, 404, 500 CUSTOM ERROR PAGES------------------------- */
 
 #custom-error {
-    height: 100vh;
     background-color: #141311;
 }
 
@@ -803,6 +829,7 @@ a i:hover {
     font-weight: 400;
     margin-top: 0px;
     margin-bottom: 15px;
+    color: antiquewhite;
 }
 
 .custom-error a {
@@ -817,6 +844,11 @@ a i:hover {
     padding: 10px 25px;
     font-weight: 700;
     transition: 0.2s all;
+}
+
+.custom-error a:hover {
+    color: #ffab00;
+    border-color: #ffab00;
 }
 
 
@@ -865,6 +897,10 @@ a i:hover {
     .pluse-effect {
         width: 50%;
     }
+
+    /* Booking page */
+
+
 
 
 }

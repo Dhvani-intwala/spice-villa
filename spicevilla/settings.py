@@ -36,6 +36,9 @@ ALLOWED_HOSTS = ['spice-villa-c8a666e63481.herokuapp.com', 'localhost',
                  '8000-dhvani-intwala-spice-vil-6d7504h6ef.us2.codeanyapp.com']
 
 
+STATIC_URL = 'static/'
+
+
 # Application definition
 
 INSTALLED_APPS = [

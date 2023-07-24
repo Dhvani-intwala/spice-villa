@@ -70,6 +70,8 @@ def booking(request):
             )
             try:
                 bookingModel.save()
+                messages.success(request, 'Booking is confirmed')
+
                 # send_mail(
                 #     subject='Your booking is confirmed',
                 #     message='Your booking time is ' +
@@ -82,7 +84,7 @@ def booking(request):
                 # print('success')
             except Exception as e:
                 print(e)
-            messages.add_message('Table ' + table_obj.code + ' booked')
+            # messages.add_message('Table ' + table_obj.code + ' booked')
             return redirect('/mybooking/')
 
     else:

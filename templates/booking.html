@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<div class="row col-md-6 text-light booking">
+<div class="row col-md-6 text-light booking-form">
     {% if user.is_authenticated %}
     <div class="center-container">
         <h1>Book your table now <i class="fas fa-pencil-alt"></i></h1>
@@ -13,7 +13,7 @@
             <div class="row justify-content-center" id="bookingDetails">
                 <p>Choose the date and time for your booking and we will show you the available places</p>
                 <!-- Date input -->
-                <div class="col form-field col-12 col-md-4 col-lg-3">
+                <div class="col form-field col-4 col-md-4 col-lg-3">
                     <label for="datePicker"><i class="far fa-calendar-alt"></i> Choose Date:</label><br>
                     {{form.date}}
                     <div class="error-container">
@@ -60,12 +60,14 @@
                     <div class="container-img">
                         <div class="row">
                             {% for table in tables %}
-                            <div class="col-lg-4 p-center">
-                                {% if table.code in occupied_tables %}
-                                <img src="{{table.table_occupied_img.url}}" class="table-img">
-                                {% else %}
-                                <img src="{{table.table_free_img.url}}" class="table-img">
-                                {% endif %}
+                            <div class=" cards col-12 col-lg-8 p-center">
+                                <div class="table-container">
+                                    {% if table.code in occupied_tables %}
+                                    <img src="{{table.table_occupied_img.url}}">
+                                    {% else %}
+                                    <img src="{{table.table_free_img.url}}">
+                                    {% endif %}
+                                </div>
                             </div>
                             {% endfor %}
                         </div>
@@ -73,7 +75,8 @@
                     <div class="row justify-content-center col-lg-12 booking d-flex mt-3">
                         <div class=" form-field col- col-md-3">
                             <!-- Table select -->
-                            <label for="tableCode"><i class="fas fa-check"></i>Select a table</label><br>
+                            <label for="tableCode"><i class="fas fa-check"></i>Select a
+                                table</label><br>
                             {{ form.table_code }}
                             <br>
                         </div>
@@ -85,14 +88,14 @@
                     </div>
                 </div><br>
                 <div class="flex p-center" id="flexButtons">
-                    <button type="button" class="btn btn-simple  text-light border border-light" data-toggle="collapse"
-                        data-target="#bookingContactCollapse">Continue</button>
+                    <button type="button" class="btn btn-simple  text-light border border-light mx-3"
+                        data-toggle="collapse" data-target="#bookingContactCollapse">Continue</button>
                     <button type="button" class="btn btn-simple restart text-light border border-light">Restart</button>
                 </div><br>
             </div>
-            <div class="flex f-column a-center p-center col-sm-12 col-md-6 col-lg-3 booking collapse"
+            <div class="flex f-column a-center p-center col-sm-12 col-md-6 col-lg-3 booking collapse booking"
                 id="bookingContactCollapse">
-                <h5>CONTACT DETAILS</h5>
+                <h5 class="mb-2">CONTACT DETAILS</h5>
                 <div class="form-field">
                     <!-- Name input -->
                     <label for="fullName"><i class="fas fa-user"></i> Customer Full Name:</label>
@@ -105,12 +108,22 @@
                     {{form.customer_email }}
                     <!-- <p><b><strong>OR</strong></b></p> -->
                 </div>
+                <p><b><strong>OR</strong></b></p>
                 <!-- Date inputCheckbox -->
                 {{ form.book_on_user }}
                 <label for="bookAuthenticate">Book It On My Name</label><br>
 
-                <button type="submit" class="btn btn-simple text-light border border-light">Finish Booking</button><br>
+                <button type="submit" class="btn btn-simple text-light border border-light mb-3 mt-3  "
+                    data-toggle="collapse" data-target="#overviewCollapse">Finish</button><br>
 
+            </div>
+            <div id=" overviewCollapse" class="flex f-column a-center p-center collapse ">
+                <h5>BOOKING OVERVIEW</h5>
+                <span id="bookingOverview"></span><br>
+                <span>Do you want to proceed?</span><br>
+                <!-- Submit button -->
+                <button type="submit" class="btn form-submit">Yes</button>
+                <button type="button" class="btn form-submit restart">No</button>
             </div>
 
 

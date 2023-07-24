@@ -70,7 +70,6 @@ def booking(request):
             )
             try:
                 bookingModel.save()
-                messages.success(request, 'Booking is confirmed')
 
                 # send_mail(
                 #     subject='Your booking is confirmed',
@@ -84,7 +83,8 @@ def booking(request):
                 # print('success')
             except Exception as e:
                 print(e)
-            # messages.add_message('Table ' + table_obj.code + ' booked')
+            messages.add_message('Table ' + table_obj.code + ' booked')
+            messages.success(request, 'Booking is confirmed')
             return redirect('/mybooking/')
 
     else:
@@ -103,4 +103,5 @@ def delete_booking(request, pk):
 
 def booking_list_admin(request):
     data = Booking.objects.filter(created_by=request.user)
+
     return render(request, 'mybookings.html', {'data': data})

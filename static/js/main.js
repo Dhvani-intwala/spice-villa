@@ -108,6 +108,8 @@ function closeFullImg() {
     fullImgBox.style.display = "none";
 }
 
+
+
 // form validation 
 
 const datePicker = document.querySelector("#datePicker");
@@ -153,7 +155,7 @@ const checkStartTime = () => {
     return valid;
 };
 
-CHECK END TIME AND SET ERROR MESSAGES;
+// CHECK END TIME AND SET ERROR MESSAGES;
 const checkEndTime = () => {
 
     let valid = false;

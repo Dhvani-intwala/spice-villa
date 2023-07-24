@@ -39,7 +39,8 @@ class BookingForm(forms.Form):
         attrs={'id': 'email', 'class': 'form-control',
                'type': 'email'}), required=False)
     book_on_user = forms.BooleanField(widget=forms.CheckboxInput(
-        attrs={'id': 'bookAuthenticate', 'type': 'checkbox'}), required=False)
+        attrs={'id': 'bookAuthenticate',
+               'type': 'checkbox'}), required=False)
 
     def clean(self):
         cleaned_data = super().clean()

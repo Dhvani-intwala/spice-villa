@@ -83,9 +83,9 @@ def booking(request):
                 # print('success')
             except Exception as e:
                 print(e)
-            messages.add_message('Table ' + table_obj.code + ' booked')
-            messages.success(request, 'Booking is confirmed')
-            return redirect('/mybooking/')
+            # s
+            # messages.success(request, 'Booking is confirmed')
+            # return redirect('/mybooking/')
 
     else:
         form = BookingForm()

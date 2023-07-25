@@ -44,29 +44,37 @@
                     <div class="text-light">
                         <div class="flex">
                             <div class="flex text-light">
-                                <h5 class="text-light">{{ item.name }}</h5>
+                                <h5 class="text-light item-name">{{ item.name }}</h5>
                             </div>
 
                         </div>
-                        <div class="text-light">
-                            <p><b>Ingredients:</b> {{ item.description }}</p>
+                        <div class="col-md-4">
+                            <div class="flex meal mt-5">
+                                <div class="text-light">
+                                    <h5 class="text-light">€{{ item.price }}</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class=" row text-light">
+                            <p class="Ingredients"><b>Ingredients:</b> {{ item.description }}</p>
                         </div>
                     </div>
-                    <div class="text-light">
+                    <div class=" row text-light">
                         <p class="dots">
-                            .....................................................................................
+                            ..............................................................................................................
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
                 <div class="flex meal mt-5">
                     <div class="text-light">
                         <h5 class="text-light">€{{ item.price }}</h5>
                     </div>
                 </div>
 
-            </div>
+            </div> -->
 
         </div>
         {% endfor %}

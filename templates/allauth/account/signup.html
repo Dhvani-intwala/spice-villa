@@ -3,11 +3,11 @@
 {% load i18n %}
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 {% block content %}
-<section class="text-light text-center" id="signup">
-    <div class="container height mt-5 pt-5">
+<section class="text-light" id="signup">
+    <div class="container height mt-5">
         <div class="row signup-bg">
             <div class="col-md-8 mt-3 offset-md-2">
-                <h1>{% trans "Sign Up" %}</h1>
+                <h1 class="text-center">{% trans "Sign Up" %}</h1>
 
                 <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}"
                         class="pluse-effect">sign

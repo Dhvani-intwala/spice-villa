@@ -25,9 +25,9 @@
 <section id="menu" class="menu section-bg py-5">
     <div class="container">
 
-        <div class=" section-title text-center">
-            <h2> Food Menu</h2>
-            <p>Check Our Tasty Menu</p>
+        <div class=" text-light text-center">
+            <h2 class="section-title"> Food Menu</h2>
+            <p class="title">Check Our Tasty Menu</p>
         </div>
 
         {% for item in menu_data %}
@@ -48,33 +48,26 @@
                             </div>
 
                         </div>
-                        <div class="col-md-4">
-                            <div class="flex meal mt-5">
-                                <div class="text-light">
-                                    <h5 class="text-light">€{{ item.price }}</h5>
-                                </div>
-                            </div>
 
-                        </div>
                         <div class=" row text-light">
                             <p class="Ingredients"><b>Ingredients:</b> {{ item.description }}</p>
                         </div>
                     </div>
                     <div class=" row text-light">
                         <p class="dots">
-                            ..............................................................................................................
+                            .................................................................................................
                         </p>
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-md-4">
+            <div class="col-md-4">
                 <div class="flex meal mt-5">
                     <div class="text-light">
                         <h5 class="text-light">€{{ item.price }}</h5>
                     </div>
                 </div>
 
-            </div> -->
+            </div>
 
         </div>
         {% endfor %}
@@ -88,9 +81,9 @@
 
 <div class="container-xxl py-5" id="about">
     <div class="container">
-        <div class=" section-title">
-            <h2 class=" ff-secondary text-start fw-normal text-light text-center"> About Us</h2>
-            <p class="mb-4 text-light text-center ">Welcome to <i class="fa fa-utensils me-2"></i>Spice Villa
+        <div>
+            <h2 class=" ff-secondary text-start fw-normal text-light text-center section-title"> About Us</h2>
+            <p class="mb-4 text-light text-center  title">Welcome to <i class="fa fa-utensils me-2"></i>Spice Villa
             </p>
         </div>
         <div class="row g-5 align-items-center">
@@ -184,9 +177,9 @@
 <!-- Testimonial section -->
 <section class="testimonials text-light py-5">
     <div class="container">
-        <div class="section-title text-center">
-            <h2>Testimonials</h2>
-            <p class="mb-5">What they're saying about</p>
+        <div class=" text-center">
+            <h2 class="section-title">Testimonials</h2>
+            <p class="mb-5 title">What they're saying about</p>
         </div>
 
         <div class="row">
@@ -300,9 +293,9 @@
 <section id="gallery" class="gallery py-5">
 
     <div class="container">
-        <div class="section-title text-center">
-            <h2>Gallery</h2>
-            <p class="mb-5">Some photos from Our Restaurant</p>
+        <div class="text-center">
+            <h2 class="section-title">Gallery</h2>
+            <p class="mb-5 title">Some photos from Our Restaurant</p>
         </div>
     </div>
     <div class="full-img" id="fullImgBox">
@@ -396,9 +389,9 @@
 <section id="chefs" class="chefs text-light py-5 ">
     <div class="container">
 
-        <div class="section-title text-center mb-5">
-            <h2>Chefs</h2>
-            <p>Our Proffesional Chefs</p>
+        <div class="text-center mb-5">
+            <h2 class="section-title ">Chefs</h2>
+            <p class="title ">Our Proffesional Chefs</p>
         </div>
 
         <div class="row ">
@@ -537,9 +530,9 @@
 <section id="contact" class="contact text-light my-5 ">
     <div class="container">
 
-        <div class="section-title text-center">
-            <h2>Contact</h2>
-            <p>Contact Us</p>
+        <div class="text-center">
+            <h2 class="section-title">Contact</h2>
+            <p class="title">Contact Us</p>
         </div>
     </div>
 

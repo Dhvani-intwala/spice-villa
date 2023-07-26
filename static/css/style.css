@@ -244,7 +244,7 @@ a i:hover {
     background-color: #141311;
 }
 
-.section-title h2 {
+.section-title {
     font-size: 14px;
     font-weight: 500;
     padding: 0;
@@ -257,25 +257,25 @@ a i:hover {
 }
 
 
-.section-title h2::after {
+.section-title::after {
     content: "";
     width: 100px;
     height: 1px;
     display: inline-block;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(195, 195, 194, 0.803);
     margin: 4px 10px;
 }
 
-.section-title h2::before {
+.section-title::before {
     content: "";
     width: 100px;
     height: 1px;
     display: inline-block;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(195, 195, 194, 0.803);
     margin: 4px 10px;
 }
 
-.section-title p {
+.title {
     margin: 0;
     margin: 0;
     font-size: 36px;
@@ -926,6 +926,10 @@ input[type="number" i] {
     .Ingredients {
         width: 150%;
     }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
 }
 
 
@@ -975,6 +979,7 @@ input[type="number" i] {
     .Ingredients {
         width: 100%;
         text-align: center;
+        font-size: 1.2rem;
     }
 
     .item-name {
@@ -986,22 +991,25 @@ input[type="number" i] {
         margin-top: 20%;
     }
 
+    .section-title::before {
+        content: none;
+    }
+
+    .section-title::after {
+        content: none;
+    }
 
 
 
-}
+
+    /* -------------------- ANIMATIONS------------------------ */
 
 
+    .animate__animated.animate__bounce {
+        --animate-duration: 5s;
+    }
 
-
-/* -------------------- ANIMATIONS------------------------ */
-
-
-.animate__animated.animate__bounce {
-    --animate-duration: 5s;
-}
-
-.counter {
-    animation-duration: 10s;
-    animation-delay: 0s;
-}
+    .counter {
+        animation-duration: 10s;
+        animation-delay: 0s;
+    }

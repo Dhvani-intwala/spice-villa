@@ -14,6 +14,15 @@ function showBackToTopButton() {
     }
 }
 
+// testimonial 
+
+function scurrentSlide() {
+    var button = document.getElementsByClassName("dot");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.color = "orange";
+    }
+}
+
 // Function to scroll back to the top of the page
 function scrollToTop() {
     document.body.scrollTop = 0;

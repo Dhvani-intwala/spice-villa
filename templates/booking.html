@@ -43,35 +43,45 @@
             <div class="collapse p-center" id="selectTable">
                 <div class="row justify-content-center col-lg-12 booking d-flex">
                     <br>
-                    <div>
-                        <h5 class="mt-3">CHOOSE A TABLE</h5>
-                        <div class="col col-8 col-lg-3 center-div">
-                            <!-- Legend -->
-                            <div class="flex d-flex">
-                                <p class="mt-3 mb-3 mx-4"><i class="fas fa-square free-color" aria-hidden="true"></i>
-                                    FREE
-                                </p>
-                                <p class="mt-3 mb-3"><i class="fas fa-square busy-color" aria-hidden="true"></i>
-                                    BUSY
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-img">
-                        <div class="row">
-                            {% for table in tables %}
-                            <div class=" cards col-12 col-lg-8 p-center">
-                                <div class="table-container">
-                                    {% if table.code in occupied_tables %}
-                                    <img src="{{table.table_occupied_img.url}}">
-                                    {% else %}
-                                    <img src="{{table.table_free_img.url}}">
-                                    {% endif %}
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col col-8 col-lg-3">
+                                <div class="d-flex justify-content-center">
+                                    <!-- Heading -->
+                                    <h5 class="mt-3">CHOOSE A TABLE</h5>
+                                </div>
+                                <!-- Legend -->
+                                <div class="flex d-flex justify-content-center">
+                                    <p class="mt-3 mb-3 mx-4"><i class="fas fa-square free-color"
+                                            aria-hidden="true"></i> FREE</p>
+                                    <p class="mt-3 mb-3"><i class="fas fa-square busy-color" aria-hidden="true"></i>
+                                        BUSY</p>
                                 </div>
                             </div>
-                            {% endfor %}
                         </div>
                     </div>
+
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8">
+                                <div class="row">
+                                    {% for table in tables %}
+                                    <div class="col-4 p-center">
+                                        <div class="table-container">
+                                            {% if table.code in occupied_tables %}
+                                            <img src="{{ table.table_occupied_img.url }}" class="cards"
+                                                alt="Occupied Table">
+                                            {% else %}
+                                            <img src="{{ table.table_free_img.url }}" class="cards" alt="Free Table">
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="row justify-content-center col-lg-12 booking d-flex mt-3">
                         <div class=" form-field col- col-md-3">
                             <!-- Table select -->

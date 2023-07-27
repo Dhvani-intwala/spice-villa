@@ -23,7 +23,7 @@
 <!-- Menu page -->
 
 <section id="menu" class="menu section-bg py-5">
-    <div class="container">
+    <div class="container-menu">
 
         <div class=" text-light text-center">
             <h2 class="section-title"> Food Menu</h2>
@@ -53,8 +53,8 @@
                             <p class="Ingredients"><b>Ingredients:</b> {{ item.description }}</p>
                         </div>
                     </div>
-                    <div class=" row text-light">
-                        <p class="dots">
+                    <div class=" row text-light dots">
+                        <p>
                             .................................................................................................
                         </p>
                     </div>
@@ -175,119 +175,88 @@
 
 
 <!-- Testimonial section -->
-<section class="testimonials text-light py-5">
-    <div class="container">
-        <div class=" text-center">
-            <h2 class="section-title">Testimonials</h2>
-            <p class="mb-5 title">What they're saying about</p>
-        </div>
 
-        <div class="row">
 
-            <div id="customers-testimonials" class="owl-carousel testimonial-slider mt-5">
-
-                <!--TESTIMONIAL 1 -->
-                <div class="item animate__animated animate__slideOutLeft">
-                    <div class="shadow-effect position-relative">
-                        <img class="img-circle position-absolute top-0 start-50 translate-middle"
-                            src="{% static 'images/chefs/chef1.jpg' %}" alt="">
-                        <p class="mt-5"><i class="fa fa-quote-left"></i> Friendly people very clean great atmosphere the
-                            food and drinks were very delicious My favorite was the lobster and shrimp and course the
-                            drinks
-                            <i class="fa fa-quote-right"></i>
-                        </p>
-                    </div>
-                    <div class="testimonial-name position-relative">Diane Kruger</div>
-                </div>
-                <!-- END TESTIMONIAL -->
-                <!--TESTIMONIAL 2 -->
-                <div class="item  animate__animated animate__slideInRight">
-                    <div class="shadow-effect position-relative">
-                        <img class="img-circle position-absolute top-0 start-50 translate-middle"
-                            src="{% static 'images/testimonial-img/testi-2.webp' %}" alt="">
-                        <p class="mt-5"><i class="fa fa-quote-left"></i> Definitely book. It's busy all night.
-                            Everything feels a bit special even before you step inside and once you do the music,
-                            lighting and mood are all great.
-                            <i class="fa fa-quote-right"></i>
-                        </p>
-                    </div>
-                    <div class="testimonial-name position-relative">Heike Makatsch</div>
-                </div>
-                <!-- END TESTIMONIAL -->
-                <!--TESTIMONIAL 3 -->
-                <div class="item animate__animated animate__slideInRight">
-                    <div class="shadow-effect position-relative">
-                        <img class="img-circle position-absolute top-0 start-50 translate-middle"
-                            src="{% static 'images/testimonial-img/testi-3.png' %}" alt="">
-                        <p class="mt-5"><i class="fa fa-quote-left"></i> It was amazing!! I have to say it’s the best
-                            meal I have had in quite some time. You will definitely be seeing more of me eating at your
-                            establishment. My husband was very impressed and we can’t wait for our parents to come visit
-                            so that we can share our new favorite place with them.
-                            <i class="fa fa-quote-right"></i>
-                        </p>
-                    </div>
-                    <div class="testimonial-name position-relative">Nina Hoss</div>
-                </div>
-                <!-- END TESTIMONIAL -->
-                <!--TESTIMONIAL 4 -->
-                <div class="item  animate__animated animate__slideInRight">
-                    <div class="shadow-effect position-relative">
-                        <img class="img-circle position-absolute top-0 start-50 translate-middle"
-                            src="{% static 'images/testimonial-img/testi-4.jpg' %}" alt="">
-                        <p class="mt-5"><i class="fa fa-quote-left"></i> As expected, the food was delicious and our
-                            servers were so friendly and helpful –
-                            we loved them! It was a delightful experience all round.
-                            Thank you so much for hosting us. We hope we can come back again soon.
-                            <i class="fa fa-quote-right"></i>
-                        </p>
-                    </div>
-                    <div class="testimonial-name position-relative">Lotte Lenya</div>
-                </div>
-                <!-- END TESTIMONIAL -->
-                <!--TESTIMONIAL 5 -->
-                <div class="item  animate__animated animate__slideInRight">
-                    <div class="shadow-effect position-relative">
-                        <img class="img-circle position-absolute top-0 start-50 translate-middle"
-                            src="{% static 'images/testimonial-img/test-5.jpeg' %}" alt="">
-                        <p class="mt-5"><i class="fa fa-quote-left"></i>My favorite restaurant! Always good food and
-                            good service! Can't beat the price! Can accommodate large groups!
-                            The staff is the best in town and why we keep coming back. Highly recommend this restaurant!
-                            <i class="fa fa-quote-right"></i>
-                        </p>
-                    </div>
-                    <div class="testimonial-name position-relative">Nina Hoss</div>
-                </div>
-                <!-- END TESTIMONIAL -->
-                <!--TESTIMONIAL 6 -->
-                <div class="item  animate__animated animate__slideInRight">
-                    <div class="shadow-effect position-relative">
-                        <img class="img-circle position-absolute top-0 start-50 translate-middle"
-                            src="{% static 'images/testimonial-img/testi-6.webp' %}" alt="">
-                        <p class="mt-5"><i class="fa fa-quote-left"></i> The food is awesome. And so is the service. The
-                            staff goes out of their way to make your dining experience wonderful.
-                            <i class="fa fa-quote-right"></i>
-                        </p>
-                    </div>
-                    <div class="testimonial-name position-relative">Hildegard Knef</div>
-                </div>
-                <!-- END TESTIMONIAL -->
-            </div>
-            <div style="text-align:center">
-
-                <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
-                <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
-                <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
-                <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
-                <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
-                <span class="dot mb-5" onclick="currentSlide({{i}})"></span>
-
-            </div>
-
-        </div>
+<section id="Testimonial" class="Testimonial">
+    <div class="text-center">
+        <h2 class="section-title">Testimonials</h2>
+        <p class=" title">What they're saying about</p>
     </div>
-</section>
 
+    <div class="wrap">
+        <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+        <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+        <ul id="testim-dots" class="dots">
+            <li class="dot active"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+        </ul>
+        <div id="testim-content" class="content">
+
+            <div class="active">
+                <div class="img"><img src="{% static 'images/testimonial-img/test-5.jpeg' %}" alt=""></div>
+                <h2>Diane Kruger</h2>
+                <p class="mt-5"><i class="fa fa-quote-left"></i> Definitely book. It's busy all night.
+                    Everything feels a bit special even before you step inside and once you do the music,
+                    lighting and mood are all great.
+                    <i class="fa fa-quote-right"></i>
+                </p>
+            </div>
+
+            <div>
+                <div class="img"><img src="{% static 'images/testimonial-img/testi-2.webp' %}" alt=""></div>
+                <h2>Heike Makatsch</h2>
+
+                <p class="mt-5"><i class="fa fa-quote-left"></i> Definitely book. It's busy all night.
+                    Everything feels a bit special even before you step inside and once you do the music,
+                    lighting and mood are all great.
+                    <i class="fa fa-quote-right"></i>
+                </p>
+            </div>
+
+            <div>
+                <div class="img"><img src="{% static 'images/testimonial-img/testi-3.png' %}" alt=""></div>
+                <h2>Nina Hoss</h2>
+
+                <p class="mt-5"><i class="fa fa-quote-left"></i> It was amazing!! I have to say it’s the best
+                    meal I have had in quite some time. You will definitely be seeing more of me eating at your
+                    establishment. My husband was very impressed and we can’t wait for our parents to come visit
+                    so that we can share our new favorite place with them.
+                    <i class="fa fa-quote-right"></i>
+                </p>
+            </div>
+
+            <div>
+                <div class="img"><img src="{% static 'images/testimonial-img/testi-4.jpg' %}" alt=""></div>
+                <h2>Lotte Lenya</h2>
+
+                <p class="mt-5"><i class="fa fa-quote-left"></i> As expected, the food was delicious and our
+                    servers were so friendly and helpful –
+                    we loved them! It was a delightful experience all round.
+                    Thank you so much for hosting us. We hope we can come back again soon.
+                    <i class="fa fa-quote-right"></i>
+                </p>
+            </div>
+
+            <div>
+                <div class="img"><img src="{% static 'images/testimonial-img/testi-6.webp' %}" alt=""></div>
+                <h2>Hildegard Knef</h2>
+
+                <p class="mt-5"><i class="fa fa-quote-left"></i> The food is awesome. And so is the service. The
+                    staff goes out of their way to make your dining experience wonderful.
+                    <i class="fa fa-quote-right"></i>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 <!-- End Testimonial section -->
+
 <!-- gallery section -->
 
 <section id="gallery" class="gallery py-5">

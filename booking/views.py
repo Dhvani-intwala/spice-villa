@@ -39,7 +39,6 @@ def booking(request):
     """
     # form = BookingForm()
     tables = Table.objects.all()
-    # Put a dates & time condition
     bookings = Booking.objects.all()
 
     occupied_table = [booking.table.code for booking in bookings]
@@ -83,8 +82,7 @@ def booking(request):
                 # print('success')
             except Exception as e:
                 print(e)
-            # s
-            # messages.success(request, 'Booking is confirmed')
+            messages.success(request, 'Booking is confirmed')
             # return redirect('/mybooking/')
 
     else:

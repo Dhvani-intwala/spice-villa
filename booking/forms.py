@@ -8,6 +8,7 @@ Forms for Booking App
 from django import forms
 from datetime import date
 from .models import Booking, Table
+from django.contrib import messages
 
 
 class BookingForm(forms.Form):
@@ -27,8 +28,8 @@ class BookingForm(forms.Form):
         attrs={'id': 'endTime', 'class': 'form-control',
                'type': 'time', 'step': '3600'}), label='')
     table_code = forms.ChoiceField(widget=forms.Select(
-        attrs={'id': 'tableCode', 'class': 'form-select',
-               'onChange': 'setPerson();'}),
+        attrs={'id': 'tableCode', 'class': 'form-control',
+               'class': 'form-select', 'onChange': 'setPerson();'}),
         choices=(
         ("A1", "A1"), ("A2", "A2"), ("B1", "B1"),
         ("B2", "B2"), ("C1", "C1"), ("C2", "C2")))
@@ -54,8 +55,6 @@ class BookingForm(forms.Form):
                                         + "on your name by selecting checkbox")
 
         if Booking.objects.filter(table=table_obj).exists():
-            raise forms.ValidationError(
-                "Table is occupied try selecting different table"
-            )
+            raise forms.ValidationError("Table is occupied try selecting different table")
 
         return cleaned_data

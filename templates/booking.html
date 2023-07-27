@@ -37,10 +37,10 @@
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn btn-simple text-light mt-5 border border-light" data-toggle="collapse"
-                data-target="#selectTable">Find a
+            <button type="button" class="btn btn-simple text-light mt-5 border border-light" id="FindTable">Find
+                a
                 table</button>
-            <div class="collapse p-center" id="selectTable">
+            <div class="p-center" id="selectTable">
                 <div class="row justify-content-center col-lg-12 booking d-flex">
                     <br>
                     <div class="container">
@@ -99,11 +99,12 @@
                 </div><br>
                 <div class="flex p-center" id="flexButtons">
                     <button type="button" class="btn btn-simple  text-light border border-light mx-3"
-                        data-toggle="collapse" data-target="#bookingContactCollapse">Continue</button>
-                    <button type="button" class="btn btn-simple restart text-light border border-light">Restart</button>
+                        id="continue">Continue</button>
+                    <button type="button" class="btn btn-simple restart text-light border border-light"
+                        id="restart">Restart</button>
                 </div><br>
             </div>
-            <div class="flex f-column a-center p-center col-sm-12 col-md-6 col-lg-3 booking collapse booking"
+            <div class="flex f-column a-center p-center col-sm-12 col-md-6 col-lg-3 booking"
                 id="bookingContactCollapse">
                 <h5 class="mb-2">CONTACT DETAILS</h5>
                 <div class="form-field">
@@ -123,13 +124,14 @@
                 {{ form.book_on_user }}
                 <label for="bookAuthenticate">Book It On My Name</label><br>
 
-                <button type="submit" class="btn btn-simple text-light border border-light mb-3 mt-3  "
-                    data-toggle="collapse" data-target="#overviewCollapse">Finish</button><br>
+                <button type="button" class="btn btn-simple text-light border border-light mb-3 mt-3"
+                    id="finish">Finish</button><br>
 
             </div>
-            <div id=" overviewCollapse" class="flex f-column a-center p-center collapse ">
+            <div id="overviewCollapse" class="flex f-column a-center p-center">
                 <h5>BOOKING OVERVIEW</h5>
                 <span id="bookingOverview"></span><br>
+                <span id="overviewText"></span><br>
                 <span>Do you want to proceed?</span><br>
                 <!-- Submit button -->
                 <button type="submit" class="btn form-submit">Yes</button>

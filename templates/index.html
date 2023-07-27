@@ -32,42 +32,43 @@
 
         {% for item in menu_data %}
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-6">
                 <div class="flex mt-5">
                     <div class="text-light">
                         <img src="{{ item.menu_img_path }}" alt="" class="img-fluids">
                     </div>
                 </div>
             </div>
-            <div class=" col-md-4">
+            <div class="col-md-2">
                 <div class="flex  mt-5">
                     <div class="text-light">
                         <div class="flex">
-                            <div class="flex text-light">
+                            <div class="text-light">
                                 <h5 class="text-light item-name">{{ item.name }}</h5>
                             </div>
+                            <div class="col-md-4">
+                                <div class="mt-5">
+                                    <div class="text-light">
+                                        <h5 class="text-light">€{{ item.price }}</h5>
+                                    </div>
+                                </div>
 
+                            </div>
                         </div>
 
                         <div class=" row text-light">
                             <p class="Ingredients"><b>Ingredients:</b> {{ item.description }}</p>
                         </div>
+                        <div class=" row text-light dots">
+                            <p>
+                                .................................................................................................
+                            </p>
+                        </div>
                     </div>
-                    <div class=" row text-light dots">
-                        <p>
-                            .................................................................................................
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="flex meal mt-5">
-                    <div class="text-light">
-                        <h5 class="text-light">€{{ item.price }}</h5>
-                    </div>
-                </div>
 
+                </div>
             </div>
+
 
         </div>
         {% endfor %}
@@ -175,7 +176,6 @@
 
 
 <!-- Testimonial section -->
-
 
 <section id="Testimonial" class="Testimonial">
     <div class="text-center">

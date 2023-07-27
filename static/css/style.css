@@ -135,12 +135,12 @@ a i:hover {
 /* -------------------- MESSAGE ALERT BAR------------------------ */
 
 .alert-bar {
-    background-color: #221f1f;
-    border: 1px solid white;
+    background-color: #ece6e6;
+    border: 1px solid #000;
     border-radius: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: #fff;
+    color: #000;
     text-align: center;
     opacity: 0.9;
     z-index: 999;
@@ -451,6 +451,7 @@ a i:hover {
 /* -------------------- TESTIMONIAL SLIDER------------------------ */
 
 /* -------------------- Reference from  https: //codepen.io/feyinway/pen/LjMPgv ------------------------ */
+
 
 .Testimonial {
     width: 100%;
@@ -1192,6 +1193,23 @@ input::-webkit-calendar-picker-indicator {
 
 input[type="number" i] {
     padding: 0px;
+}
+
+#selectTable {
+    display: none;
+}
+
+#bookingContactCollapse {
+    display: none;
+}
+
+#overviewCollapse {
+    display: none;
+}
+
+.error-container {
+    color: red;
+    font-size: larger;
 }
 
 /* ---------------------- MyBOOKING PAGE ----------------------------- */

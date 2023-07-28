@@ -31,47 +31,52 @@
         </div>
 
         {% for item in menu_data %}
-        <div class="row">
-            <div class="col-lg-6">
+        <div class="row menu">
+            <div class="col-md-4">
                 <div class="flex mt-5">
                     <div class="text-light">
                         <img src="{{ item.menu_img_path }}" alt="" class="img-fluids">
                     </div>
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-5">
                 <div class="flex  mt-5">
                     <div class="text-light">
-                        <div class="flex">
-                            <div class="text-light">
-                                <h5 class="text-light item-name">{{ item.name }}</h5>
+                        <div class=" row flex">
+                            <!-- <div class=" col-4 flex text-light"> -->
+                            <div class=" col-6 text-light">
+                                <h5 class="text-light item-name mb-3">{{ item.name }}</h5>
                             </div>
-                            <div class="col-md-4">
+                            <div class=" col-3 text-light">
+                                <h5 class="text-light">€{{ item.price }}</h5>
+                            </div>
+                        </div>
+                        <!-- <div class="col-md-4">
                                 <div class="mt-5">
                                     <div class="text-light">
                                         <h5 class="text-light">€{{ item.price }}</h5>
                                     </div>
                                 </div>
 
-                            </div>
-                        </div>
-
-                        <div class=" row text-light">
-                            <p class="Ingredients"><b>Ingredients:</b> {{ item.description }}</p>
-                        </div>
-                        <div class=" row text-light dots">
-                            <p>
-                                .................................................................................................
-                            </p>
-                        </div>
+                            </div> -->
                     </div>
 
+                    <div class=" row text-light">
+                        <p class="Ingredients"><b>Ingredients:</b> {{ item.description }}</p>
+                    </div>
+                    <div class=" row text-light dots">
+                        <p>
+                            ............................................................................................................................
+                        </p>
+                    </div>
                 </div>
+
             </div>
-
-
         </div>
-        {% endfor %}
+
+
+    </div>
+    {% endfor %}
 
     </div>
 </section>
@@ -267,20 +272,13 @@
             <p class="mb-5 title">Some photos from Our Restaurant</p>
         </div>
     </div>
-    <div class="full-img" id="fullImgBox">
-        <!-- <a href="{% static 'images/gallery/gallery12.jpeg' %}" class="gallery-lightbox" id="fullImg"> -->
-        <img src="{% static 'images/gallery/gallery12.jpeg' %}" alt="" class="img-fluid" id="fullImg">
-        <span onclick="closeFullImg()">X</span>
-    </div>
-
-    <div class="container-fluid">
+    <div class="container-fluid grid">
         <div class="row g-0">
 
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
                     <!-- <a href="{% static 'images/gallery/gallery12.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
-                    <img src="{% static 'images/gallery/gallery12.jpeg' %}" alt="" class="img-fluid"
-                        onclick="closeFullImg( this.src)">
+                    <img src="{% static 'images/gallery/gallery12.jpeg' %}" alt="" class="img-fluid img">
                     </a>
                 </div>
             </div>
@@ -288,8 +286,7 @@
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
                     <!-- <a href="{% static 'images/gallery/gallery2.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
-                    <img src="{% static 'images/gallery/gallery2.jpeg' %}" alt="" class="img-fluid"
-                        onclick="closeFullImg( this.src)">
+                    <img src="{% static 'images/gallery/gallery2.jpeg' %}" alt="" class="img-fluid img">
                     </a>
                 </div>
             </div>
@@ -297,8 +294,7 @@
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
                     <!-- <a href="{% static 'images/gallery/gallery14.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
-                    <img src="{% static 'images/gallery/gallery14.jpeg' %}" alt="" class="img-fluid"
-                        onclick="closeFullImg()">
+                    <img src="{% static 'images/gallery/gallery14.jpeg' %}" alt="" class="img-fluid img">
                     </a>
                 </div>
             </div>
@@ -306,8 +302,7 @@
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
                     <!-- <a href="{% static 'images/gallery/gallery4.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
-                    <img src="{% static 'images/gallery/gallery4.jpeg' %}" alt="" class="img-fluid"
-                        onclick="closeFullImg(this.src)">
+                    <img src="{% static 'images/gallery/gallery4.jpeg' %}" alt="" class="img-fluid img">
                     </a>
                 </div>
             </div>
@@ -315,8 +310,7 @@
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
                     <!-- <a href="{% static 'images/gallery/gallery20.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
-                    <img src="{% static 'images/gallery/gallery20.jpeg' %}" alt="" class="img-fluid"
-                        onclick="closeFullImg(this.src)">
+                    <img src="{% static 'images/gallery/gallery20.jpeg' %}" alt="" class="img-fluid img">
                     </a>
                 </div>
             </div>
@@ -324,16 +318,14 @@
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
                     <!-- <a href="{% static 'images/gallery/gallery21.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
-                    <img src="{% static 'images/gallery/gallery21.jpeg' %}" alt="" class="img-fluid"
-                        onclick="closeFullImg(this.src)">
+                    <img src="{% static 'images/gallery/gallery21.jpeg' %}" alt="" class="img-fluid img">
                     </a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
                     <!-- <a href="{% static 'images/gallery/gallery19.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
-                    <img src="{% static 'images/gallery/gallery19.jpeg' %}" alt="" class="img-fluid"
-                        onclick="closeFullImg(this.src)">
+                    <img src="{% static 'images/gallery/gallery19.jpeg' %}" alt="" class="img-fluid img">
                     </a>
                 </div>
             </div>
@@ -341,11 +333,12 @@
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
                     <!-- <a href="{% static 'images/gallery/gallery18.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
-                    <img src="{% static 'images/gallery/gallery18.jpeg' %}" alt="" class="img-fluid"
-                        onclick="closeFullImg(this.src)">
+                    <img src="{% static 'images/gallery/gallery18.jpeg' %}" alt="" class="img-fluid img">
                     </a>
                 </div>
             </div>
+
+
 
         </div>
     </div>

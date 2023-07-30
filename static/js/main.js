@@ -157,12 +157,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     };
 
 
-
-
-
-
-
-
     // setperson for table
 
     function setPerson() {
@@ -437,11 +431,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
             OverviewText.textContent = "You have booked Table on " + date + ", starts on " + start + " and ends on " + end + " for " + numberOfPersons + " persons.";
             OverviewText.style.color = 'white';
         });
-
-
-
-
-
 
     }
 

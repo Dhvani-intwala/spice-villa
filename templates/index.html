@@ -39,15 +39,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col-md-6">
                 <div class="flex  mt-5">
                     <div class="text-light">
-                        <div class=" row flex">
-                            <!-- <div class=" col-4 flex text-light"> -->
-                            <div class=" col-6 text-light">
+                        <div class=" row flex block-div">
+                            <div class=" col-6 text-light item-name">
                                 <h5 class="text-light item-name mb-3">{{ item.name }}</h5>
                             </div>
-                            <div class=" col-3 text-light">
+                            <div class=" col-3 text-light item-price">
                                 <h5 class="text-light">€{{ item.price }}</h5>
                             </div>
                         </div>
@@ -64,11 +63,13 @@
                     <div class=" row text-light">
                         <p class="Ingredients"><b>Ingredients:</b> {{ item.description }}</p>
                     </div>
-                    <div class=" row text-light dots">
+                    <div class="line"></div>
+        
+                    <!-- <div class=" row">
                         <p>
                             ............................................................................................................................
                         </p>
-                    </div>
+                    </div> -->
                 </div>
 
             </div>

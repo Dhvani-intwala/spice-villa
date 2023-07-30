@@ -87,55 +87,55 @@ restaurant.
 - The navbar shows all the sections that the user can enter and provides a quick and easy means of
   navigating the site. The link to make a booking is enlarged to make it extra easy to find and use.
 
-  ![Navbar]()
+  ![Navbar](/static/images/readme-img/Nav.png)
 
 ### Hero
 
 The hero section makes for a great first impression of the site and thus the restaurant for the visitor.
 It also encompasses the links that the user most likely needs the most often which is the menu link
 and a link to Book a Table.
-![Hero]()
+![Hero](/static/images/readme-img/Hero.png)
 
 ### Menu
 
 On the Menu page there is a list with all the menu elements. Every item represents a meal with
 details such as Name, Image, Price, and Ingredients. The list design is simple and attractive.
 
-![Menu]()
+![Menu](/static/images/readme-img/menu-page.png)
 
 ### About
 
 The about section tells more about the restaurant and incorporates some of the design to further
 enhance its unique selling points.
 
-![About]()
+![About](/static/images/readme-img/About.png)
 
 ### Testimonials
 
 The testimonials show what some of the previous customers says of the restaurant and is a method
 of providing social proof to increase customer conversion of the webpage.
 
-![Testimonials]()
+![Testimonials](/static/images/readme-img/Testimonial.png)
 
 ### Gallery
 
 In the gallery visitors can see examples of its interior and what the restaurant looks like.
 
-![Gallery]()
+![Gallery](/static/images/readme-img/Gallery.png)
 
 ### Contact
 
 The contact section includes all the necessary information about the restaurant that the visitor may
 need to know about.
 
-![Contact]()
+![Contact](/static/images/readme-img/Contact.png)
 
 ### Account signup/Login
 
 The account pages where the user can create an account in order to book a table, as well as login as
 an existing user.
 
-![signup/Login]()
+![signup/Login](/static/images/readme-img/sign-up.png)
 
 ###  Login page
 
@@ -145,7 +145,7 @@ authentication was successful.
 Considering that the website is created for a restaurant, the profile of the user is created to display
 essential information such as name and email.
 
-![Login]()
+![Login](/static/images/readme-img/login.png)
 
 ### Booking page
 

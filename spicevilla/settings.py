@@ -30,7 +30,7 @@ if os.path.isfile('env.py'):
 SECRET_KEY = 'e$^r!fxokj2$hg21ou)=r3t)hu0qfzor12))99t7xv)0#1lc!6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['spice-villa-c8a666e63481.herokuapp.com', 'localhost',
                  '8000-dhvani-intwala-spice-vil-6d7504h6ef.us2.codeanyapp.com']
@@ -177,3 +177,6 @@ EMAIL_HOST_USER = 'intdhvani2627@gmail.com'
 EMAIL_HOST_PASSWORD = '34344262'
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'intdhvani2627@gmail.com'
+
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'

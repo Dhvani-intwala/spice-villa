@@ -6,42 +6,22 @@ function scrollToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-if (window.location.pathname=='/mybooking') {
+jQuery(document).ready(function ($) {
+    if ($(".counter").counterUp) {
+        $(".counter").counterUp({
+            delay: 10,
+            time: 1000,
+        });
+    }
+    // preloader
+    if ($("#preloader")) {
+        $('#preloader').remove();
+    }
+});
 
-    const bookingNav = document.getElementById('mybookingNav');
-    removeActiveAll();
-    bookingNav.classList.add("active");
-
-
-}
 
 
 document.addEventListener("DOMContentLoaded", function (event) {
-
-    // function animateValue(counter){
-    //     var Counter = document.getElementById(counter);
-    //     var current = Counter.innerHTML;
-    //     setInterval(function(){
-    //         current++;
-    //     },1000);
-    // }
-    // animateValue(counter);
-  
-    jQuery(document).ready(function ($) {
-        if(window.location.pathname === '/') {
-        if ($(".counter").counterUp) {
-            $(".counter").counterUp({
-                delay: 10,
-                time: 1000,
-            });
-        }
-    }
-    
-        //preloader
-        if ($("#preloader")) {
-            $('#preloader').remove();
-        }
-    });
 
     if (performance.getEntriesByType('navigation')[0].type != 'navigate') {
         if (window.location.hash) {
@@ -216,6 +196,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const datePicker = document.querySelector("#datePicker");
         const startTime = document.querySelector("#startTime");
         const endTime = document.querySelector("#endTime");
+        const customer_name = document.querySelector("#fullName");
+        const customer_email = document.querySelector("#email");
         const selectTable = document.getElementById('selectTable');
         ContinueButton = document.getElementById('continue');
         RestartButton = document.getElementById('restart');
@@ -224,6 +206,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
         OverviewText = document.getElementById('overviewText');
 
         datePicker.min = new Date().toLocaleDateString('en-ca');
+
+        const isRequired = value => value === '' ? false : true;
+        const isBetween = (length, min, max) => length < min || length > max ? false : true;
 
         var currentDay = new Date();
         var dd = String(currentDay.getDate()).padStart(2, '0');
@@ -243,25 +228,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             if (match) this.value = match[1] + ":00";
         });
 
-        const isRequired = value => value === '' ? false : true;
-
-        const isBetween = (length, min, max) => length < min || length > max ? false : true;
-
-        const isDateValueValid = (date) => {
-
-            // get input value date 
-            var inputDate = new Date(date);
-            inputDate.setHours(0, 0, 0, 0);
-
-            // get current day
-            var today = new Date();
-            today.setHours(0, 0, 0, 0);
-
-            if (inputDate >= today)
-                return true;
-            else
-                return false;
-        };
+        
 
         // --------------------------CHECK IF START TIME IS AFTER CURRENT TIME FOR TODAY BOOKINGS--------------------------
         const isStartTimeTodayValid = (startTime) => {
@@ -324,6 +291,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 return true;
         };
 
+        const isDateValueValid = (date) => {
+
+            // get input value date 
+            var inputDate = new Date(date);
+            inputDate.setHours(0,0,0,0);
+    
+            // get current day
+            var today = new Date();
+            today.setHours(0,0,0,0);
+    
+            if( inputDate >= today )
+              return true;
+            else  
+              return false;
+          };
+    
+        
 
         const checkDate = () => {
             let valid = false;
@@ -424,29 +408,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
             OverviewText.textContent = "You have booked Table on " + date + ", starts on " + start + " and ends on " + end + " for " + numberOfPersons + " persons.";
             OverviewText.style.color = 'green';
         });
+    
+        // setperson for table
+
+        function setPerson() {
+            var tableCode = document.getElementById("tableCode").value;
+            console.log("here" + tableCode);
+            var temp = 0;
+            if (tableCode === "A1") {
+                temp = "8";
+            } else if (tableCode === "A2") {
+                temp = "2";
+            } else if (tableCode === "B1") {
+                temp = "4";
+            } else if (tableCode === "B2") {
+                temp = "4";
+            } else if (tableCode === "C1") {
+                temp = "6";
+            } else if (tableCode === "C2") {
+                temp = "6";
+            }
+            document.getElementById("tablePersons").value = temp;
+        }
+        setPerson()
 
     }
      
-    // setperson for table
-
-    function setPerson() {
-        var tableCode = document.getElementById("tableCode").value;
-        console.log("here" + tableCode);
-        var temp = 0;
-        if (tableCode === "A1") {
-            temp = "8";
-        } else if (tableCode === "A2") {
-            temp = "2";
-        } else if (tableCode === "B1") {
-            temp = "4";
-        } else if (tableCode === "B2") {
-            temp = "4";
-        } else if (tableCode === "C1") {
-            temp = "6";
-        } else if (tableCode === "C2") {
-            temp = "6";
-        }
-        document.getElementById("tablePersons").value = temp;
-    }
-
 });

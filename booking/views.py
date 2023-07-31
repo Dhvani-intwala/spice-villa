@@ -16,6 +16,7 @@ from .forms import BookingForm
 import os
 import datetime
 from django.core.mail import send_mail
+from django.utils.timezone import now, localtime
 
 
 def home(request):
@@ -38,9 +39,22 @@ def booking(request):
     A view that provides a form to the user that creates a Booking entry
     """
     # form = BookingForm()
+    
+    def finish_all_completed_booking():
+        bookings_all = Booking.objects.all()
+
+        for booking in bookings_all:
+            
+            if(booking.date < datetime.date.today()):
+                booking.delete()
+                continue
+            elif(booking.date == datetime.date.today()):
+                if(booking.end_time < localtime().time()):
+                    booking.delete()
+                    continue
+    finish_all_completed_booking()
     tables = Table.objects.all()
     bookings = Booking.objects.all()
-
     occupied_table = [booking.table.code for booking in bookings]
 
     if (request.method == 'POST'):
@@ -83,7 +97,7 @@ def booking(request):
             except Exception as e:
                 print(e)
             messages.success(request, 'Booking is confirmed')
-            # return redirect('/mybooking/')
+            return redirect('/mybooking/')
 
     else:
         form = BookingForm()

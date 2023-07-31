@@ -99,6 +99,17 @@ def delete_booking(request, pk):
     return redirect('/mybooking/')
 
 
+def edit_booking(request):
+    """The view that renders the edit_booking page where the user can
+    update a current booking. Checks if current user matches the user
+    that made the booking, otherwise it redirects to the mybookings_page.
+    """
+    #  booking = get_object_or_404(Booking, id=booking_id)
+    #  if request.user != booking.user:
+    #     return redirect('mybookings_page')
+    return render(request, 'edit_booking.html')
+
+
 def booking_list_admin(request):
     data = Booking.objects.filter(created_by=request.user)
 

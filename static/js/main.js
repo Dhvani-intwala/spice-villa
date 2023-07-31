@@ -1,12 +1,47 @@
 
+
 // back to top button
 // Function to scroll back to the top of the page
 function scrollToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+if (window.location.pathname=='/mybooking') {
+
+    const bookingNav = document.getElementById('mybookingNav');
+    removeActiveAll();
+    bookingNav.classList.add("active");
+
+
+}
+
 
 document.addEventListener("DOMContentLoaded", function (event) {
+
+    // function animateValue(counter){
+    //     var Counter = document.getElementById(counter);
+    //     var current = Counter.innerHTML;
+    //     setInterval(function(){
+    //         current++;
+    //     },1000);
+    // }
+    // animateValue(counter);
+  
+    jQuery(document).ready(function ($) {
+        if(window.location.pathname === '/') {
+        if ($(".counter").counterUp) {
+            $(".counter").counterUp({
+                delay: 10,
+                time: 1000,
+            });
+        }
+    }
+    
+        //preloader
+        if ($("#preloader")) {
+            $('#preloader').remove();
+        }
+    });
 
     if (performance.getEntriesByType('navigation')[0].type != 'navigate') {
         if (window.location.hash) {
@@ -28,24 +63,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
             backToTopBtn.style.display = "none";
         }
     }
-
-
-    jQuery(document).ready(function ($) {
-        if ($(".counter").counterUp) {
-            $(".counter").counterUp({
-                delay: 10,
-                time: 1000,
-            });
-        }
-        //preloader
-        if ($("#preloader")) {
-            $('#preloader').remove();
-        }
-    });
-
-
-
+   
     // Testimonial slider
+    if(window.location.pathname === '/') {
+
+    
 
     'use strict';
     var testimonial = document.getElementById("Testimonial"),
@@ -131,11 +153,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
         });
 
-        testim.addEventListener("touchstart", function (e) {
+        testimonial.addEventListener("touchstart", function (e) {
             touchStartPos = e.changedTouches[0].clientX;
         });
 
-        testim.addEventListener("touchend", function (e) {
+        testimonial.addEventListener("touchend", function (e) {
             touchEndPos = e.changedTouches[0].clientX;
 
             touchPosDiff = touchStartPos - touchEndPos;
@@ -155,29 +177,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         });
     };
-
-
-    // setperson for table
-
-    function setPerson() {
-        var tableCode = document.getElementById("tableCode").value;
-        console.log("here" + tableCode);
-        var temp = 0;
-        if (tableCode === "A1") {
-            temp = "8";
-        } else if (tableCode === "A2") {
-            temp = "2";
-        } else if (tableCode === "B1") {
-            temp = "4";
-        } else if (tableCode === "B2") {
-            temp = "4";
-        } else if (tableCode === "C1") {
-            temp = "6";
-        } else if (tableCode === "C2") {
-            temp = "6";
-        }
-        document.getElementById("tablePersons").value = temp;
     }
+   
 
     // Add active class to the current link
     var header = document.getElementById("navbarSupportedContent");
@@ -189,14 +190,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.className += " active";
         });
     }
-
-
-
-    // Image slider
-
-
-
-
 
     // form validation
     const showError = (input, message) => {
@@ -217,9 +210,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
         error.textContent = '';
     };
 
+    if (window.location.pathname === '/booking/') {
 
-
-    if (window.location.pathname == '/booking/') {
+        console.log(window.location.pathname)
         const datePicker = document.querySelector("#datePicker");
         const startTime = document.querySelector("#startTime");
         const endTime = document.querySelector("#endTime");
@@ -429,9 +422,31 @@ document.addEventListener("DOMContentLoaded", function (event) {
             const date = datePicker.value.trim();
             const numberOfPersons = document.getElementById("tablePersons").value;
             OverviewText.textContent = "You have booked Table on " + date + ", starts on " + start + " and ends on " + end + " for " + numberOfPersons + " persons.";
-            OverviewText.style.color = 'white';
+            OverviewText.style.color = 'green';
         });
 
+    }
+     
+    // setperson for table
+
+    function setPerson() {
+        var tableCode = document.getElementById("tableCode").value;
+        console.log("here" + tableCode);
+        var temp = 0;
+        if (tableCode === "A1") {
+            temp = "8";
+        } else if (tableCode === "A2") {
+            temp = "2";
+        } else if (tableCode === "B1") {
+            temp = "4";
+        } else if (tableCode === "B2") {
+            temp = "4";
+        } else if (tableCode === "C1") {
+            temp = "6";
+        } else if (tableCode === "C2") {
+            temp = "6";
+        }
+        document.getElementById("tablePersons").value = temp;
     }
 
 });

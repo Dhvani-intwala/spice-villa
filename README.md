@@ -201,7 +201,7 @@ details.
 The footer contains the essential information about the restaurant for easy access to the most
 relevant contact information and social media links on all pages throughout the website.
 
-![Footer]()
+![Footer](/static/images/readme-img/footer.png)
 
 ## Technologies Used
 Languages

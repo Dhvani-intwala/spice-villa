@@ -56,5 +56,4 @@ class BookingForm(forms.Form):
 
         if Booking.objects.filter(table=table_obj).exists():
             raise forms.ValidationError("Table is occupied try selecting different table")
-
         return cleaned_data

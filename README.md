@@ -147,12 +147,38 @@ essential information such as name and email.
 
 ![Login](/static/images/readme-img/login.png)
 
-### Booking page
 
-In the booking page the customer can make a reservation using the form and save it. It will then
-show up in the customers mybooking page.
+### Book a Table
 
-![Booking page]()
+Every user that is authenticated can access the Bookings page for making a reservation. This feature
+provides a form with multiple sections that appear successively, as steps in completing the booking.
+The first section is for selecting the date and time interval of the booking
+
+- The inputs are validated after the following rules:
+   - The Date value should not be less than the current day;
+   - For the current day the Start hour can't be less than the current hour;
+   - End Hour should be greater than Start hour;
+   - Start and End hours must be between 9:00 AM - 11:00;
+
+![Booking page](/static/images/readme-img/Booking_page.png)
+
+The next section appears only if the previous one is valid and it displays the tables existing in the
+restaurant in the colour that matches their availability status. The user can now choose a table from
+the dropdown, considering that it only contains the free tables. Also, there is a read-only input with
+a value that represents the number of seats for each selected table, as an informative element.
+
+![BookaTable](/static/images/readme-img/Table.png)
+
+Another part of the form is displayed with the contact details to be filled in. A better alternative
+available for the users that are not staff members is to check the Book it on my name option. This
+means that the form will automatically register the authenticated user's name and email as contact
+details.
+
+![Contact-details](/static/images/readme-img/Contact_user.png)
+
+The last section contains an overview of the booking. If the reservation is submitted, a success message will appear
+![overview](/static/images/readme-img/Overview_details.png)
+
 
 ### Mybookings
 
@@ -167,33 +193,6 @@ The button triggers a modal for confirmation, that being a part of the defensive
 
 ![Mybookings]()
 
-### Book a Table
-
-Every user that is authenticated can access the Bookings page for making a reservation. This feature
-provides a form with multiple sections that appear successively, as steps in completing the booking.
-The first section is for selecting the date and time interval of the booking
-
-- The inputs are validated after the following rules:
-   - The Date value should not be less than the current day;
-   - For the current day the Start hour can't be less than the current hour;
-   - End Hour should be greater than Start hour;
-   - Start and End hours must be between 9:00 AM - 11:00;
-
-![BookaTable]()
-
-The next section appears only if the previous one is valid and it displays the tables existing in the
-restaurant in the colour that matches their availability status. The user can now choose a table from
-the dropdown, considering that it only contains the free tables. Also, there is a read-only input with
-a value that represents the number of seats for each selected table, as an informative element.
-
-![]()
-
-Another part of the form is displayed with the contact details to be filled in. A better alternative
-available for the users that are not staff members is to check the Book it on my name option. This
-means that the form will automatically register the authenticated user&#39;s name and email as contact
-details.
-
-![]()
 
 
 ### Footer

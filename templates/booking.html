@@ -111,18 +111,27 @@
                     <!-- Name input -->
                     <label for="fullName"><i class="fas fa-user"></i> Customer Full Name:</label>
                     {{ form.customer_full_name }}
+                    <div class="error-container">
+                        <small class="errorlist"></small>
+                    </div>
 
                 </div>
                 <div class="form-field">
                     <!-- Email input -->
                     <label for="email"><i class="fas fa-envelope"></i> Customer Email:</label>
                     {{form.customer_email }}
+
+                    <div class="error-container">
+                        <small class="errorlist"></small>
+                    </div>
                     <!-- <p><b><strong>OR</strong></b></p> -->
                 </div>
                 <p><b><strong>OR</strong></b></p>
                 <!-- Date inputCheckbox -->
                 {{ form.book_on_user }}
                 <label for="bookAuthenticate">Book It On My Name</label><br>
+
+                <span id="bookingOnmyname"></span><br>
 
                 <button type="button" class="btn btn-simple text-light border border-light mb-3 mt-3"
                     id="finish">Finish</button><br>
@@ -134,8 +143,8 @@
                 <span id="overviewText"></span><br>
                 <span >Do you want to proceed?</span><br>
                 <!-- Submit button -->
-                <button type="submit" class=" btn-green">Yes</button>
-                <button type="button" class=" restart btn-red">No</button>
+                <button type="submit" class=" btns-green">Yes</button>
+                <a href="#bookingForm" class="btns-red" id="nobutton">No</a>
             </div>
 
 

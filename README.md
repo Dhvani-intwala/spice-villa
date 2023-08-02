@@ -182,16 +182,23 @@ The last section contains an overview of the booking. If the reservation is subm
 
 ### Mybookings
 
-The current bookings for a customer are shown on the mybooking page, that way the customer can
-get an overview of all bookings and check the date and time etc for each booking. Every booking has
-a visual representation of a note with the details of the reservation written on it. The customer can
-also delete a booking by clicking on the "delete" button.
+The users' accounts have been created using the django allauth module. This way, information about the current user can be accessed from the template and displayed for confirming that the authentication was successful.
+Considering that the website is created for a restaurant, the profile of the user is created to display essential information such as name and email.
 
-Also, for giving the user the ability to manage his bookings, every element in the list comes with a
-Delete Booking button.
+![Mybookings](/static/images/readme-img/mybooking.png)
+
+Also, the my booking page contains one more feature that better experience with the website. 
+
+-The feature is called Your upcoming bookings and is represented by a list of the bookings created by the currently authenticated user.
+Every booking has a visual representation of a note with the details of the reservation written on it.
+
+![Mybookings](/static/images/readme-img/sticky-img1.png)
+
+Also, for giving the user the ability to manage his bookings, every element in the list comes with a Delete Booking button.
 The button triggers a modal for confirmation, that being a part of the defensive programming.
 
-![Mybookings]()
+![Mybookings delete](/static/images/readme-img/
+
 
 
 
@@ -238,7 +245,6 @@ Languages
   - Was used to create the database schema.
 
 ## Deployment
-
 
 ### Deploy on Heroku
 

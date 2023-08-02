@@ -25,17 +25,17 @@
                         </div>
                         <div class="text-center">
                             <a  href="{% url 'edit' %}" class="btn-light button-link mb-3" type="button">Edit </a>
-                            <a class="btn-red button-link mb-3" data-bs-toggle="modal"
+                            <a class="btn-red button-delete mb-3" data-bs-toggle="modal"
                                     data-bs-target="#deleteBookingModal{{ data.pk }}" type="button">Delete
                             </a>
                         </div>
                     </div>
                     
                     <!-- Modal -->
-                    <div class="modal fade" id="deleteBookingModal{{ data.pk }}" tabindex="-1"
+                    <div class="modal" id="deleteBookingModal{{ data.pk }}" tabindex="-1"
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
-                            <div class="modal-content">
+                            <div class="modal-content  bg-color">
                                 <div class="modal-body">
                                     <p class="text-dark">Are you sure you want to delete booking for {{ data.date }} ,
                                         From
@@ -50,8 +50,8 @@
                                         <input type="hidden" name="{{ redirect_field_name }}"
                                             value="{{ redirect_field_value }}" />
                                         {% endif %}
-                                        <button type="button" class="btn btn-red" data-bs-dismiss="modal">No</button>
-                                        <button type="submit" class="btn btn-green">yes</button>
+                                        <button type="button" class="btns-red" data-bs-dismiss="modal">No</button>
+                                        <button type="submit" class="btns-green">yes</button>
                                     </form>
                                 </div>
                             </div>

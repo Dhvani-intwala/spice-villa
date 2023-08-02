@@ -19,8 +19,6 @@ jQuery(document).ready(function ($) {
     }
 });
 
-
-
 document.addEventListener("DOMContentLoaded", function (event) {
 
     if (performance.getEntriesByType('navigation')[0].type != 'navigate') {
@@ -49,114 +47,114 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     
 
-    'use strict';
-    var testimonial = document.getElementById("Testimonial"),
-        testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
-        testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
-        testimLeftArrow = document.getElementById("left-arrow"),
-        testimRightArrow = document.getElementById("right-arrow"),
-        testimSpeed = 4500,
-        currentSlide = 0,
-        currentActive = 0,
-        testimTimer,
-        touchStartPos,
-        touchEndPos,
-        touchPosDiff,
-        ignoreTouch = 30;
-    ;
+        'use strict';
+        var testimonial = document.getElementById("Testimonial"),
+            testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
+            testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
+            testimLeftArrow = document.getElementById("left-arrow"),
+            testimRightArrow = document.getElementById("right-arrow"),
+            testimSpeed = 4500,
+            currentSlide = 0,
+            currentActive = 0,
+            testimTimer,
+            touchStartPos,
+            touchEndPos,
+            touchPosDiff,
+            ignoreTouch = 30;
+        ;
 
-    window.onload = function () {
+        window.onload = function () {
 
-        // Testim Script
-        function playSlide(slide) {
-            for (var k = 0; k < testimDots.length; k++) {
-                testimContent[k].classList.remove("active");
-                testimContent[k].classList.remove("inactive");
-                testimDots[k].classList.remove("active");
+            // Testim Script
+            function playSlide(slide) {
+                for (var k = 0; k < testimDots.length; k++) {
+                    testimContent[k].classList.remove("active");
+                    testimContent[k].classList.remove("inactive");
+                    testimDots[k].classList.remove("active");
+                }
+
+                if (slide < 0) {
+                    slide = currentSlide = testimContent.length - 1;
+                }
+
+                if (slide > testimContent.length - 1) {
+                    slide = currentSlide = 0;
+                }
+
+                if (currentActive != currentSlide) {
+                    testimContent[currentActive].classList.add("inactive");
+                }
+                testimContent[slide].classList.add("active");
+                testimDots[slide].classList.add("active");
+
+                currentActive = currentSlide;
+
+                clearTimeout(testimTimer);
+                testimTimer = setTimeout(function () {
+                    playSlide(currentSlide += 1);
+                }, testimSpeed);
             }
 
-            if (slide < 0) {
-                slide = currentSlide = testimContent.length - 1;
-            }
-
-            if (slide > testimContent.length - 1) {
-                slide = currentSlide = 0;
-            }
-
-            if (currentActive != currentSlide) {
-                testimContent[currentActive].classList.add("inactive");
-            }
-            testimContent[slide].classList.add("active");
-            testimDots[slide].classList.add("active");
-
-            currentActive = currentSlide;
-
-            clearTimeout(testimTimer);
-            testimTimer = setTimeout(function () {
-                playSlide(currentSlide += 1);
-            }, testimSpeed);
-        }
-
-        testimLeftArrow.addEventListener("click", function () {
-            playSlide(currentSlide -= 1);
-        });
-
-        testimRightArrow.addEventListener("click", function () {
-            playSlide(currentSlide += 1);
-        });
-
-        for (var l = 0; l < testimDots.length; l++) {
-            testimDots[l].addEventListener("click", function () {
-                playSlide(currentSlide = testimDots.indexOf(this));
+            testimLeftArrow.addEventListener("click", function () {
+                playSlide(currentSlide -= 1);
             });
-        }
 
-        playSlide(currentSlide);
+            testimRightArrow.addEventListener("click", function () {
+                playSlide(currentSlide += 1);
+            });
 
-        // keyboard shortcuts
-        document.addEventListener("keyup", function (e) {
-            switch (e.keyCode) {
-                case 37:
+            for (var l = 0; l < testimDots.length; l++) {
+                testimDots[l].addEventListener("click", function () {
+                    playSlide(currentSlide = testimDots.indexOf(this));
+                });
+            }
+
+            playSlide(currentSlide);
+
+            // keyboard shortcuts
+            document.addEventListener("keyup", function (e) {
+                switch (e.keyCode) {
+                    case 37:
+                        testimLeftArrow.click();
+                        break;
+
+                    case 39:
+                        testimRightArrow.click();
+                        break;
+
+                    case 39:
+                        testimRightArrow.click();
+                        break;
+
+                    default:
+                        break;
+                }
+            });
+
+            testimonial.addEventListener("touchstart", function (e) {
+                touchStartPos = e.changedTouches[0].clientX;
+            });
+
+            testimonial.addEventListener("touchend", function (e) {
+                touchEndPos = e.changedTouches[0].clientX;
+
+                touchPosDiff = touchStartPos - touchEndPos;
+
+                console.log(touchPosDiff);
+                console.log(touchStartPos);
+                console.log(touchEndPos);
+
+
+                if (touchPosDiff > 0 + ignoreTouch) {
                     testimLeftArrow.click();
-                    break;
-
-                case 39:
+                } else if (touchPosDiff < 0 - ignoreTouch) {
                     testimRightArrow.click();
-                    break;
+                } else {
+                    return;
+                }
 
-                case 39:
-                    testimRightArrow.click();
-                    break;
-
-                default:
-                    break;
-            }
-        });
-
-        testimonial.addEventListener("touchstart", function (e) {
-            touchStartPos = e.changedTouches[0].clientX;
-        });
-
-        testimonial.addEventListener("touchend", function (e) {
-            touchEndPos = e.changedTouches[0].clientX;
-
-            touchPosDiff = touchStartPos - touchEndPos;
-
-            console.log(touchPosDiff);
-            console.log(touchStartPos);
-            console.log(touchEndPos);
-
-
-            if (touchPosDiff > 0 + ignoreTouch) {
-                testimLeftArrow.click();
-            } else if (touchPosDiff < 0 - ignoreTouch) {
-                testimRightArrow.click();
-            } else {
-                return;
-            }
-
-        });
-    };
+            });
+        };
     }
    
 
@@ -204,6 +202,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         FinishButton = document.getElementById('finish');
         OverviewCollapse = document.getElementById('overviewCollapse');
         OverviewText = document.getElementById('overviewText');
+        const book_auth = document.querySelector("#bookAuthenticate");
+
 
         datePicker.min = new Date().toLocaleDateString('en-ca');
 
@@ -325,7 +325,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
             return valid;
         };
 
-        // CHECK START TIME AND SET ERROR MESSAGES
+        const isStringLengthValid = (string, value) => {
+
+            if(string.length > value)
+              return false;
+            else
+              return true;
+        };
+
+         // --------------------------CHECK IF STRING CONTAINS SPECILA CHARACTERS--------------------------
+        const containsSpecialChars = (string) => {
+            const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+
+            return specialChars.test(string);
+        };
+    
+
+        // CHECK START TIME AND SET ERROR MESSAGESshowError
         const checkStartTime = () => {
             var currentTime = new Date().toLocaleTimeString(navigator.language, {
                 hour: "2-digit",
@@ -371,6 +387,44 @@ document.addEventListener("DOMContentLoaded", function (event) {
             return valid;
         };
 
+         // --------------------------CHECK NAME INPUT AND SET ERROR MESSAGES--------------------------
+        const checkCustomerName = () => {
+
+            let valid = false;
+
+            const name = customer_name.value.trim();
+        
+            if (!isRequired(name)) {
+                showError(customer_name, 'Please type a name');
+            } else if(!isStringLengthValid(name, 30)){
+            showError(customer_name, 'No more than 30 characters');
+            } else if(containsSpecialChars(name)){
+                showError(customer_name, 'No special characters');
+            } else{
+                showSuccess(customer_name);
+                valid = true;
+            }
+            return valid;
+        }; 
+
+      // --------------------------CHECK EMAIL AND SET ERROR MESSAGES--------------------------
+        const checkEmail = () => {
+
+            let valid = false;
+
+            const email = customer_email.value.trim();
+        
+            if (!isRequired(email)) {
+                showError(customer_email, 'Please type an email');
+            } else if(!isEmailValid(email)){
+                showError(customer_email, 'Email is invalid');
+            } else{
+                showSuccess(customer_email);
+                valid = true;
+            }
+            return valid;
+        };
+
         findTableButton = document.getElementById('FindTable');
         findTableButton.addEventListener("click", () => {
             console.log('findtable');
@@ -399,39 +453,72 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
 
         FinishButton.addEventListener("click", () => {
-            finish.style.display = 'none';
-            OverviewCollapse.style.display = 'block';
             const start = startTime.value.trim();
             const end = endTime.value.trim();
             const date = datePicker.value.trim();
             const numberOfPersons = document.getElementById("tablePersons").value;
-            OverviewText.textContent = "You have booked Table on " + date + ", starts on " + start + " and ends on " + end + " for " + numberOfPersons + " persons.";
-            OverviewText.style.color = 'green';
-        });
+           
+
+            if(book_auth.checked == false){
+          
+                console.log('not checked')
+          
+                // book_auth.style.display = "none"
+                let isNameValid = checkCustomerName();
+                let isEmailValid = checkEmail();
+          
+                let isContactSectionValid = isNameValid && isEmailValid;
+
+                if ( isContactSectionValid) {
     
-        // setperson for table
+                    book_auth.removeEventListener("click", manipulateInputs);
+                    
+                    //prevent user from changing checbox state
+                    book_auth.addEventListener("click", (event)=>{
+        
+                      setTimeout(function() {
+                        this.removeAttr('checked');
+                      }, 0);
+            
+                      event.preventDefault();
+                      event.stopPropagation();
+                    });
+        
+                    customer_name.readOnly = true;
+                    customer_email.readOnly = true;
+                    finishButton.style.display="none";
+                    
+                    // display next section
+                    document.querySelector('#overviewCollapse').style.display = 'block';
+                }
+                else{
+                    //prevent user from changing checbox state
+                    book_auth.addEventListener("click", (event)=>{
+        
+                        setTimeout(function() {
+                        this.checked = true;
+                        }, 0);
+            
+                        event.preventDefault();
+                        event.stopPropagation();
+                    });
+                      
+                    customer_name.parentElement.style.display="none";
+                    customer_email.parentElement.style.display="none";
+        
+                    // display next section
+                    finish.style.display="none";
+                    document.querySelector('#overviewCollapse').style.display = 'block';
 
-        function setPerson() {
-            var tableCode = document.getElementById("tableCode").value;
-            console.log("here" + tableCode);
-            var temp = 0;
-            if (tableCode === "A1") {
-                temp = "8";
-            } else if (tableCode === "A2") {
-                temp = "2";
-            } else if (tableCode === "B1") {
-                temp = "4";
-            } else if (tableCode === "B2") {
-                temp = "4";
-            } else if (tableCode === "C1") {
-                temp = "6";
-            } else if (tableCode === "C2") {
-                temp = "6";
+                }
+                
+                OverviewText.textContent = "You have booked Table on " + date + ", starts on " + start + " and ends on " + end + " for " + numberOfPersons + " persons.";
+                OverviewText.style.color = 'green';
+                
+            
+            
             }
-            document.getElementById("tablePersons").value = temp;
-        }
-        setPerson()
-
-    }
-     
+        }  
+    }      
 });
+     

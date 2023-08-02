@@ -210,8 +210,11 @@ relevant contact information and social media links on all pages throughout the 
 ![Footer](/static/images/readme-img/footer.png)
 
 ## Technologies Used
-Languages
+
+### Languages
+
 - Python
+- Django
 - JavaScript
 - HTML5
 - CSS3
@@ -309,4 +312,4 @@ For creating a clone of the repository on your local machine, use<b>Clone</b>:
 - My Code Institute Mentor for feedback and suggestions.
 - The Code Institute Slack community.
 
-[Back to top](#toc)
+[Back to top](#content)

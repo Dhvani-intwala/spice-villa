@@ -28,8 +28,9 @@ urlpatterns = [
     path('booking/', views.booking, name='booking'),
     path('submit/', booking, name='submit_booking'),
     path('mybooking/', views.booking_list_admin, name='booking_list_admin'),
-    path('mybooking/delete/<int:pk>', views.delete_booking,
+    path('mybooking/delete/<int:pk>/', views.delete_booking,
          name='delete_booking'),
-    path('changebooking', views.edit_booking, name='edit'),
+    path('mybooking/edit/<int:pk>/', views.booking, name='edit_booking'),
+    
 ]
 

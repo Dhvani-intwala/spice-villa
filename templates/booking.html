@@ -5,11 +5,18 @@
 <div class="row col-md-6 text-light booking-form">
     {% if user.is_authenticated %}
     <div class="center-container">
+        {% if edit_page %}
+        <h1>Edit your table now<i class="fas fa-pencil-alt"></i></h1>
+        {% else %}
         <h1>Book your table now <i class="fas fa-pencil-alt"></i></h1>
+        {% endif %}
         <!-- Booking form -->
         <form id="bookingForm" method="post" action="{% url 'submit_booking' %}">
             {% csrf_token %}
             {{ form.non_field_errors }}
+            {% if edit_page %}
+            <input type="hidden" name="primary-key" value="{{data}}">
+            {% endif %}
             <div class="row justify-content-center" id="bookingDetails">
                 <p>Choose the date and time for your booking and we will show you the available places</p>
                 <!-- Date input -->
@@ -37,9 +44,7 @@
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn btn-simple text-light mt-5 border border-light" id="FindTable">Find
-                a
-                table</button>
+            <button type="button" class="btn btn-simple text-light mt-5 border border-light" id="FindTable">Find a table</button>
             <div class="p-center" id="selectTable">
                 <div class="row justify-content-center col-lg-12 booking d-flex">
                     <br>
@@ -83,14 +88,14 @@
                     </div>
 
                     <div class="row justify-content-center col-lg-12 booking d-flex mt-3">
-                        <div class=" form-field col- col-md-3">
+                        <div class=" form-field col-12 col-md-5">
                             <!-- Table select -->
                             <label for="tableCode"><i class="fas fa-check"></i>Select a
                                 table</label><br>
                             {{ form.table_code }}
                             <br>
                         </div>
-                        <div class="form-field col-3 col-md-3">
+                        <div class="form-field col-12 col-md-5">
                             <!-- Number of persons read-only input -->
                             <label for="tablePersons"><i class="fas fa-users"></i>Number of persons</label>
                             <input id="tablePersons" class="form-control" type="text" disabled value="2">
@@ -143,8 +148,12 @@
                 <span id="overviewText"></span><br>
                 <span >Do you want to proceed?</span><br>
                 <!-- Submit button -->
-                <button type="submit" class=" btns-green">Yes</button>
-                <a href="#bookingForm" class="btns-red" id="nobutton">No</a>
+                {% if edit_page %}
+                <button type="submit" name="edit form" class=" btns-green">Yes</button>
+                {% else %}
+                <button type="submit" name="new form" class=" btns-green">Yes</button>
+                {% endif %}
+                <a href="#bookingForm" class="btns-red-color" type="button" id="nobutton">No</a>
             </div>
 
 

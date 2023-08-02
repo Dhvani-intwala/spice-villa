@@ -1104,6 +1104,14 @@ a i:hover {
     padding: 5px 10px;
 }
 
+.btns-red-color{
+    text-decoration: none;
+    background-color: red;
+    color: #000;
+    padding: 5px 10px;
+
+}
+
 
 /* -------------------- BOOKING PAGE  ------------------------ */
 
@@ -1197,6 +1205,7 @@ input[type="number" i] {
     color: red;
     font-size: larger;
 }
+
 
 /* ---------------------- MyBOOKING PAGE ----------------------------- */
 .containers {
@@ -1419,7 +1428,7 @@ input[type="number" i] {
     /* login page */
 
     .booking-text {
-        margin-top: 100%;
+        margin-top: 50%;
     }
 
     .container {

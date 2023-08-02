@@ -29,7 +29,7 @@ class BookingForm(forms.Form):
                'type': 'time', 'step': '3600'}), label='')
     table_code = forms.ChoiceField(widget=forms.Select(
         attrs={'id': 'tableCode', 'class': 'form-control',
-               'class': 'form-select', 'onChange': 'setPerson();'}),
+               'class': 'form-select'}),
         choices=(
         ("A1", "A1"), ("A2", "A2"), ("B1", "B1"),
         ("B2", "B2"), ("C1", "C1"), ("C2", "C2")))
@@ -48,12 +48,12 @@ class BookingForm(forms.Form):
         customer_full_name = cleaned_data['customer_full_name']
         customer_email = cleaned_data['customer_email']
         book_on_user = cleaned_data['book_on_user']
-        table_obj = Table.objects.get(code=cleaned_data['table_code'])
+        # table_obj = Table.objects.get(code=cleaned_data['table_code'])
 
         if (not (customer_email and customer_full_name) and not book_on_user):
             raise forms.ValidationError("Either write name and email or book "
                                         + "on your name by selecting checkbox")
 
-        if Booking.objects.filter(table=table_obj).exists():
-            raise forms.ValidationError("Table is occupied try selecting different table")
+        # if Booking.objects.filter(table=table_obj).exists():
+        #     raise forms.ValidationError("Table is occupied try selecting different table")
         return cleaned_data

@@ -4,7 +4,8 @@
 
 The fully deployed project can be accessed at [This link](https://spice-villa-c8a666e63481.herokuapp.com/).<br><br>
 
----
+Developer: Dhvani Intwala
+
 
 ## [Content](#content)
 

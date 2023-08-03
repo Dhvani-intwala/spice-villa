@@ -87,6 +87,18 @@ restaurant.
 <img src="static/images/readme-img/gray-color.png" width="30%"><br>
 <img src="static/images/readme-img/white_color.png" width="30%"><br>
 
+- The secondary colour scheme was used for buttons, warnings, errors or for highlighting important information.
+
+<img src="static/images/readme-img/green_color.png" width="30%"><br>
+<img src="static/images/readme-img/red_color.png" width="30%"><br>
+<img src="static/images/readme-img/light_color.png" width="30%"><br>
+
+
+
+
+### Wireframes
+
+### Database Schema
 
 ### Flowchart
 The Flowchart for my program was created using LucidChart and it visually represents how the system works.

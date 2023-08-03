@@ -1265,6 +1265,7 @@ input[type="number" i] {
     /* background-attachment: fixed; */
     padding: 10px;
     color: #0c0c0c;
+    height: 35vh;
 }
 
 .button-link {

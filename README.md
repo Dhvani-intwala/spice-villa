@@ -14,6 +14,7 @@ You can view the live site here:-
   - [Design](#design)
     - [Wireframes](#wireframes)
     - [Database Schema](#database-schema)
+    - [Flow-chart](#flow-chart)
 - [Features](#features)
   - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
@@ -77,6 +78,14 @@ The theme for the project were chosen in accordance with the intended target mar
 the restaurant. With its fancy looks and feel, dark colours and luxurious details and effects, the
 theme fits perfect for the goal of giving the visitor the impression that this is a very high quality
 restaurant.
+
+### Flowchart
+The Flowchart for my program was created using LucidChart and it visually represents how the system works.
+
+<details>
+  <summary>Flowchart</summary>
+<img src="static/images/readme-img/Flowchart.png" ><br>
+</details>
 
 
 
@@ -197,7 +206,13 @@ Every booking has a visual representation of a note with the details of the rese
 Also, for giving the user the ability to manage his bookings, every element in the list comes with a Delete Booking button.
 The button triggers a modal for confirmation, that being a part of the defensive programming.
 
-![Mybookings delete](/static/images/readme-img/
+![Mybookings delete](/static/images/readme-img/delete_booking.png)
+
+If the bookings list is empty, a suggestive message is displayed.
+
+![No_booking_msg](/static/images/readme-img/nobooking-msg.png)
+
+
 
 
 

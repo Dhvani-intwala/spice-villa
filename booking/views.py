@@ -100,13 +100,12 @@ def booking(request, pk = None):
             if(form.is_valid()):
                 print(request.POST.get('primary-key'))
                 booking = get_object_or_404(Booking, pk=request.POST.get('primary-key'))
-                table_obj = booking.table
-                table_obj.code = form.cleaned_data['table_code']
+                table_obj = Table.objects.get(code=form.cleaned_data['table_code'])
                 booking.date = form.cleaned_data['date']
                 print(form.cleaned_data['date'])
                 booking.start_time = form.cleaned_data['start_time']
                 booking.end_time = form.cleaned_data['end_time']
-                booking.table.code = form.cleaned_data['table_code'],
+                booking.table = table_obj
                 booking.customer_full_name= form.cleaned_data['customer_full_name']
                 booking.customer_email=form.cleaned_data['customer_email']
             else:
@@ -138,41 +137,6 @@ def delete_booking(request, pk):
     booking.delete()
     messages.success(request, 'Booking has been deleted')
     return redirect('/mybooking/')
-
-
-def edit_booking(request, pk):
-    """The view that renders the edit_booking page where the user can
-    update a current booking. Checks if current user matches the user
-    that made the booking, otherwise it redirects to the mybookings_page.
-    """
-    booking = get_object_or_404(Booking, pk=pk)
-    form = BookingForm(initial = {'date':booking.date , 'start_time':booking.start_time , 'end_time':booking.end_time , 'table_code':booking.table.code ,
-    'customer_full_name':booking.customer_full_name , 'customer_email':booking.customer_email })
-    tables = Table.objects.all()
-    bookings = Booking.objects.all()
-    occupied_table = [booking.table.code for booking in bookings]
-
-    if(request.method == 'POST'):
-        form = BookingForm(request.POST)
-        print('check here i am')
-        if(form.is_valid()):
-            
-            table_obj = booking['table']
-            table_obj.code = form.cleaned_data['table_code']
-            booking['date'] = form.cleaned_data['date']
-            booking['start_time'] = form.cleaned_data['start_time']
-            booking['end_time'] = form.cleaned_data['end_time']
-            booking['table'] =table_obj,
-            booking['customer_full_name']= form.cleaned_data['name']
-            booking['customer_email']=form.cleaned_data['email']
-        try:
-            booking.save()
-        except Exception as e:
-            print(e)
-            messages.success(request, 'Booking is edited')
-            return redirect('/mybooking/')
-    return render(request, 'booking.html', {'edit_page':True, 'form': form, 'tables': tables,
-                                            'occupied_tables': occupied_table,'data':pk})
 
 
 def booking_list_admin(request):

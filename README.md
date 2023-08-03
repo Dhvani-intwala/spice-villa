@@ -1,6 +1,6 @@
 <h1 align="center"> Spice villa - Booking website</h1>
 
-You can view the live site here:-
+<img src="static/images/readme-img/home-page.png" ><br>
 
 ---
 

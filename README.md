@@ -2,6 +2,8 @@
 
 <img src="static/images/readme-img/home-page.png" ><br>
 
+The fully deployed project can be accessed at [This link](https://spice-villa-c8a666e63481.herokuapp.com/).<br><br>
+
 ---
 
 ## [Content](#content)

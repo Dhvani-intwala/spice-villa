@@ -81,6 +81,13 @@ the restaurant. With its fancy looks and feel, dark colours and luxurious detail
 theme fits perfect for the goal of giving the visitor the impression that this is a very high quality
 restaurant.
 
+- The primary colour scheme was used for most of the text existent on the website, in either dark or bright colours for creating a good contrast.<br>
+
+<img src="static/images/readme-img/black_color.png" width="30%"><br>
+<img src="static/images/readme-img/gray-color.png" width="30%"><br>
+<img src="static/images/readme-img/white_color.png" width="30%"><br>
+
+
 ### Flowchart
 The Flowchart for my program was created using LucidChart and it visually represents how the system works.
 

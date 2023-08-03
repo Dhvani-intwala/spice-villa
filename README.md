@@ -2,10 +2,11 @@
 
 <img src="static/images/readme-img/home-page.png" ><br>
 
-The fully deployed project can be accessed at [This link](https://spice-villa-c8a666e63481.herokuapp.com/).<br><br>
+The fully deployed project can be accessed at [This link](https://spice-villa-c8a666e63481.herokuapp.com/).<br>
 
-Developer: Dhvani Intwala
+## Developer: Dhvani Intwala
 
+---
 
 ## [Content](#content)
 
@@ -100,12 +101,19 @@ restaurant.
 ### Wireframes
 
 ### Database Schema
+The project uses the PostgreSQL relational database for storing the data.
+There were created two diagrams to represent the relation between the tables.
+
+<details>
+<summary>Schema</summary>
+<img src="static/images/readme-img/Database.png" ><br>
+</details>
 
 ### Flowchart
 The Flowchart for my program was created using LucidChart and it visually represents how the system works.
 
 <details>
-  <summary>Flowchart</summary>
+<summary>Flowchart</summary>
 <img src="static/images/readme-img/Flowchart.png" ><br>
 </details>
 

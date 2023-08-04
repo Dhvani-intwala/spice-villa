@@ -98,7 +98,7 @@ At the time of deployment the validation for *script.js* has the following outco
 ## Bugs
 
 - Reinstalled all necessary Libraries because 
-- Removed Static folder from cloudinary and run command Pyhton manage.py collectstatic because after website was deployed the output in heroku was not simillar like workspace.
+- Removed Static folder from cloudinary and run command Pyhton manage.py collectstatic because after website was deployed the output in heroku doesn't matches the development version.
 - 
 
 

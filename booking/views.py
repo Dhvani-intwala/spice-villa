@@ -142,6 +142,10 @@ def delete_booking(request, pk):
 
 
 def booking_list_admin(request):
+    """
+    A view that provides the list of bookings 
+    data that coresponds to authenticated user
+    """
     
     data = Booking.objects.filter(created_by=request.user)
 

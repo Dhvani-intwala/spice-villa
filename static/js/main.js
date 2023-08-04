@@ -1,4 +1,4 @@
-
+// --------------------- COUNTER -------------------
 jQuery(document).ready(function($) {
     if ($(".counter").counterUp) {
         $(".counter").counterUp({
@@ -6,13 +6,13 @@ jQuery(document).ready(function($) {
             time: 1000,
         });
     }
-    // preloader
+    //---------------- PRELOADER -------------
     if ($("#preloader")) {
         $("#preloader").remove();
     }
 });
-// back to top button
-// Function to scroll back to the top of the page
+// --------------------------- BACK TO TOP BUTTON ------------------------
+// --------------------------- FUNCTION TO SCROLL BACK TO THE TOP OF THE PAGE ---------------------------------
 function scrollToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     }
 
-    // Testimonial slider
+    // --------------------------------- TESTIMONIAL SLIDER  --------------------------------
     if (window.location.pathname === "/") {
         ("use strict");
         var testimonial = document.getElementById("Testimonial"),
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             touchPosDiff,
             ignoreTouch = 30;
         window.onload = function() {
-            // Testim Script
+            // ------------ TESTIM SCRIPT ---------------------------
             function playSlide(slide) {
                 for (var k = 0; k < testimDots.length; k++) {
                     testimContent[k].classList.remove("active");
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
             playSlide(currentSlide);
 
-            // keyboard shortcuts
+            // ------------------ KEYBOARD SHORTCUTS -------------------------
             document.addEventListener("keyup", function(e) {
                 switch (e.keyCode) {
                     case 37:
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         };
     }
 
-    // Add active class to the current link
+    // ----------------------------- ADD ACTIVE CLASS TO THE CURRENT LINK ---------------------------
     var header = document.getElementById("navbarSupportedContent");
     var btns = header.getElementsByClassName("nav-link");
     for (var i = 0; i < btns.length; i++) {
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
     }
 
-    // form validation
+    // ------------------------- FORM VALIDATION ----------------------------
     const showError = (input, message) => {
         // get the form-field element
         const formField = input.parentElement;
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         datePicker.min = new Date().toLocaleDateString("en-ca");
 
-        // setperson for table
+        // ---------------------------- SETPERSON FOR TABLE ---------------------
 
         function setPerson() {
             var tableCode = document.getElementById("tableCode").value;

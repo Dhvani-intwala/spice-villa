@@ -240,17 +240,21 @@ If the bookings list is empty, a suggestive message is displayed.
 
 ![No_booking_msg](/static/images/readme-img/nobooking-msg.png)
 
-
-
-
-
-
 ### Footer
 
 The footer contains the essential information about the restaurant for easy access to the most
 relevant contact information and social media links on all pages throughout the website.
 
 ![Footer](/static/images/readme-img/footer.png)
+
+## Future Features
+
+- Add a contact form on the main page so visitors can contact the restaurant via email directly on the webpage.
+- Create functionality in the admin panel for the staff to be able to add and delete the amount of tables and seats in the restaurant and incorporate it into the booking function so that it can calculate available seats in the restaurant.
+- Create functionality in the admin panel so that restaurant personnel can update the menu items on the webpage inside the admin panel.
+- When a customer books a table then the cutomer gets the notification via email.
+- Updating the booking feature with a more complex algorithm and design for generating the available tables. The current algorithm sets a table as busy even if it is registered as booked only for a small part of the interval requested by the user for the reservation. Also, the Start and End time are restricted to accept only zero hundred hours. By changing the limit to even zero-thirty hours, the tables algorithm will be more efficient.
+
 
 ## Technologies Used
 

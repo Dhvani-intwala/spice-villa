@@ -3,17 +3,14 @@
 Back to [README.md](README.md)<br>
 
 ## Table of contents
-* [User Story and Feature Testing](#user-story-and-feature-testing)
+
 * [Automated View Testing](#automated-view-testing)
 * [Browser Testing](#browser-testing)
 * [Code Validation](#code-validation)
 * [Bugs](#bugs)
 
 
-
-
-
-
+# Automated View Testing
 
 
 ## Browser Testing
@@ -35,11 +32,12 @@ At the time of deployment the validation have the following outcome:<br><br>
 The following pages have been tested:
 * Home
 * Menu
-* Make a booking
-* Where to find us
-* Reviews
-* Profile
-* Manage bookings
+* About
+* Contact
+* Chefs
+* Gallary
+* Booking a table
+* My bookings
 * Login/Register
 * 403/404/500 custom pages
 
@@ -96,5 +94,11 @@ At the time of deployment the validation for *script.js* has the following outco
 <img src="/static/images/readme-img/view.png"><br><br>
 </details>
 
+
+## Bugs
+
+- Reinstalled all necessary Libraries because 
+- Removed Static folder from cloudinary and run command Pyhton manage.py collectstatic because after website was deployed the output in heroku was not simillar like workspace.
+- 
 
 

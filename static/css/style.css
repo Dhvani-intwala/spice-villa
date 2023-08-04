@@ -1498,6 +1498,7 @@ input[type="number" i] {
         width: 90vw;
         margin: auto;
         margin-bottom: 10%;
+        margin-top: 10%;
     }
 
     .signup {

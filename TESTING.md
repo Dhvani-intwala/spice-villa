@@ -24,7 +24,9 @@ The website was tested on different browser for assuring the features work accor
 * Opera
 * Firefox
 
+## Code Validation
 
+### HTML
 The html code of the website was validated using [W3 Markup Validator](https://validator.w3.org/).<br>
 At the time of deployment the validation have the following outcome:<br><br>
 
@@ -47,3 +49,23 @@ The CSS code was validated using [W3 Jigsaw Validator](https://jigsaw.w3.org/css
 At the time of deployment the validation for *style.css* has the following outcome:<br><br>
 
 <img src="/static/images/readme-img/CSS-validation.png"><br><br>
+
+### Javascript
+
+The Javascript code was validated using using [JsHint](https://jshint.com/)<br>
+At the time of deployment the validation for *script.js* has the following outcome:<br><br>
+
+<img src="/static/images/readme-img/"><br><br>
+
+**Lighthouse reports:**<br>
+
+<details>
+<summary>Desktop</summary>
+<img src="/static/images/readme-img/Desktop.png"><br><br>
+</details>
+<br>
+<details>
+<summary>Mobile</summary>
+<img src="/static/images/readme-img/mobli_lighthouse.png"><br><br>
+</details>
+

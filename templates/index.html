@@ -1,6 +1,4 @@
-{% extends "base.html" %}
-{% load static %}
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block content %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <!-- main-image -->
 <section id="hero" class="d-flex align-items-center">
@@ -8,7 +6,7 @@
         <div class="row">
             <div class="col-lg-8 animate__animated animate__bounce text-white">
                 <h1>Welcome to Spice Villa</h1>
-                <h2> A taste you will remember</h2>
+                <h2>A taste you will remember</h2>
 
                 <div class="btns">
                     <a href="{% url 'home' %}#menu" class="btn-menu">Our Menu</a>
@@ -24,9 +22,8 @@
 
 <section id="menu" class="menu section-bg py-5">
     <div class="container-menu">
-
-        <div class=" text-light text-center">
-            <h2 class="section-title"> Food Menu</h2>
+        <div class="text-light text-center">
+            <h2 class="section-title">Food Menu</h2>
             <p class="title">Check Our Tasty Menu</p>
         </div>
 
@@ -35,18 +32,18 @@
             <div class="col-md-4">
                 <div class="flex mt-5">
                     <div class="text-light">
-                        <img src="{{ item.menu_img_path }}" alt="" class="img-fluids">
+                        <img src="{{ item.menu_img_path }}" alt="" class="img-fluids" />
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="flex  mt-5">
+                <div class="flex mt-5">
                     <div class="text-light">
-                        <div class=" row flex block-div">
-                            <div class=" col-6 text-light item-name">
+                        <div class="row flex block-div">
+                            <div class="col-6 text-light item-name">
                                 <h5 class="text-light item-name mb-3">{{ item.name }}</h5>
                             </div>
-                            <div class=" col-3 text-light item-price">
+                            <div class="col-3 text-light item-price">
                                 <h5 class="text-light">€{{ item.price }}</h5>
                             </div>
                         </div>
@@ -60,26 +57,21 @@
                             </div> -->
                     </div>
 
-                    <div class=" row text-light">
+                    <div class="row text-light">
                         <p class="Ingredients"><b>Ingredients:</b> {{ item.description }}</p>
                     </div>
                     <div class="line"></div>
-        
+
                     <!-- <div class=" row">
                         <p>
                             ............................................................................................................................
                         </p>
                     </div> -->
                 </div>
-
             </div>
         </div>
-
-
     </div>
     {% endfor %}
-
-    </div>
 </section>
 
 <!-- End Menu Section -->
@@ -89,109 +81,81 @@
 <div class="container-xxl py-5" id="about">
     <div class="container">
         <div>
-            <h2 class=" ff-secondary text-start fw-normal text-light text-center section-title"> About Us</h2>
-            <p class="mb-4 text-light text-center  title">Welcome to <i class="fa fa-utensils me-2"></i>Spice Villa
-            </p>
+            <h2 class="ff-secondary text-start fw-normal text-light text-center section-title">About Us</h2>
+            <p class="mb-4 text-light text-center title">Welcome to <i class="fa fa-utensils me-2"></i>Spice Villa</p>
         </div>
         <div class="row g-5 align-items-center">
             <div class="col-lg-6">
                 <div class="row g-3">
-
                     <div class="col-6 text-start">
-                        <img src="{% static 'images/about/about-img1.jfif'%}" alt=""
-                            class="img-fluid rounded w-100 animate__zoomIn  animate__animated">
+                        <img src="{% static 'images/about/about-img1.jfif'%}" alt="" class="img-fluid rounded w-100 animate__zoomIn animate__animated" />
                     </div>
 
                     <div class="col-6 text-start">
-                        <img src="{% static 'images/about/about-img2.jfif'%}" alt=""
-                            class="img-fluid rounded w-75 animate__zoomIn animate__animated" style="margin-top:25%">
+                        <img src="{% static 'images/about/about-img2.jfif'%}" alt="" class="img-fluid rounded w-75 animate__zoomIn animate__animated" style="margin-top: 25%;" />
                     </div>
 
                     <div class="col-6 text-end">
-                        <img src="{% static 'images/about/about-img3.jfif'%}" alt=""
-                            class="img-fluid rounded w-75 animate__zoomIn animate__animated">
+                        <img src="{% static 'images/about/about-img3.jfif'%}" alt="" class="img-fluid rounded w-75 animate__zoomIn animate__animated" />
                     </div>
 
                     <div class="col-6 text-end">
-                        <img src="{% static 'images/about/about-img4.jfif'%}" alt=""
-                            class="img-fluid rounded w-100 animate__zoomIn animate__animated">
+                        <img src="{% static 'images/about/about-img4.jfif'%}" alt="" class="img-fluid rounded w-100 animate__zoomIn animate__animated" />
                     </div>
-
                 </div>
             </div>
 
             <div class="col-lg-6 text-light animate__animated animate__backInRight">
+                <p>Welcome to SPICE VILLA, where culinary excellence meets warm hospitality. our restaurant is a haven for food lovers seeking unforgettable dining experiences.</p>
 
-
-                <p> Welcome to SPICE VILLA, where culinary excellence meets warm hospitality. our
-                    restaurant is a haven for food lovers seeking unforgettable dining experiences.
-                </p>
-
-                <p>In addition to our exquisite food and outstanding service, our restaurant boasts a thoughtfully
-                    designed
-                    ambiance. Our interior decor combines elements of modern elegance with touches of rustic charm,
-                    creating
-                    a welcoming space that is perfect for intimate dinners, family gatherings, or celebrations with
-                    friends.
-                    We also offer outdoor seating for those who wish to savor their meals in the fresh air.
+                <p>
+                    In addition to our exquisite food and outstanding service, our restaurant boasts a thoughtfully designed ambiance. Our interior decor combines elements of modern elegance with touches of rustic charm, creating a
+                    welcoming space that is perfect for intimate dinners, family gatherings, or celebrations with friends. We also offer outdoor seating for those who wish to savor their meals in the fresh air.
                 </p>
                 <p>
-                    Whether you're seeking a romantic dinner for two, a memorable meal with loved ones, or a place to
-                    celebrate
-                    a special occasion, [Restaurant Name] is here to exceed your expectations. Join us and let us take
-                    you on a
+                    Whether you're seeking a romantic dinner for two, a memorable meal with loved ones, or a place to celebrate a special occasion, [Restaurant Name] is here to exceed your expectations. Join us and let us take you on a
                     culinary journey that will awaken your senses and create lasting memories.
-
                 </p>
-                <p>We look forward to welcoming you to Splice Villa and sharing our passion for exceptional food,
-                    impeccable service,
-                    and unforgettable moments. </p>
+                <p>We look forward to welcoming you to Splice Villa and sharing our passion for exceptional food, impeccable service, and unforgettable moments.</p>
 
-                <div class="row g-4 mb-4 ">
-
-                    <div class="col-sm-6 ">
+                <div class="row g-4 mb-4">
+                    <div class="col-sm-6">
                         <div class="d-flex align-items-center border-start border-5 border-light px-3">
-                            <h1 class="flex-shrink-0 display-5 text-light mb-0" id="counter"> <span class="counter">25</span>
-                            </h1>
-                            <div class="ps-4 ">
+                            <h1 class="flex-shrink-0 display-5 text-light mb-0" id="counter"><span class="counter">25</span></h1>
+                            <div class="ps-4">
                                 <p class="mb-0 text-light">Years of</p>
-                                <h6 class="text-uppercase mb-0 text-light"> Experiences</h6>
+                                <h6 class="text-uppercase mb-0 text-light">Experiences</h6>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center border-start border-5 border-light px-3">
-                            <h1 class="flex-shrink-0 display-5 text-light mb-0" id="counter"> <span class="counter">10</span>
-                            </h1>
+                            <h1 class="flex-shrink-0 display-5 text-light mb-0" id="counter"><span class="counter">10</span></h1>
                             <div class="ps-4">
                                 <p class="mb-0 text-light">Popular</p>
                                 <h6 class="text-uppercase mb-0 text-light">Master chefs</h6>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
     </div>
 </div>
 <!-- End about Section -->
-
 
 <!-- Testimonial section -->
 
 <section id="Testimonial" class="Testimonial">
     <div class="text-center">
         <h2 class="section-title">Testimonials</h2>
-        <p class=" title">What they're saying about</p>
+        <p class="title">What they're saying about</p>
     </div>
 
     <div class="wrap">
         <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
-        <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+        <span id="left-arrow" class="arrow left fa fa-chevron-left"></span>
         <ul id="testim-dots" class="dots">
             <li class="dot active"></li>
             <li class="dot"></li>
@@ -200,73 +164,64 @@
             <li class="dot"></li>
         </ul>
         <div id="testim-content" class="content">
-
             <div class="active">
-                <div class="img"><img src="{% static 'images/testimonial-img/test-5.jpeg' %}" alt=""></div>
+                <div class="img"><img src="{% static 'images/testimonial-img/test-5.jpeg' %}" alt="" /></div>
                 <h2>Diane Kruger</h2>
-                <p class="mt-5"><i class="fa fa-quote-left"></i> Definitely book. It's busy all night.
-                    Everything feels a bit special even before you step inside and once you do the music,
-                    lighting and mood are all great.
+                <p class="mt-5">
+                    <i class="fa fa-quote-left"></i> Definitely book. It's busy all night. Everything feels a bit special even before you step inside and once you do the music, lighting and mood are all great.
                     <i class="fa fa-quote-right"></i>
                 </p>
             </div>
 
             <div>
-                <div class="img"><img src="{% static 'images/testimonial-img/testi-2.webp' %}" alt=""></div>
+                <div class="img"><img src="{% static 'images/testimonial-img/testi-2.webp' %}" alt="" /></div>
                 <h2>Heike Makatsch</h2>
 
-                <p class="mt-5"><i class="fa fa-quote-left"></i> Definitely book. It's busy all night.
-                    Everything feels a bit special even before you step inside and once you do the music,
-                    lighting and mood are all great.
+                <p class="mt-5">
+                    <i class="fa fa-quote-left"></i> Definitely book. It's busy all night. Everything feels a bit special even before you step inside and once you do the music, lighting and mood are all great.
                     <i class="fa fa-quote-right"></i>
                 </p>
             </div>
 
             <div>
-                <div class="img"><img src="{% static 'images/testimonial-img/testi-3.png' %}" alt=""></div>
+                <div class="img"><img src="{% static 'images/testimonial-img/testi-3.png' %}" alt="" /></div>
                 <h2>Nina Hoss</h2>
 
-                <p class="mt-5"><i class="fa fa-quote-left"></i> It was amazing!! I have to say it’s the best
-                    meal I have had in quite some time. You will definitely be seeing more of me eating at your
-                    establishment. My husband was very impressed and we can’t wait for our parents to come visit
-                    so that we can share our new favorite place with them.
+                <p class="mt-5">
+                    <i class="fa fa-quote-left"></i> It was amazing!! I have to say it’s the best meal I have had in quite some time. You will definitely be seeing more of me eating at your establishment. My husband was very impressed and
+                    we can’t wait for our parents to come visit so that we can share our new favorite place with them.
                     <i class="fa fa-quote-right"></i>
                 </p>
             </div>
 
             <div>
-                <div class="img"><img src="{% static 'images/testimonial-img/testi-4.jpg' %}" alt=""></div>
+                <div class="img"><img src="{% static 'images/testimonial-img/testi-4.jpg' %}" alt="" /></div>
                 <h2>Lotte Lenya</h2>
 
-                <p class="mt-5"><i class="fa fa-quote-left"></i> As expected, the food was delicious and our
-                    servers were so friendly and helpful –
-                    we loved them! It was a delightful experience all round.
-                    Thank you so much for hosting us. We hope we can come back again soon.
+                <p class="mt-5">
+                    <i class="fa fa-quote-left"></i> As expected, the food was delicious and our servers were so friendly and helpful – we loved them! It was a delightful experience all round. Thank you so much for hosting us. We hope we
+                    can come back again soon.
                     <i class="fa fa-quote-right"></i>
                 </p>
             </div>
 
             <div>
-                <div class="img"><img src="{% static 'images/testimonial-img/testi-6.webp' %}" alt=""></div>
+                <div class="img"><img src="{% static 'images/testimonial-img/testi-6.webp' %}" alt="" /></div>
                 <h2>Hildegard Knef</h2>
 
-                <p class="mt-5"><i class="fa fa-quote-left"></i> The food is awesome. And so is the service. The
-                    staff goes out of their way to make your dining experience wonderful.
+                <p class="mt-5">
+                    <i class="fa fa-quote-left"></i> The food is awesome. And so is the service. The staff goes out of their way to make your dining experience wonderful.
                     <i class="fa fa-quote-right"></i>
                 </p>
             </div>
-
         </div>
-
     </div>
-
 </section>
 <!-- End Testimonial section -->
 
 <!-- gallery section -->
 
 <section id="gallery" class="gallery py-5">
-
     <div class="container">
         <div class="text-center">
             <h2 class="section-title">Gallery</h2>
@@ -275,110 +230,84 @@
     </div>
     <div class="container-fluid grid">
         <div class="row g-0">
-
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <!-- <a href="{% static 'images/gallery/gallery12.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
-                    <img src="{% static 'images/gallery/gallery12.jpeg' %}" alt="" class="img-fluid img">
-                    </a>
+                    <!-- <a href="{% static 'images/gallery/gallery12.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> </a>-->
+                    <img src="{% static 'images/gallery/gallery12.jpeg' %}" alt="" class="img-fluid img" />
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <!-- <a href="{% static 'images/gallery/gallery2.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
-                    <img src="{% static 'images/gallery/gallery2.jpeg' %}" alt="" class="img-fluid img">
-                    </a>
+                    <!-- <a href="{% static 'images/gallery/gallery2.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()">  </a>-->
+                    <img src="{% static 'images/gallery/gallery2.jpeg' %}" alt="" class="img-fluid img" />
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <!-- <a href="{% static 'images/gallery/gallery14.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
-                    <img src="{% static 'images/gallery/gallery14.jpeg' %}" alt="" class="img-fluid img">
-                    </a>
+                    <!-- <a href="{% static 'images/gallery/gallery14.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"></a> -->
+                    <img src="{% static 'images/gallery/gallery14.jpeg' %}" alt="" class="img-fluid img" />
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <!-- <a href="{% static 'images/gallery/gallery4.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
-                    <img src="{% static 'images/gallery/gallery4.jpeg' %}" alt="" class="img-fluid img">
-                    </a>
+                    <!-- <a href="{% static 'images/gallery/gallery4.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> </a>-->
+                    <img src="{% static 'images/gallery/gallery4.jpeg' %}" alt="" class="img-fluid img" />
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <!-- <a href="{% static 'images/gallery/gallery20.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
-                    <img src="{% static 'images/gallery/gallery20.jpeg' %}" alt="" class="img-fluid img">
-                    </a>
+                    <!-- <a href="{% static 'images/gallery/gallery20.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"></a> -->
+                    <img src="{% static 'images/gallery/gallery20.jpeg' %}" alt="" class="img-fluid img" />
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <!-- <a href="{% static 'images/gallery/gallery21.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
-                    <img src="{% static 'images/gallery/gallery21.jpeg' %}" alt="" class="img-fluid img">
-                    </a>
+                    <!-- <a href="{% static 'images/gallery/gallery21.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()">  </a>-->
+                    <img src="{% static 'images/gallery/gallery21.jpeg' %}" alt="" class="img-fluid img" />
                 </div>
             </div>
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <!-- <a href="{% static 'images/gallery/gallery19.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
-                    <img src="{% static 'images/gallery/gallery19.jpeg' %}" alt="" class="img-fluid img">
-                    </a>
+                    <!-- <a href="{% static 'images/gallery/gallery19.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"></a> -->
+                    <img src="{% static 'images/gallery/gallery19.jpeg' %}" alt="" class="img-fluid img" />
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4">
                 <div class="gallery-item">
-                    <!-- <a href="{% static 'images/gallery/gallery18.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()"> -->
-                    <img src="{% static 'images/gallery/gallery18.jpeg' %}" alt="" class="img-fluid img">
-                    </a>
+                    <!-- <a href="{% static 'images/gallery/gallery18.jpeg' %}" class="gallery-lightbox" onclick="closeFullImg()">  </a>-->
+                    <img src="{% static 'images/gallery/gallery18.jpeg' %}" alt="" class="img-fluid img" />
                 </div>
             </div>
-
-
-
         </div>
     </div>
-
 </section>
-
 
 <!-- End gallery section -->
 <!-- chefs section -->
-<section id="chefs" class="chefs text-light py-5 ">
+<section id="chefs" class="chefs text-light py-5">
     <div class="container">
-
         <div class="text-center mb-5">
-            <h2 class="section-title ">Chefs</h2>
-            <p class="title ">Our Proffesional Chefs</p>
+            <h2 class="section-title">Chefs</h2>
+            <p class="title">Our Proffesional Chefs</p>
         </div>
 
-        <div class="row ">
+        <div class="row">
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
                     <div class="member-img">
-
-                        <img src="{% static 'images/chefs/chef1.jpg' %}"
-                            class="img-fluid animate__pulse animate__animated" alt="">
+                        <img src="{% static 'images/chefs/chef1.jpg' %}" class="img-fluid animate__pulse animate__animated" alt="" />
 
                         <div class="social position-absolute text-center">
-                            <a href="http://www.twitter.com" target="_blank" rel="noopener"
-                                aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i
-                                    class="bi bi-twitter"></i></a>
-                            <a href="http://www.facebook.com" target="_blank" rel="noopener"
-                                aria-label="Join our Facebookpage (opens in a new tab)" class="facebook"><i
-                                    class="bi bi-facebook"></i></a>
-                            <a href="http://www.instagram.com" target="_blank" rel="noopener"
-                                aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
-                                    class="bi bi-instagram"></i></a>
-                            <a href="http://www.linkedin.com" target="_blank" rel="noopener"
-                                aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
-                                    class="bi bi-linkedin"></i>
-                            </a>
+                            <a href="http://www.twitter.com" target="_blank" rel="noopener" aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="http://www.facebook.com" target="_blank" rel="noopener" aria-label="Join our Facebookpage (opens in a new tab)" class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="http://www.instagram.com" target="_blank" rel="noopener" aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="http://www.linkedin.com" target="_blank" rel="noopener" aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i class="bi bi-linkedin"></i> </a>
                         </div>
                     </div>
 
@@ -390,27 +319,15 @@
             </div>
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
-                    <div class="member-img ">
-
-                        <img src="{% static 'images/chefs/chef2.jpg' %}" class="img-fluid" alt="">
+                    <div class="member-img">
+                        <img src="{% static 'images/chefs/chef2.jpg' %}" class="img-fluid" alt="" />
                         <div class="social position-absolute text-center">
-                            <a href="http://www.twitter.com" target="_blank" rel="noopener"
-                                aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i
-                                    class="bi bi-twitter"></i></a>
-                            <a href="http://www.facebook.com" target="_blank" rel="noopener"
-                                aria-label="Join our Facebookpage (opens in a new tab)" class="facebook"><i
-                                    class="bi bi-facebook"></i></a>
-                            <a href="http://www.instagram.com" target="_blank" rel="noopener"
-                                aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
-                                    class="bi bi-instagram"></i></a>
-                            <a href="http://www.linkedin.com" target="_blank" rel="noopener"
-                                aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
-                                    class="bi bi-linkedin"></i>
-                            </a>
+                            <a href="http://www.twitter.com" target="_blank" rel="noopener" aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="http://www.facebook.com" target="_blank" rel="noopener" aria-label="Join our Facebookpage (opens in a new tab)" class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="http://www.instagram.com" target="_blank" rel="noopener" aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="http://www.linkedin.com" target="_blank" rel="noopener" aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i class="bi bi-linkedin"></i> </a>
                         </div>
-
                     </div>
-
 
                     <div class="member-info text-center my-3">
                         <h4>stefanie martini</h4>
@@ -421,24 +338,14 @@
 
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
-                    <div class="member-img ">
+                    <div class="member-img">
+                        <img src="{% static 'images/chefs/chef3.jpg' %}" class="img-fluid" alt="" />
 
-                        <img src="{% static 'images/chefs/chef3.jpg' %}" class="img-fluid" alt="">
-
-                        <div class="social  position-absolute text-center">
-                            <a href="http://www.twitter.com" target="_blank" rel="noopener"
-                                aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i
-                                    class="bi bi-twitter"></i></a>
-                            <a href="http://www.facebook.com" target="_blank" rel="noopener"
-                                aria-label="Join our Facebookpage (opens in a new tab)" class="facebook"><i
-                                    class="bi bi-facebook"></i></a>
-                            <a href="http://www.instagram.com" target="_blank" rel="noopener"
-                                aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
-                                    class="bi bi-instagram"></i></a>
-                            <a href="http://www.linkedin.com" target="_blank" rel="noopener"
-                                aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
-                                    class="bi bi-linkedin"></i>
-                            </a>
+                        <div class="social position-absolute text-center">
+                            <a href="http://www.twitter.com" target="_blank" rel="noopener" aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="http://www.facebook.com" target="_blank" rel="noopener" aria-label="Join our Facebookpage (opens in a new tab)" class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="http://www.instagram.com" target="_blank" rel="noopener" aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="http://www.linkedin.com" target="_blank" rel="noopener" aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i class="bi bi-linkedin"></i> </a>
                         </div>
                     </div>
 
@@ -451,24 +358,14 @@
 
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
-                    <div class="member-img ">
-
-                        <img src="{% static 'images/chefs/chef4.jpg' %}" class="img-fluid" alt="">
+                    <div class="member-img">
+                        <img src="{% static 'images/chefs/chef4.jpg' %}" class="img-fluid" alt="" />
 
                         <div class="social position-absolute text-center">
-                            <a href="http://www.twitter.com" target="_blank" rel="noopener"
-                                aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i
-                                    class="bi bi-twitter"></i></a>
-                            <a href="http://www.facebook.com" target="_blank" rel="noopener"
-                                aria-label="Join our Facebookpage (opens in a new tab)" class="facebook"><i
-                                    class="bi bi-facebook"></i></a>
-                            <a href="http://www.instagram.com" target="_blank" rel="noopener"
-                                aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
-                                    class="bi bi-instagram"></i></a>
-                            <a href="http://www.linkedin.com" target="_blank" rel="noopener"
-                                aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i
-                                    class="bi bi-linkedin"></i>
-                            </a>
+                            <a href="http://www.twitter.com" target="_blank" rel="noopener" aria-label="Join our Twitterpage (opens in a new tab)" class="twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="http://www.facebook.com" target="_blank" rel="noopener" aria-label="Join our Facebookpage (opens in a new tab)" class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="http://www.instagram.com" target="_blank" rel="noopener" aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="http://www.linkedin.com" target="_blank" rel="noopener" aria-label="Join our Instagrampage (opens in a new tab)" class="instagram"><i class="bi bi-linkedin"></i> </a>
                         </div>
                     </div>
 
@@ -478,21 +375,16 @@
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     </div>
 </section>
-
 
 <!-- End chefs Section -->
 
 <!-- Contact Section -->
 
-<section id="contact" class="contact text-light my-5 ">
+<section id="contact" class="contact text-light my-5">
     <div class="container">
-
         <div class="text-center">
             <h2 class="section-title">Contact</h2>
             <p class="title">Contact Us</p>
@@ -500,15 +392,14 @@
     </div>
 
     <div class="container">
-
         <div class="row animate__animated animate__fadeInUp">
             <div class="col-md-6">
                 <div class="info">
                     <div class="address">
                         <i class="bi bi-geo-alt"></i>
                         <h4>Location:</h4>
-                        <p> kaimstr 1,</p>
-                        <p> 89601</p>
+                        <p>kaimstr 1,</p>
+                        <p>89601</p>
                         <p>münchen</p>
                     </div>
                 </div>
@@ -518,16 +409,14 @@
                         <i class="bi bi-clock"></i>
                         <h4>Open Hours:</h4>
                         <p>
-                            Monday-Saturday:<br>
+                            Monday-Saturday:<br />
                             11:00 AM - 2300 PM
                         </p>
                     </div>
                 </div>
-
             </div>
 
             <div class="col-md-6">
-
                 <div class="info">
                     <div class="email">
                         <i class="bi bi-envelope"></i>
@@ -543,12 +432,9 @@
                         <p>+49 17614142565</p>
                     </div>
                 </div>
-
             </div>
         </div>
-
     </div>
-
 </section>
 
 <!-- End Contact Section -->

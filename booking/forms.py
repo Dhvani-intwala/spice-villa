@@ -54,5 +54,6 @@ class BookingForm(forms.Form):
                                         + "on your name by selecting checkbox")
 
         # if Booking.objects.filter(table=table_obj).exists():
-        #     raise forms.ValidationError("Table is occupied try selecting different table")
+        # raise forms.ValidationError
+        # ("Table is occupied try selecting different table")
         return cleaned_data

@@ -69,3 +69,32 @@ At the time of deployment the validation for *script.js* has the following outco
 <img src="/static/images/readme-img/mobli_lighthouse.png"><br><br>
 </details>
 
+
+
+### PEP8 Python Linter Test
+- [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/) was used to check that the Python code meets PEP8 standards.
+
+### Booking
+
+<details>
+<summary>models.py</summary>
+<img src="/static/images/readme-img/Modal.png"><br><br>
+</details>
+
+<details>
+<summary>forms.py</summary>
+<img src="/static/images/readme-img/form.png"><br><br>
+</details>
+
+<details>
+<summary>urls.py</summary>
+<img src="/static/images/readme-img/url.png"><br><br>
+</details>
+
+<details>
+<summary>views.py</summary>
+<img src="/static/images/readme-img/view.png"><br><br>
+</details>
+
+
+

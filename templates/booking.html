@@ -1,6 +1,4 @@
-{% extends "base.html" %}
-{% load static %}
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block content %}
 
 <div class="row col-md-6 text-light booking-form">
     {% if user.is_authenticated %}
@@ -12,16 +10,14 @@
         {% endif %}
         <!-- Booking form -->
         <form id="bookingForm" method="post" action="{% url 'submit_booking' %}">
-            {% csrf_token %}
-            {{ form.non_field_errors }}
-            {% if edit_page %}
-            <input type="hidden" name="primary-key" value="{{data}}">
+            {% csrf_token %} {{ form.non_field_errors }} {% if edit_page %}
+            <input type="hidden" name="primary-key" value="{{data}}" />
             {% endif %}
             <div class="row justify-content-center" id="bookingDetails">
                 <p>Choose the date and time for your booking and we will show you the available places</p>
                 <!-- Date input -->
                 <div class="col form-field col-12 col-md-4 col-lg-3">
-                    <label for="datePicker"><i class="far fa-calendar-alt"></i> Choose Date:</label><br>
+                    <label for="datePicker"><i class="far fa-calendar-alt"></i> Choose Date:</label><br />
                     {{form.date}}
                     <div class="error-container">
                         <small class="errorlist booking-error"></small>
@@ -29,7 +25,7 @@
                 </div>
                 <!-- Start time input -->
                 <div class="col form-field col-lg-3">
-                    <label for="startTime"><i class="fas fa-clock"></i> Starting At:</label><br>
+                    <label for="startTime"><i class="fas fa-clock"></i> Starting At:</label><br />
                     {{form.start_time}}
                     <div class="error-container">
                         <small class="errorlist booking-error"></small>
@@ -37,7 +33,7 @@
                 </div>
                 <!-- End time input -->
                 <div class="col form-field col-lg-3">
-                    <label for="endTime"><i class="fas fa-clock"></i> Until:</label><br>
+                    <label for="endTime"><i class="fas fa-clock"></i> Until:</label><br />
                     {{form.end_time}}
                     <div class="error-container">
                         <small class="errorlist booking-error"></small>
@@ -47,7 +43,7 @@
             <button type="button" class="btn btn-simple text-light mt-5 border border-light" id="FindTable">Find a table</button>
             <div class="p-center" id="selectTable">
                 <div class="row justify-content-center col-lg-12 booking d-flex">
-                    <br>
+                    <br />
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col col-8 col-lg-3">
@@ -57,10 +53,8 @@
                                 </div>
                                 <!-- Legend -->
                                 <div class="flex d-flex justify-content-center">
-                                    <p class="mt-3 mb-3 mx-4"><i class="fas fa-square free-color"
-                                            aria-hidden="true"></i> FREE</p>
-                                    <p class="mt-3 mb-3"><i class="fas fa-square busy-color" aria-hidden="true"></i>
-                                        BUSY</p>
+                                    <p class="mt-3 mb-3 mx-4"><i class="fas fa-square free-color" aria-hidden="true"></i> FREE</p>
+                                    <p class="mt-3 mb-3"><i class="fas fa-square busy-color" aria-hidden="true"></i> BUSY</p>
                                 </div>
                             </div>
                         </div>
@@ -74,10 +68,9 @@
                                     <div class="col-4 p-center">
                                         <div class="table-container">
                                             {% if table.code in occupied_tables %}
-                                            <img src="{{ table.table_occupied_img.url }}" class="cards"
-                                                alt="Occupied Table">
+                                            <img src="{{ table.table_occupied_img.url }}" class="cards" alt="Occupied Table" />
                                             {% else %}
-                                            <img src="{{ table.table_free_img.url }}" class="cards" alt="Free Table">
+                                            <img src="{{ table.table_free_img.url }}" class="cards" alt="Free Table" />
                                             {% endif %}
                                         </div>
                                     </div>
@@ -88,29 +81,27 @@
                     </div>
 
                     <div class="row justify-content-center col-lg-12 booking-tablecode d-flex mt-3">
-                        <div class=" form-field col-12 col-md-5">
+                        <div class="form-field col-12 col-md-5">
                             <!-- Table select -->
-                            <label for="tableCode"><i class="fas fa-check"></i>Select a
-                                table</label><br>
+                            <label for="tableCode"><i class="fas fa-check"></i>Select a table</label><br />
                             {{ form.table_code }}
-                            <br>
+                            <br />
                         </div>
                         <div class="form-field col-12 col-md-5">
                             <!-- Number of persons read-only input -->
                             <label for="tablePersons"><i class="fas fa-users"></i>Number of persons</label>
-                            <input id="tablePersons" class="form-control" type="text" disabled value="2">
+                            <input id="tablePersons" class="form-control" type="text" disabled value="2" />
                         </div>
                     </div>
-                </div><br>
+                </div>
+                <br />
                 <div class="flex p-center" id="flexButtons">
-                    <button type="button" class="btn btn-simple  text-light border border-light mx-3"
-                        id="continue">Continue</button>
-                    <button type="button" class="btn btn-simple restart text-light border border-light"
-                        id="restart">Restart</button>
-                </div><br>
+                    <button type="button" class="btn btn-simple text-light border border-light mx-3" id="continue">Continue</button>
+                    <button type="button" class="btn btn-simple restart text-light border border-light" id="restart">Restart</button>
+                </div>
+                <br />
             </div>
-            <div class="flex f-column a-center p-center col-sm-12 col-md-6 col-lg-3 booking"
-                id="bookingContactCollapse">
+            <div class="flex f-column a-center p-center col-sm-12 col-md-6 col-lg-3 booking" id="bookingContactCollapse">
                 <h5 class="mb-2">CONTACT DETAILS</h5>
                 <div class="form-field">
                     <!-- Name input -->
@@ -119,7 +110,6 @@
                     <div class="error-container">
                         <small class="errorlist"></small>
                     </div>
-
                 </div>
                 <div class="form-field">
                     <!-- Email input -->
@@ -131,40 +121,37 @@
                     </div>
                     <!-- <p><b><strong>OR</strong></b></p> -->
                 </div>
-                <p><b><strong>OR</strong></b></p>
+                <p>
+                    <b><strong>OR</strong></b>
+                </p>
                 <!-- Date inputCheckbox -->
                 {{ form.book_on_user }}
-                <label for="bookAuthenticate">Book It On My Name</label><br>
+                <label for="bookAuthenticate">Book It On My Name</label><br />
 
-                <span id="bookingOnmyname"></span><br>
+                <span id="bookingOnmyname"></span><br />
 
-                <button type="button" class="btn btn-simple text-light border border-light mb-3 mt-3"
-                    id="finish">Finish</button><br>
-
+                <button type="button" class="btn btn-simple text-light border border-light mb-3 mt-3" id="finish">Finish</button><br />
             </div>
             <div id="overviewCollapse" class="flex f-column a-center p-center mb-5">
                 <h5 class="mb-2">BOOKING OVERVIEW</h5>
-                <span id="bookingOverview"></span><br>
-                <span id="overviewText"></span><br>
-                <span >Do you want to proceed?</span><br>
+                <span id="bookingOverview"></span><br />
+                <span id="overviewText"></span><br />
+                <span>Do you want to proceed?</span><br />
                 <!-- Submit button -->
                 {% if edit_page %}
-                <button type="submit" name="edit form" class=" btns-green">Yes</button>
+                <button type="submit" name="edit form" class="btns-green">Yes</button>
                 {% else %}
-                <button type="submit" name="new form" class=" btns-green">Yes</button>
+                <button type="submit" name="new form" class="btns-green">Yes</button>
                 {% endif %}
                 <a href="#bookingForm" class="btns-red-color" type="button" id="nobutton">No</a>
             </div>
-
-
         </form>
         {% else %}
-        <p class="booking-text">To make a reservation, please <a href="{% url 'account_login' %}"
-                class="booking-signin-up">login</a>. If you have not created an account yet, then please <a
-                href="{% url 'account_signup' %}" class="booking-signin-up">sign
-                up.</a></p>
+        <p class="booking-text">
+            To make a reservation, please <a href="{% url 'account_login' %}" class="booking-signin-up">login</a>. If you have not created an account yet, then please
+            <a href="{% url 'account_signup' %}" class="booking-signin-up">sign up.</a>
+        </p>
         {% endif %}
-
     </div>
 </div>
 <script src="{% static 'js/main.js' %}"></script>

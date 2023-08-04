@@ -1,55 +1,46 @@
-{% extends "base.html" %}
-{% load static %}
-{% block content %}
-
+{% extends "base.html" %} {% load static %} {% block content %}
 
 <div class="row content text-light col-10 col-lg-9 min-h-100" id="bookingNav">
     <div class="center-container">
         <h2>Welcome back , {{ user.username }}</h2>
-        <small>{{ user.email }}</small><br><br>
+        <small>{{ user.email }}</small><br />
+        <br />
     </div>
     <div class="flex sp-between">
         <!-- Bookings Container -->
-        <h4 class="decorated"><span>Your upcoming bookings <i class="far fa-calendar-alt"></i></span></h4>
-        <div class="col col-lg-12 booking-table ">
-          
+        <h4 class="decorated">
+            <span>Your upcoming bookings <i class="far fa-calendar-alt"></i></span>
+        </h4>
+        <div class="col col-lg-12 booking-table">
             <div class="containers">
                 <div class="row">
-                    {% if data %}
-                    {% for data in data %}
+                    {% if data %} {% for data in data %}
                     <div class="col-md-6">
                         <div class="bg-card">
                             <p class="mt-3"><b>Date: </b>{{ data.date }}</p>
                             <p><b>From: </b>{{ data.start_time }} <b>To: </b>{{ data.end_time }}</p>
                             <p><b>Table: </b>{{ data.table }}</p>
-                            <p><small><b>Customer: </b>{{ data.customer_full_name }}</small></p>
+                            <p>
+                                <small><b>Customer: </b>{{ data.customer_full_name }}</small>
+                            </p>
                         </div>
                         <div class="text-center">
-                            <a  href="{% url 'edit_booking' pk=data.pk %}" class="btn-light button-link mb-3" type="button">Edit </a>
-                            <a class="btn-red button-delete mb-3" data-bs-toggle="modal"
-                                    data-bs-target="#deleteBookingModal{{ data.pk }}" type="button">Delete
-                            </a>
+                            <a href="{% url 'edit_booking' pk=data.pk %}" class="btn-light button-link mb-3" type="button">Edit </a>
+                            <a class="btn-red button-delete mb-3" data-bs-toggle="modal" data-bs-target="#deleteBookingModal{{ data.pk }}" type="button">Delete </a>
                         </div>
                     </div>
-                    
+
                     <!-- Modal -->
-                    <div class="modal" id="deleteBookingModal{{ data.pk }}" tabindex="-1"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal" id="deleteBookingModal{{ data.pk }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
-                            <div class="modal-content  bg-color">
+                            <div class="modal-content bg-color">
                                 <div class="modal-body">
-                                    <p class="text-dark">Are you sure you want to delete booking for {{ data.date }} ,
-                                        From
-                                        {{data.start_time }} To {{ data.end_time }} ?
-                                    </p>
+                                    <p class="text-dark">Are you sure you want to delete booking for {{ data.date }} , From {{data.start_time }} To {{ data.end_time }} ?</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <form method="post" class="delete-booking"
-                                        action="{% url 'delete_booking' pk=data.pk %}">
-                                        {% csrf_token %}
-                                        {% if redirect_field_value %}
-                                        <input type="hidden" name="{{ redirect_field_name }}"
-                                            value="{{ redirect_field_value }}" />
+                                    <form method="post" class="delete-booking" action="{% url 'delete_booking' pk=data.pk %}">
+                                        {% csrf_token %} {% if redirect_field_value %}
+                                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                                         {% endif %}
                                         <button type="button" class="btns-red" data-bs-dismiss="modal">No</button>
                                         <button type="submit" class="btns-green">yes</button>
@@ -58,19 +49,15 @@
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
-                    {% else %}
-                    <div >
-                        <p class="No-booking"> Currently, there are no bookings. To reserve a Table Please <a class=""
-                                href="{% url 'booking' %}">click here</a></p>
+                    {% endfor %} {% else %}
+                    <div>
+                        <p class="No-booking">Currently, there are no bookings. To reserve a Table Please <a class="" href="{% url 'booking' %}">click here</a></p>
                     </div>
                     {% endif %}
                 </div>
             </div>
         </div>
     </div>
-
-
 </div>
 <script src="{% static 'js/main.js' %}"></script>
 {%endblock%}

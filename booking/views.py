@@ -58,10 +58,6 @@ def booking(request, pk = None):
     bookings = Booking.objects.all()
     occupied_table = [booking.table.code for booking in bookings]
 
-
-    
-            
-
     if (request.method == 'POST'):
         if('new form' in request.POST):
             form = BookingForm(request.POST)
@@ -85,7 +81,6 @@ def booking(request, pk = None):
                     customer_email=email,
                     created_on=datetime.datetime.now(),
                     created_by=request.user
-
                 )
                 try:
                     bookingModel.save()
@@ -93,9 +88,7 @@ def booking(request, pk = None):
                     print(e)
                 messages.success(request, 'Booking is confirmed')
                 return redirect('/mybooking/')
-        elif('edit form' in request.POST):
-            
-            
+        elif('edit form' in request.POST): 
             form = BookingForm(request.POST)
             if(form.is_valid()):
                 print(request.POST.get('primary-key'))
@@ -122,17 +115,26 @@ def booking(request, pk = None):
             isEdit = True
             print('pk true')
             booking = get_object_or_404(Booking, pk=pk)
-            form = BookingForm(initial = {'date':booking.date , 'start_time':booking.start_time , 'end_time':booking.end_time , 'table_code':booking.table.code ,
-                                'customer_full_name':booking.customer_full_name , 'customer_email':booking.customer_email })
+            form = BookingForm(initial = {'date':booking.date,
+                                'start_time':booking.start_time,
+                                'end_time':booking.end_time,
+                                'table_code':booking.table.code,
+                                'customer_full_name':booking.customer_full_name,
+                                'customer_email':booking.customer_email })
         else:
             isEdit = False
             form = BookingForm(initial = {'date': datetime.date.today()})
 
     return render(request, 'booking.html', {'form': form, 'tables': tables,
-                                            'occupied_tables': occupied_table,'edit_page':isEdit,'data':pk})
-
+                                            'occupied_tables': occupied_table,
+                                            'edit_page':isEdit,'data':pk})
 
 def delete_booking(request, pk):
+    """
+    The view that performs the deletion of a booking.
+    Checks if current user matches the user that made the booking,
+    otherwise it redirects to the mybookings_page.
+    """
     booking = get_object_or_404(Booking, pk=pk)
     booking.delete()
     messages.success(request, 'Booking has been deleted')
@@ -140,6 +142,7 @@ def delete_booking(request, pk):
 
 
 def booking_list_admin(request):
+    
     data = Booking.objects.filter(created_by=request.user)
 
     return render(request, 'mybookings.html', {'data': data})

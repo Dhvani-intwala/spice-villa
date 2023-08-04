@@ -27,7 +27,7 @@ The website was tested on different browser for assuring the features work accor
 The html code of the website was validated using [W3 Markup Validator](https://validator.w3.org/).<br>
 At the time of deployment the validation have the following outcome:<br><br>
 
-<img src=""><br><br>
+<img src="/static/images/readme-img/html.codevalidation.png"><br><br>
 
 The following pages have been tested:
 * Home
@@ -53,7 +53,7 @@ At the time of deployment the validation for *style.css* has the following outco
 The Javascript code was validated using using [JsHint](https://jshint.com/)<br>
 At the time of deployment the validation for *script.js* has the following outcome:<br><br>
 
-<img src="/static/images/readme-img/"><br><br>
+<img src="/static/images/readme-img/jshint.png"><br><br>
 
 **Lighthouse reports:**<br>
 

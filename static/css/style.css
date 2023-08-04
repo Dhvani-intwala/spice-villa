@@ -71,8 +71,7 @@ body {
 /* ----------------------NAVBAR----------------------------- */
 
 .logo {
-    font-family: 'Cinzel',
-        serif;
+    font-family: 'Cinzel',serif;
     font-size: 1.5rem;
 }
 
@@ -184,7 +183,7 @@ a i:hover {
 }
 
 #hero h2 {
-    margin-bottom: 10px 0 0 0;
+    margin-bottom: 10px;
     font-size: 22px;
 
 }
@@ -395,7 +394,6 @@ a i:hover {
 
 .member {
     margin-bottom: 20px;
-    overflow: 20px;
     border-radius: 5px;
     background-color: black;
 }
@@ -1151,6 +1149,12 @@ a i:hover {
     margin: auto;
 }
 
+.booking-tablecode{
+    margin: auto;
+    width:70%;
+}
+
+
 .form-field {
     margin-bottom: 40px;
 }
@@ -1487,14 +1491,12 @@ input[type="number" i] {
     #signup {
         width: 100vw;
         margin: auto;
-        padding: auto;
         margin-bottom: 10%;
     }
 
     #login {
         width: 90vw;
         margin: auto;
-        padding: auto;
         margin-bottom: 10%;
     }
 

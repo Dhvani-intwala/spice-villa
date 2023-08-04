@@ -28,8 +28,7 @@ class BookingForm(forms.Form):
         attrs={'id': 'endTime', 'class': 'form-control',
                'type': 'time', 'step': '3600'}), label='')
     table_code = forms.ChoiceField(widget=forms.Select(
-        attrs={'id': 'tableCode', 'class': 'form-control',
-               'class': 'form-select'}),
+        attrs={'id': 'tableCode', 'class': 'form-control'}),
         choices=(
         ("A1", "A1"), ("A2", "A2"), ("B1", "B1"),
         ("B2", "B2"), ("C1", "C1"), ("C2", "C2")))

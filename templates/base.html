@@ -26,21 +26,17 @@
         integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
-
-
 <body>
     <!-- Message Alert Bar ----->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
+            <div>
                 {% for message in messages %}
                 <div class="alert {{ message.tags }} alert-dismissible fade show alert-bar" id="msg" role="alert">
                     {{ message | safe }}
                 </div>
                 {% endfor %}
             </div>
-        </div>
-    </div>
+    
+    
     <header id="header" class="fixed-top d-flex align-items-cente">
         <!-- Navigatin links -->
         <nav class=" nav navbar navbar-expand-lg navbar-dark bg-dark sticky-nav " id="navbar">
@@ -89,6 +85,7 @@
             </div>
         </nav>
     </header>
+
 
     {% block content %} {% endblock %}
     <!-- Footer -->

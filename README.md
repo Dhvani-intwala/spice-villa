@@ -18,20 +18,17 @@ The fully deployed project can be accessed at [This link](https://spice-villa-c8
   - [Design](#design)
     - [Wireframes](#wireframes)
     - [Database Schema](#database-schema)
-    - [Flow-chart](#flow-chart)
+    - [Flowchart](#flowchart)
 - [Features](#features)
   - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
   - [Languages](#languages)
   - [Frameworks Libraries Programs](#frameworks-libraries-programs)
 - [Testing](#testing)
-  - [Bugs](#bugs)
-    - [Fixed Bugs](#fixed-bugs)
-    - [Remaining Bugs](#remaining-bugs)
-  - [Deployment](#deployment)
-    - [Deploy on heroku](#deploy-on-heroku)
-    - [FORK THE REPOSITORY](#fork-the-repository)
-    - [CLONE THE REPOSITORY](#clone-the-repository)
+- [Deployment](#deployment)
+  - [Deploy on heroku](#deploy-on-heroku)
+  - [Fork the repository](#fork-the-repository)
+  - [Clone the repository](#clone-the-repository)
 - [Credits](#credits)
   - [Code](#code)
   - [Media](#media)
@@ -99,6 +96,7 @@ restaurant.
 
 
 ### Wireframes
+The wireframes for mobile and desktop were created with [Balsamiq](https://balsamiq.com/) tool and can be viewed [here](/static/wireframes/wireframe.pdf)<br>
 
 ### Database Schema
 The project uses the PostgreSQL relational database for storing the data.
@@ -291,6 +289,11 @@ relevant contact information and social media links on all pages throughout the 
   - Was used to create wireframes
 - [LucidCharts:](https://www.lucidchart.com/)
   - Was used to create the database schema.
+
+
+
+## Testing
+The testing documentation can be found at [TESTING.md](TESTING.md)
 
 ## Deployment
 

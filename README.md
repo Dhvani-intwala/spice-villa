@@ -36,57 +36,48 @@ The fully deployed project can be accessed at [This link](https://spice-villa-c8
 
 ## Overview
 
-This is a project designed and developed to create a complete experience for the clients of Spice Villa Restaurant. The users are given the possibility to create a booking, see the restaurant menu. All these functionalities can be accessed by any user with an account, considering that the staff members have special permissions for controlling the data.
-The website was created for real-life situations, but the restaurant's name is fictive.
-Spice Villa - booking website was developed using Python (Django), HTML, CSS and JavaScript by storing the data in a PostgreSQL database.
+This is a project designed and developed to create a complete experience for Spice Villa Restaurant customers. Users have the ability to view the restaurant's menu, create, edit and delete a booking. All of these functions can be accessed by any user with an account, with the administrator having special rights to control the data.
+
+The website was created for real situations, but the name of the restaurant is fictitious.
+
+Spice Villa - booking website was developed using Python (Django), HTML, CSS and JavaScript and stores the data in a PostgreSQL database.
 
 ## User Experience
 
 ### Project goals
 
-The overall goal of the website is to create a restaurant webpage that is enticing for the visitors that generates an interest and curiosity to visit the restaurant. Visitors should be able to find general information about the restaurant as well as finding the menu offerings. In addition, visitors should be able to make a reservation for a table directly on the webpage. It will also provide a booking management admin panel for the staff members.
+The overall goal of the website is to create a restaurant website that is enticing to visitors and creates interest and curiosity to visit the restaurant. Visitors should be able to find general information about the restaurant and the menu. In addition, visitors should be able to make a table reservation directly on the website. 
 
 ### User Stories
--  First Time Visitor Goals
-   - As a first-time visitor I can read and learn about the location and history
-    and get a feel for the restaurant.
-   - As a first-time visitor I can find out what kind of food they serve from
-    their menu.
-   - As a first-time visitor I can find information about how to make a
-    reservation at the restaurant.
+- Goals for first-time visitors
+    - As a first-time visitor, I can read and learn about the place and the history of the restaurant and get a feel for the restaurant.
+    - As a first-time visitor, I can find out what type of food is on the the menu.
+    - As a first-time visitor, I can find information about how to make a reservation at the restaurant.
 
-- Returning Visitor Goals
-  - As a returning visitor I can create an account so I can make a
-    reservation online.
-  - As a returning visitor I can view the menu to see if it has changed.
+- Destinations for returning visitors
+    - As a returning visitor, I can create an account so I can make a reservation online.
+    - As a returning visitor, I can look at the menu to see if it has changed.
 
-- Frequent User Goals
-  - As a frequent visitor I can login and find my current bookings.
-  -  As a frequent visitor I can change or cancel my booking in the login
-    page.
+- Goals for frequent visitors
+    - As a regular visitor, I can log in and view my current bookings.
+    - As a frequent visitor, I can change or cancel my booking on the login page
 
-### Agile Methodology
+### Agile methodology
 
-This project was developed using the Agile methodology.
-All epics and user stories implementation progress were registered using Trello. Necessary goals and
-priorities throughout the project were well defined. In addition, labels were used to further define
-the priority of each user story in the Kanban board. As the user stories were accomplished, they
-were moved in the Trello board from To Do, Progress and Done lists.
+This project was developed using the agile methodology.
+All progress in implementing Epics and User Stories was captured using Trello. Necessary goals and priorities were well defined throughout the project. In addition, labels were used to define the priority of each user story on the Kanban board. As user stories were completed, they were moved from the To Do, Progress, and Done lists in the Trello board.
 
 ### Design
 
-The theme for the project were chosen in accordance with the intended target market in mind for
-the restaurant. With its fancy looks and feel, dark colours and luxurious details and effects, the
-theme fits perfect for the goal of giving the visitor the impression that this is a very high quality
-restaurant.
+The themes for the project were chosen in accordance with the intended target audience for the restaurant. With its fancy look, dark colours and luxurious details and effects, the theme fits perfectly with the goal of giving visitors the impression that this is a very high-end restaurant.
 
-- The primary colour scheme was used for most of the text existent on the website, in either dark or bright colours for creating a good contrast.<br>
+The primary colour scheme was used for most of the text on the website, in either dark or light colours to create a good contrast.<br>
 
 <img src="static/images/readme-img/black_color.png" width="30%"><br>
 <img src="static/images/readme-img/gray-color.png" width="30%"><br>
 <img src="static/images/readme-img/white_color.png" width="30%"><br>
 
-- The secondary colour scheme was used for buttons, warnings, errors or for highlighting important information.
+The secondary colour scheme was used for buttons, warnings, errors or for highlighting important information.
 
 <img src="static/images/readme-img/green_color.png" width="30%"><br>
 <img src="static/images/readme-img/red_color.png" width="30%"><br>
@@ -99,8 +90,8 @@ restaurant.
 The wireframes for mobile and desktop were created with [Balsamiq](https://balsamiq.com/) tool and can be viewed [here](/static/wireframes/wireframe.pdf)<br>
 
 ### Database Schema
-The project uses the PostgreSQL relational database for storing the data.
-There were created two diagrams to represent the relation between the tables.
+The project uses the relational database PostgreSQL to store the data.
+Two diagrams were created to show the relationships between the tables.
 
 <details>
 <summary>Schema</summary>
@@ -108,7 +99,7 @@ There were created two diagrams to represent the relation between the tables.
 </details>
 
 ### Flowchart
-The Flowchart for my program was created using LucidChart and it visually represents how the system works.
+I created the flowchart for my website's functionality using LucidChart and it visually represents how the system works.
 
 <details>
 <summary>Flowchart</summary>
@@ -121,22 +112,20 @@ The Flowchart for my program was created using LucidChart and it visually repres
 
 ### Navbar
 
-- The navbar shows all the sections that the user can enter and provides a quick and easy means of
-  navigating the site. The link to make a booking is enlarged to make it extra easy to find and use.
+- The navigation bar displays all the sections that the user can enter, providing a quick and easy way to
+ navigation on the website. The link to the booking is enlarged so that it is particularly easy to find and use.
 
   ![Navbar](/static/images/readme-img/Nav.png)
 
 ### Hero
 
-The hero section makes for a great first impression of the site and thus the restaurant for the visitor.
-It also encompasses the links that the user most likely needs the most often which is the menu link
-and a link to Book a Table.
+The Hero section provides a good first impression of the website and thus the restaurant for the visitor.
+It also includes the links that the user is likely to need most often, namely the menu link and a table reservation link.
 ![Hero](/static/images/readme-img/Hero.png)
 
 ### Menu
 
-On the Menu page there is a list with all the menu elements. Every item represents a meal with
-details such as Name, Image, Price, and Ingredients. The list design is simple and attractive.
+On the Menu page there is a list of all the menu items. Each item represents a meal with details such as name, picture, price and ingredients. The design of the list is simple and attractive.
 
 ![Menu](/static/images/readme-img/menu-page.png)
 
@@ -149,90 +138,70 @@ enhance its unique selling points.
 
 ### Testimonials
 
-The testimonials show what some of the previous customers says of the restaurant and is a method
-of providing social proof to increase customer conversion of the webpage.
+Testimonials show what previous customers have to say about the restaurant and are a method of providing social proof and increasing customer conversion on the website.
 
 ![Testimonials](/static/images/readme-img/Testimonial.png)
 
 ### Gallery
 
-In the gallery visitors can see examples of its interior and what the restaurant looks like.
+In the gallery, visitors can see examples of interior design and learn what the restaurant looks like.
 
 ![Gallery](/static/images/readme-img/Gallery.png)
 
 ### Contact
 
-The contact section includes all the necessary information about the restaurant that the visitor may
-need to know about.
+The contact area contains all the necessary information about the restaurant that the visitor needs to know.
 
 ![Contact](/static/images/readme-img/Contact.png)
 
 ### Account signup/Login
 
-The account pages where the user can create an account in order to book a table, as well as login as
-an existing user.
+In the account pages, the user can create an account in order to reserve a table, as well as log in as an existing user.
 
 ![signup/Login](/static/images/readme-img/sign-up.png)
 
 ###  Login page
 
-The users accounts have been created using the django allauth module. This way, information about
-the current user can be accessed from the template and displayed for confirming that the
-authentication was successful.
-Considering that the website is created for a restaurant, the profile of the user is created to display
-essential information such as name and email.
+The user accounts were created using the django allauth module. In this way, information about the current user can be retrieved from the template and displayed to confirm that the authentication was successful.
+Considering that the website is created for a restaurant, the user's profile is created to display important information such as name and email.
 
 ![Login](/static/images/readme-img/login.png)
 
 
 ### Book a Table
 
-Every user that is authenticated can access the Bookings page for making a reservation. This feature
-provides a form with multiple sections that appear successively, as steps in completing the booking.
-The first section is for selecting the date and time interval of the booking
+Any user who is authenticated can access the booking page to make a reservation. This feature
+ provides a form with several sections that appear one after the other as steps to complete the booking.
+The first section is used to select the date and period for the booking
 
-- The inputs are validated after the following rules:
-   - The Date value should not be less than the current day;
-   - For the current day the Start hour can't be less than the current hour;
-   - End Hour should be greater than Start hour;
-   - Start and End hours must be between 9:00 AM - 11:00;
+- The inputs are validated according to the following rules:
+ - The date value should not be less than the current day;
+ - For the current day, the start hour should not be smaller than the current hour;
+ - The end hour must be greater than the start hour;
+ - Start hour and end hour must be between 9:00 AM and 11:00 PM;
 
 ![Booking page](/static/images/readme-img/Booking_page.png)
 
-The next section appears only if the previous one is valid and it displays the tables existing in the
-restaurant in the colour that matches their availability status. The user can now choose a table from
-the dropdown, considering that it only contains the free tables. Also, there is a read-only input with
-a value that represents the number of seats for each selected table, as an informative element.
+The next section appears only if the previous one is valid, and displays the tables available in the restaurant in the colour corresponding to their availability status. The user can now select a table from the drop-down list, as it contains only the available tables. There is also a read-only input with a value indicating the number of seats for each selected table, as an informative element.
 
 ![BookaTable](/static/images/readme-img/Table.png)
 
-Another part of the form is displayed with the contact details to be filled in. A better alternative
-available for the users that are not staff members is to check the Book it on my name option. This
-means that the form will automatically register the authenticated user's name and email as contact
-details.
+Another part of the form is displayed with the contact information to be filled in. A better alternative for users who already have an account is to book by clicking the Book on my name button. This means that the form will automatically register the authenticated user's name and email address as contact information.
 
 ![Contact-details](/static/images/readme-img/Contact_user.png)
 
-The last section contains an overview of the booking. If the reservation is submitted, a success message will appear
+The last section contains an overview of the reservation. When the reservation has been sent, a success message appears.
 ![overview](/static/images/readme-img/Overview_details.png)
 
 
 ### Mybookings
 
-The users' accounts have been created using the django allauth module. This way, information about the current user can be accessed from the template and displayed for confirming that the authentication was successful.
-Considering that the website is created for a restaurant, the profile of the user is created to display essential information such as name and email.
+A customer's current bookings are displayed on the mybooking page so that the customer can get an overview of all bookings and check the date and time, etc. for each booking. On this page, the customer can also click on the "edit" button and make the necessary changes to the booking, which are then saved and displayed on the "My Bookings" page. The customer can also delete a booking by clicking on the "Delete" button. It will then disappear from the list of reservations.
 
-![Mybookings](/static/images/readme-img/mybooking.png)
+![Mybookings](/static/images/readme-img/mybooking-page.png)
 
-Also, the my booking page contains one more feature that better experience with the website. 
 
--The feature is called Your upcoming bookings and is represented by a list of the bookings created by the currently authenticated user.
-Every booking has a visual representation of a note with the details of the reservation written on it.
-
-![Mybookings](/static/images/readme-img/sticky-img1.png)
-
-Also, for giving the user the ability to manage his bookings, every element in the list comes with a Delete Booking button.
-The button triggers a modal for confirmation, that being a part of the defensive programming.
+The delete button triggers a modal for confirmation, that being a part of the defensive programming.
 
 ![Mybookings delete](/static/images/readme-img/delete_booking.png)
 
@@ -242,18 +211,16 @@ If the bookings list is empty, a suggestive message is displayed.
 
 ### Footer
 
-The footer contains the essential information about the restaurant for easy access to the most
-relevant contact information and social media links on all pages throughout the website.
+The footer contains the most important information about the restaurant and provides easy access to the most
+relevant contact information and social media links on all pages of the website.
 
 ![Footer](/static/images/readme-img/footer.png)
 
 ## Future Features
 
-- Add a contact form on the main page so visitors can contact the restaurant via email directly on the webpage.
-- Create functionality in the admin panel for the staff to be able to add and delete the amount of tables and seats in the restaurant and incorporate it into the booking function so that it can calculate available seats in the restaurant.
-- Create functionality in the admin panel so that restaurant personnel can update the menu items on the webpage inside the admin panel.
-- When a customer books a table then the cutomer gets the notification via email.
-- Updating the booking feature with a more complex algorithm and design for generating the available tables. The current algorithm sets a table as busy even if it is registered as booked only for a small part of the interval requested by the user for the reservation. Also, the Start and End time are restricted to accept only zero hundred hours. By changing the limit to even zero-thirty hours, the tables algorithm will be more efficient.
+- -Add a contact form on the main page so visitors can email the restaurant directly on the website.
+- When a customer books a table, they will receive an email notification.
+- Update the booking feature with a more complex algorithm and design for generating available tables. The current algorithm sets a table as occupied even if it is only registered as booked for a small portion of the interval requested by the user for the reservation. Also, the start and end times are limited to zero hundred hours. Changing the limit to zero to thirty hours will make the algorithm more efficient.
 
 
 ## Technologies Used
@@ -346,17 +313,18 @@ For creating a clone of the repository on your local machine, use<b>Clone</b>:
 
 ## Credits
 
+- The texts and images that are used for testimonials were taken from google.
+
 ### Code
 
 - [Django Documenation](https://www.djangoproject.com/) was used to provide examples of code solutions and Django functionality.
 - [Bootstrap Documenation](https://getbootstrap.com/) was used to provide examples of Bootstrap functionality and building blocks.
 - [Code Institute walkthrough](https://codeinstitute.net/) as inspiration and code examples, the code institute walkthroughs "Hello Django" and "I Think Therefore I Blog" was used.
 
-### Content
-
 ### Media
 
-- Most of the pictures for the project was taken from [Google](https://www.google.de)
+- Most of the pictures for the project was taken from [Pexels] (https://www.pexels.com/) and [Pixabay] (https://pixabay.com)
+
 
 ### Acknowledgements
 

@@ -10,7 +10,29 @@ Back to [README.md](README.md)<br>
 * [Bugs](#bugs)
 
 
-# Automated View Testing
+## Aditional Manual Testing
+
+#### Error Handling
+
+* Ensure that **403 HTTP** errors display custom 403.html.
+    - **Stress Test:** Input a route in the URL for accessing another user content
+* Ensure that **404 HTTP** errors display the custom 404.html.
+    - **Stress Test:** Input a random route in the URL that can't be found in the declared paths of the project
+* Ensure that **500 HTTP** errors display the custom 500.html.
+    - **Stress Test:** Set debug to false and try to access a path that has been breaked intentionally.
+
+#### Interface Interaction
+
+* Ensure all interactive elements respond appropriately:
+    - **Desktop:**
+        - All navbar elements correctly respond to hovering.
+        - All buttons correctly respond to hovering.
+        - All authentication links correctly respond to hovering
+    - **Mobile:**
+        - All navbar elements correctly respond to touch.
+        - All buttons correctly respond to touch.
+        - All authentication links correctly respond to touch
+
 
 
 ## Browser Testing

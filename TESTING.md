@@ -177,6 +177,8 @@ At the time of deployment the validation for *script.js* has the following outco
 
 - Reinstalled all necessary Libraries because 
 - Removed Static folder from cloudinary and run command Pyhton manage.py collectstatic because after website was deployed the output in heroku doesn't matches the development version.
-- 
+- Not able to Push to github there was a error with Github Password authentication which was removed by generating SSH key
+<br><br>
+<img src="/static/images/readme-img/Error4.png">
 
 

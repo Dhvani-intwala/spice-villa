@@ -8,8 +8,11 @@ import datetime
 import unittest
 from datetime import datetime, date
 from django.test import TestCase
-from django.contrib.auth import get_user_model
-from .models import Table
+# from users.models import User
+# from settings.AUTH_USER_MODEL import user
+from django.contrib.auth.models import User
+from django.conf import settings
+from .models import Table,Booking
 
 class TestViews(TestCase):
     """
@@ -22,27 +25,24 @@ class TestViews(TestCase):
         """
 
         # creates test user
-        email = "testuser@yahoo.com"
+        email = "testuser@gmail.com"
         first = "test"
         last = "user"
         pswd = "T12345678."
-        user_model = get_user_model()
-        self.user = user_model.objects.create_user(
+        self.user = User.objects.create_user(
             email=email, first_name=first, last_name=last, password=pswd)
-        logged_in = self.user.login(email=email, password=pswd)
-        self.assertTrue(logged_in)
-
+        logged_in = self.client.login(email=email, password=pswd)
 
     def test_booking_page_redirects(self):
         """ Test if booking page redirects in case user is not logged in"""
         self.user.logout()
-        response = self.user.get('/booking/mybookings/')
+        response = self.user.get('/mybooking/')
         self.assertEqual(response.status_code, 302)
 
 
     def test_booking_page(self):
         """ Test if booking page renders correct page """
-        response = self.user.get('/booking/mybookings/')
+        response = self.user.get('/mybooking/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'booking.html')
 
@@ -83,8 +83,8 @@ class TestViews(TestCase):
             "book_on_user": "on",
         }
 
-        self.client.get('/bookings/mybookings/')
-        self.client.post('/bookings/mybookings/', new_booking)
+        self.client.get('/booking/')
+        self.client.post('/booking/', new_booking)
 
         self.client.logout()
 

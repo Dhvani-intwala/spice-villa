@@ -10,6 +10,8 @@ Back to [README.md](README.md)<br>
 * [Browser Testing](#browser-testing)
 * [Code Validation](#code-validation)
 * [Bugs](#bugs)
+    * [Solved Bugs](#solved-bugs)
+    * [UnSolved Bugs](#unSolved-bugs)
 
 
 ## Methodology
@@ -172,13 +174,24 @@ At the time of deployment the validation for *script.js* has the following outco
 <img src="/static/images/readme-img/view.png"><br><br>
 </details>
 
-
 ## Bugs
 
-- Reinstalled all necessary Libraries because 
-- Removed Static folder from cloudinary and run command Pyhton manage.py collectstatic because after website was deployed the output in heroku doesn't matches the development version.
-- Not able to Push to github there was a error with Github Password authentication which was removed by generating SSH key
+### Solved Bugs
+
+- Removed the Static folder from Cloudinary and ran the Pyhton manage.py collectstatic command because after deploying the site, the output in heroku didn't match the development version.
+- Not able to Push to github there was a error with Github password authentication which was fixed by generating an SSH key
 <br><br>
 <img src="/static/images/readme-img/Error4.png">
+
+- The table did not change in the booking editing page, which was solved by creating a new object of the table model and assiging the new object to an booking model table field.
+
+### UnSolved Bugs
+
+- Uncaught TypeError: Cannot read properties of null (reading 'getAttribute')
+ at Object.getSelectorFromElement (util.js:103:30)
+    at e._getRootElement (alert.js:82:29)
+    at e.close (alert.js:64:32)
+    at (index):161:23
+
 
 
